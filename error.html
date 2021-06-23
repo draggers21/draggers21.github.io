@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>
+        Blog :=)
+    </title>
+
+</head>
+
+<body>
+    <h1 id="error_code">
+
+    </h1>
+    <script type="text/javascript">
+        const params = new URLSearchParams(window.location.search);
+        if (!params) {
+            // redirect to home page if no get parameters are passed
+            window.location.replace("index.html");
+        }
+        else {
+            if (!params.has("err_code")) {
+                // redirect to home page if "id" parameter is not passed
+                window.location.replace("index.html");
+            }
+            else {
+                const err_code = params.get("err_code");
+
+                document.getElementById("error_code").innerHTML = err_code;
+
+            }
+        }
+    </script>
+</body>
+
+</html>
