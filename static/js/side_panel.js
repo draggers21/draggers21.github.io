@@ -1,8 +1,8 @@
-import { fetch_meta_data, capitalizeFirstLetter } from "./utils.js";
+import { fetch_json_data, capitalizeFirstLetter } from "./utils.js";
 import { DATE_TO_BLOG_ID_MAPPING, TAGS_TO_BLOG_ID_MAPPING, AUTHOR_BLOG_ID_MAPPING } from "./constants.js";
 
 function process_date_meta_data() {
-    fetch_meta_data(DATE_TO_BLOG_ID_MAPPING).then(function (meta_data) {
+    fetch_json_data(DATE_TO_BLOG_ID_MAPPING).then(function (meta_data) {
         const date_side_panel = document.getElementById("side-panel-date");
         const h4_title = document.createElement("h4");
         h4_title.innerHTML = "View by date: ";
@@ -22,7 +22,7 @@ function process_date_meta_data() {
 }
 
 function process_tag_meta_data() {
-    fetch_meta_data("../../" + TAGS_TO_BLOG_ID_MAPPING).then(function (meta_data) {
+    fetch_json_data("../../" + TAGS_TO_BLOG_ID_MAPPING).then(function (meta_data) {
         const tag_side_panel = document.getElementById("side-panel-tags")
         const h4_title = document.createElement("h4");
         h4_title.innerHTML = "Search by tag: ";
@@ -38,7 +38,7 @@ function process_tag_meta_data() {
 }
 
 function process_author_meta_data() {
-    fetch_meta_data("../../" + AUTHOR_BLOG_ID_MAPPING).then(function (meta_data) {
+    fetch_json_data("../../" + AUTHOR_BLOG_ID_MAPPING).then(function (meta_data) {
         const author_side_panel = document.getElementById("side-panel-authors")
         const h4_title = document.createElement("h4");
         h4_title.innerHTML = "Search by author: ";
