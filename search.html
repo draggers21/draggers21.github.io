@@ -29,7 +29,7 @@
     <link href="static/default/css/deafult.css" rel="stylesheet">
     <!-- version 1.0 style Ends -->
     <!-- Main Driver Script -->
-    <script type="text/javascript" src="static/js/search.js"></script>
+    <!-- <script type="text/javascript" src="static/js/search.js"></script> -->
     <!-- Main Driver Ends -->
 </head>
 
@@ -38,7 +38,7 @@
     <!-- Description: this version will contain the base design like, a solid bg, animated bg will come out in future versions-->
     <div class="row container-fluid">
         <div class="col-sm-9">
-            <div class="container-fluid" id="new_blogs">
+            <div class="container-fluid" id="search-results">
                 <!-- Search query Holder description tab  -->
                 <div class="row blog_card">
                     <div class="col">
@@ -53,7 +53,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Error description tab  ends -->
+                <!-- Search query Holder description tab  Ends -->
 
             </div>
         </div>
@@ -64,32 +64,12 @@
                     <div class="card-body blog-card">
                         <h3 class="card-title">Archives</h3>
                         <br />
-                        <h4>View by Date: </h4>
-                        <h5 class="card-text"> Jan 2020</h5>
-                        <h5 class="card-text"> Feb 2020</h5>
-                        <h5 class="card-text"> Mar 2020</h5>
-                        <h5 class="card-text"> Jun 2020</h5>
-                        <h5 class="card-text"> Jul 2020</h5>
-                        <h5 class="card-text"> Apr 2020</h5>
-
+                        <div id="side-panel-date"></div>
                         <br />
-
-                        <h4>View by Tag(s): </h4>
-                        <span class="badge rounded-pill tag tag-color">Tag 1 </span>
-                        <span class="badge rounded-pill tag tag-color">Tag 2</span>
-                        <span class="badge rounded-pill tag tag-color">Tag 3</span>
-                        <span class="badge rounded-pill tag tag-color">Tag 4</span>
-
-                        <br /> <br />
-
-                        <h4>Popular: </h4>
-                        <h5 class="card-text"> Blog Title 1</h5>
-                        <h5 class="card-text"> Blog Title 2</h5>
-                        <h5 class="card-text"> Blog Title 3</h5>
-                        <h5 class="card-text"> Blog Title 4</h5>
-                        <h5 class="card-text"> Blog Title 5</h5>
-                        <h5 class="card-text"> Blog Title 6</h5>
-
+                        <div id="side-panel-tags"></div>
+                        <br />
+                        <div id="side-panel-authors"></div>
+                        <br />
                     </div>
 
                 </div>
@@ -97,7 +77,8 @@
         </div>
     </div>
     <!-- version 1.0 Ends -->
-
+    <script type="module" src="static/js/search.js"></script>
+    <script type="module" src="static/js/side_panel.js"></script>
 </body>
 
 </html>

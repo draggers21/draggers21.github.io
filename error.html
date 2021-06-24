@@ -70,7 +70,7 @@
                         <div class="card text-justify" id="">
 
                             <div class="card-body blog-card">
-                                <h3 class="card-title">Maybe some good ol' searching can help</h3>
+                                <h3 class="card-title">Nothing somthing a good ol' search can't do.</h3>
                                 <br />
                                 <form class="card-text" action="search.html" method="GET" id="search_form">
                                     <input placeholder="Enter search string" name="query">
@@ -135,32 +135,12 @@
                     <div class="card-body blog-card">
                         <h3 class="card-title">Archives</h3>
                         <br />
-                        <h4>View by Date: </h4>
-                        <h5 class="card-text"> Jan 2020</h5>
-                        <h5 class="card-text"> Feb 2020</h5>
-                        <h5 class="card-text"> Mar 2020</h5>
-                        <h5 class="card-text"> Jun 2020</h5>
-                        <h5 class="card-text"> Jul 2020</h5>
-                        <h5 class="card-text"> Apr 2020</h5>
-
+                        <div id="side-panel-date"></div>
                         <br />
-
-                        <h4>View by Tag(s): </h4>
-                        <span class="badge rounded-pill tag tag-color">Tag 1 </span>
-                        <span class="badge rounded-pill tag tag-color">Tag 2</span>
-                        <span class="badge rounded-pill tag tag-color">Tag 3</span>
-                        <span class="badge rounded-pill tag tag-color">Tag 4</span>
-
-                        <br /> <br />
-
-                        <h4>Popular: </h4>
-                        <h5 class="card-text"> Blog Title 1</h5>
-                        <h5 class="card-text"> Blog Title 2</h5>
-                        <h5 class="card-text"> Blog Title 3</h5>
-                        <h5 class="card-text"> Blog Title 4</h5>
-                        <h5 class="card-text"> Blog Title 5</h5>
-                        <h5 class="card-text"> Blog Title 6</h5>
-
+                        <div id="side-panel-tags"></div>
+                        <br />
+                        <div id="side-panel-authors"></div>
+                        <br />
                     </div>
 
                 </div>
@@ -169,11 +149,8 @@
     </div>
     <!-- version 1.0 Ends -->
 
-    <!-- Magnify Script -->
-    <script src="static/js/magnify.js" type="text/javascript"></script>
-    <!-- Magnify Script ends-->
-
     <script type="text/javascript" src="static/js/error.js"></script>
+    <script type="module" src="static/js/side_panel.js"></script>
 </body>
 
 </html>
