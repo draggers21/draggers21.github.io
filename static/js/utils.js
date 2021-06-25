@@ -75,3 +75,42 @@ export function create_blog_cards(blog_id, meta_data) {
 
     return div1;
 }
+
+export function create_pagination(number_of_pages) {
+
+    let empty_div = document.createElement("div");
+    let left_shift = document.createElement("a");
+    left_shift.setAttribute("href", "#");
+    left_shift.setAttribute("class", "disabled");
+    left_shift.setAttribute("onclick", "change_page(this.name)");
+    left_shift.setAttribute("name", "left_shift");
+    left_shift.setAttribute("id", "prev_page");
+    left_shift.innerHTML = "&laquo";
+    empty_div.appendChild(left_shift);
+
+    for (let i = 1; i <= number_of_pages; i++) {
+        let a_tag = document.createElement("a");
+        a_tag.setAttribute("href", "#");
+        a_tag.setAttribute("onclick", "change_page(this.name)");
+        a_tag.setAttribute("name", "page_" + i);
+        a_tag.innerHTML = i;
+        if (i == 1) {
+            a_tag.setAttribute("class", "this-is-the-active-page");
+        }
+        if (i == number_of_pages) {
+            a_tag.setAttribute("id", "last_page");
+        }
+        empty_div.appendChild(a_tag);
+    }
+    let right_shift = document.createElement("a");
+    right_shift.setAttribute("href", "#");
+    if (number_of_pages == 1) {
+        right_shift.setAttribute("class", "disabled");
+    }
+    right_shift.setAttribute("onclick", "change_page(this.name)");
+    right_shift.setAttribute("name", "right_shift");
+    right_shift.setAttribute("id", "next_page");
+    right_shift.innerHTML = "&raquo;";
+    empty_div.appendChild(right_shift);
+    return empty_div;
+}

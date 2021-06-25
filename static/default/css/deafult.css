@@ -32,3 +32,39 @@ body {
     max-height: inherit;
     max-width: inherit;
 }
+
+.pagination {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: #e0e0e0;
+    background-color: #424242;
+    float: left;
+    padding: 8px 16px;    
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 10px;
+  }
+  
+  .pagination a.this-is-the-active-page {
+    background-color: #00897B;
+    color: white;
+    border-radius: 50%;
+  }
+  
+  .pagination a:hover:not(.this-is-the-active-page) {
+    background-color: #ddd;
+    border-radius: 50%;
+  }
+
+  .pagination a.disabled {
+    background-color: #1b1b1b;
+    color: white;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .pagination a:hover(.disabled) {
+    border-radius: 50%;
+  }
