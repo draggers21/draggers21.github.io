@@ -49,7 +49,7 @@ export function create_blog_cards(blog_id, meta_data) {
     for (let j = 0; j < blog_tags.length; j++) {
         let span = document.createElement("span");
         span.setAttribute("class", "badge rounded-pill tag tag-color");
-        span.innerHTML = blog_tags[j];
+        span.innerHTML = '<a href="search.html?query=tags:' + blog_tags[j] + '">' + blog_tags[j] + '</a>';
         blog_tags_container.appendChild(span);
     }
 
@@ -59,7 +59,7 @@ export function create_blog_cards(blog_id, meta_data) {
 
     let read_more_button = document.createElement("a");
     read_more_button.setAttribute("href", "view.html?id=" + blog_id);
-    read_more_button.innerHTML = "Read More"
+    read_more_button.innerHTML = "...Continue Reading"
     blog_summary_container.appendChild(read_more_button);
 
 
@@ -79,6 +79,9 @@ export function create_blog_cards(blog_id, meta_data) {
 export function create_pagination(number_of_pages) {
 
     let empty_div = document.createElement("div");
+    empty_div.setAttribute("class", "row");
+    let col = document.createElement("div");
+    col.setAttribute("class", "col");
     let left_shift = document.createElement("a");
     left_shift.setAttribute("href", "#");
     left_shift.setAttribute("class", "disabled");
@@ -86,7 +89,7 @@ export function create_pagination(number_of_pages) {
     left_shift.setAttribute("name", "left_shift");
     left_shift.setAttribute("id", "prev_page");
     left_shift.innerHTML = "&laquo";
-    empty_div.appendChild(left_shift);
+    col.appendChild(left_shift);
 
     for (let i = 1; i <= number_of_pages; i++) {
         let a_tag = document.createElement("a");
@@ -100,7 +103,7 @@ export function create_pagination(number_of_pages) {
         if (i == number_of_pages) {
             a_tag.setAttribute("id", "last_page");
         }
-        empty_div.appendChild(a_tag);
+        col.appendChild(a_tag);
     }
     let right_shift = document.createElement("a");
     right_shift.setAttribute("href", "#");
@@ -111,6 +114,20 @@ export function create_pagination(number_of_pages) {
     right_shift.setAttribute("name", "right_shift");
     right_shift.setAttribute("id", "next_page");
     right_shift.innerHTML = "&raquo;";
-    empty_div.appendChild(right_shift);
+    col.appendChild(right_shift);
+    empty_div.appendChild(col);
     return empty_div;
 }
+
+export function sanitize_input(string) {
+    const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#x27;',
+        "/": '&#x2F;',
+    };
+    const reg = /[&<>"'/]/ig;
+    return string.replace(reg, (match)=>(map[match]));
+  }

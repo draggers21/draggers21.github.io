@@ -1,4 +1,4 @@
-import { fetch_json_data, create_blog_cards, create_pagination } from "./utils.js";
+import { fetch_json_data, create_blog_cards, create_pagination, sanitize_input } from "./utils.js";
 import { BLOG_META_DATA_LOCATION, AUTHOR_BLOG_ID_MAPPING, DATE_TO_BLOG_ID_MAPPING, TAGS_TO_BLOG_ID_MAPPING, CARD_PER_PAGE_LIMIT } from "./constants.js";
 
 const params = new URLSearchParams(window.location.search);
@@ -12,8 +12,8 @@ else {
         window.location.replace("index.html");
     }
     else {
-        const raw_query = params.get("query");
-
+        const raw_query = sanitize_input(params.get("query"));
+        
         // add query to dom
         document.getElementById("search-query").innerHTML = "Search query:&emsp;'&nbsp;" + raw_query + "&nbsp;'";
 
@@ -22,13 +22,17 @@ else {
             const query_arr = raw_query.split(":");
             parse_filters(query_arr);
         }
-        else {
+        else if(!raw_query == ""){
             // search in title by default
             search_title(raw_query);
             search_author(raw_query);
             search_tags(raw_query);
             search_summary(raw_query);
             search_content(raw_query);
+        }
+        else{
+            // error code 1503 is invalid search string
+            window.location.replace("error.html?err_code=1503");
         }
     }
 }

@@ -1,6 +1,12 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <!-- Auxillary tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="">
+    <!-- Auxillary tags Ends -->
     <title>
         Blog :=)
     </title>
@@ -34,18 +40,11 @@
 </head>
 
 <body>
-
-    <!-- Magnify Starts -->
-    <!--<div id="magnify">
-        <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
-        <div id="img_here"></div>
-    </div> -->
-    <!-- Magnify ends -->
-
+    <div id="navigation-bar"></div>
     <!-- version 1.0 -->
     <!-- Description: this version will contain the base design like, a solid bg, animated bg will come out in future versions-->
     <div class="row container-fluid">
-        <div class="col-sm-9">
+        <div class="col-lg-9">
             <div class="container-fluid" id="new_blogs">
                 <!-- Error description tab  -->
                 <div class="row blog_card">
@@ -70,11 +69,11 @@
                         <div class="card text-justify" id="">
 
                             <div class="card-body blog-card">
-                                <h3 class="card-title">Nothing somthing a good ol' search can't do.</h3>
+                                <h3 class="card-title">Nothing somthing a good ol' search can't fix.</h3>
                                 <br />
-                                <form class="card-text" action="search.html" method="GET" id="search_form">
-                                    <input placeholder="Enter search string" name="query">
-                                    <input type="submit" placeholder="Search">
+                                <form class="card-text d-flex" action="search.html" method="GET" id="search_form">
+                                    <input placeholder="Search" class="form-control me-2" name="query" style="background-color: #1d1c1c;color: #e0e0e0;">
+                                    <button class="btn btn-outline-success" type="submit" style="background-color: #00897B; color: #e0e0e0; font-weight: 900;">Search</button>
                                 </form>
                                 <br />
                                 <!-- <h5 class="card-text">Search manual: </h5> -->
@@ -133,7 +132,7 @@
 
             </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-lg-3">
             <div class="container-fluid blog_card">
                 <div class="card text-justify" id="side-panel">
 
@@ -153,8 +152,19 @@
         </div>
     </div>
     <!-- version 1.0 Ends -->
-    <script type="text/javascript" src="static/js/error.js"></script>
+    <!-- Footer -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col" style="text-align: center;" id="footer-text">
+            </div>
+        </div>
+    </div>
+    <!-- Footer Ends -->
+    <script type="module" src="static/js/navbar.js"></script>
+    <script type="module" src="static/js/error.js"></script>
     <script type="module" src="static/js/side_panel.js"></script>
+    <script type="module" src="static/js/footer.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,1 @@
+document.getElementById("footer-text").innerHTML = "© Draggers21 2021 <br /><br />"

@@ -1,11 +1,15 @@
 body {
-    background-color: #212121;     
+    background-color: #121212;     
  }
  * {
     color: #e0e0e0; 
  }
  a {
      color: #e0e0e0; 
+     text-decoration: none;
+ }
+ a:hover {
+    color: #e0e0e0; 
  }
  .tag-color{
      background-color: #00897B;
@@ -13,6 +17,10 @@ body {
  .tag {
      padding-left: 10px;
      padding-right: 10px;
+     margin-right: 5px;
+     margin-left: 5px;
+     font-weight: 700;
+     font-size: medium;
  }
  .blog_card {
      padding-bottom: 20px;
@@ -68,3 +76,17 @@ body {
   .pagination a:hover(.disabled) {
     border-radius: 50%;
   }
+
+#spinner {
+  animation: rotate 0.56s infinite linear;
+  width:50px;
+  height:50px;
+  border:12px solid #fff;
+  border-bottom:12px solid rgb(101, 157, 189);
+  border-radius:50%;
+  margin:0;
+}
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}

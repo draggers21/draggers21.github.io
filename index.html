@@ -1,6 +1,12 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <!-- Auxillary tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="">
+    <!-- Auxillary tags Ends -->
     <title>
         Blog :=)
     </title>
@@ -32,16 +38,19 @@
 </head>
 
 <body>
+
     <!-- version 1.0 -->
     <!-- Description: this version will contain the base design like, a solid bg, animated bg will come out in future versions-->
+    <div id="navigation-bar"></div>
+
     <div class="row container-fluid">
-        <div class="col-sm-9">
+        <div class="col-lg-9">
             <div class="container-fluid" id="blog-card-holder"></div>
             <!-- Pagination -->
-            <div class="pagination" id="pagination"></div>
+            <div class="row"><div class="col" style="text-align: center;"><div class="pagination" id="pagination"></div></div></div>
             <!-- Pagination Ends-->
         </div>
-        <div class="col-sm-3">
+        <div class="col-lg-3">
             <div class="container-fluid blog_card">
                 <div class="card text-justify" id="side-panel">
 
@@ -61,18 +70,23 @@
         </div>
     </div>
     <!-- Footer -->
-    <div id="footer"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col" style="text-align: center;" id="footer-text">
+            </div>
+        </div>
+    </div>
     <!-- Footer Ends -->
     <!-- version 1.0 Ends -->
 
     <!-- required scripts -->
+    <script type="module" src="static/js/navbar.js"></script>
     <script type="module" src="static/js/index.js"></script>
     <script type="module" src="static/js/side_panel.js"></script>
     <script type="text/javascript">
         /* 
-    TODO: Optimize code and clean it. 
-*/
-
+            TODO: Optimize code and clean it. Can be found in static/js/paginate.js
+        */
         function check_next_prev_button() {
             if (document.getElementsByClassName("this-is-the-active-page")[0].getAttribute("name") == "page_1") {
                 document.getElementById("prev_page").setAttribute("class", "disabled");
@@ -107,7 +121,6 @@
                 // document.getElementById(page_to_deactivate).style.display = "none";
 
                 let prev_page = "page_" + (parseInt(page_to_deactivate.split("_")[1]) - 1);
-                console.log(prev_page);
                 // remove active status
                 active_pages[0].removeAttribute("class");
                 document.getElementById(page_to_deactivate).style.display = "none";
@@ -163,16 +176,7 @@
 
     </script>
     <!-- required scripts -->
-
+    <script type="module" src="static/js/footer.js"></script>
 </body>
 
 </html>
-
-<!-- 
-    TODO:
-    1. Pagination
-    2. Input Sanitiation
-    3. Footer
-    4. Nav Bar
-    5. Automation (Mansha)
--->

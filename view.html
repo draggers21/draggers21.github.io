@@ -1,6 +1,12 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <!-- Auxillary tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="">
+    <!-- Auxillary tags Ends -->
     <title>
         Blog :=)
     </title>
@@ -31,7 +37,7 @@
     <!-- @TODO: If large shift to a css file -->
     <link href="static/default/css/deafult.css" rel="stylesheet">
     <!-- version 1.0 style Ends -->
-    
+
 </head>
 
 <body>
@@ -46,7 +52,7 @@
     <!-- version 1.0 -->
     <!-- Description: this version will contain the base design like, a solid bg, animated bg will come out in future versions-->
     <div class="row container-fluid">
-        <div class="col-sm-9">
+        <div class="col-lg-9">
             <div class="container-fluid" id="new_blogs">
                 <!-- One blog card -->
                 <div class="row blog_card">
@@ -66,7 +72,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-lg-3">
             <div class="container-fluid blog_card">
                 <div class="card text-justify" id="side-panel">
 
@@ -86,12 +92,21 @@
         </div>
     </div>
     <!-- version 1.0 Ends -->
-
+    <!-- Footer -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col" style="text-align: center;" id="footer-text">
+            </div>
+        </div>
+    </div>
+    <!-- Footer Ends -->
     <!-- Magnify Script -->
     <script src="static/js/magnify.js" type="text/javascript"></script>
     <!-- Magnify Script ends-->
     <script type="text/javascript" src="static/js/view.js"></script>
     <script type="module" src="static/js/side_panel.js"></script>
+    <script type="module" src="static/js/footer.js"></script>
+
 </body>
 
 </html>

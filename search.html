@@ -1,6 +1,12 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <!-- Auxillary tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="">
+    <!-- Auxillary tags Ends -->
     <title>
         Blog :=)
     </title>
@@ -35,9 +41,10 @@
 
 <body>
     <!-- version 1.0 -->
+    <div id="navigation-bar"></div>
     <!-- Description: this version will contain the base design like, a solid bg, animated bg will come out in future versions-->
     <div class="row container-fluid">
-        <div class="col-sm-9">
+        <div class="col-lg-9">
             <div class="container-fluid" id="search-results">
                 <!-- Search query Holder description tab  -->
                 <div class="row blog_card">
@@ -99,9 +106,11 @@
                 </div>
                 <!-- Search Tab Help ends -->
             </div>
-            <div class="pagination" id="pagination"></div>
+            <!-- Pagination -->
+            <div class="row"><div class="col" style="text-align: center;"><div class="pagination" id="pagination"></div></div></div>
+            <!-- Pagination Ends-->
         </div>
-        <div class="col-sm-3">
+        <div class="col-lg-3">
             <div class="container-fluid blog_card">
                 <div class="card text-justify" id="side-panel">
 
@@ -121,6 +130,15 @@
         </div>
     </div>
     <!-- version 1.0 Ends -->
+    <!-- Footer -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col" style="text-align: center;" id="footer-text">
+            </div>
+        </div>
+    </div>
+    <!-- Footer Ends -->
+    <script type="module" src="static/js/navbar.js"></script>
     <script type="module" src="static/js/search.js"></script>
     <script type="module" src="static/js/side_panel.js"></script>
     <script type="text/javascript">
@@ -217,6 +235,8 @@
         }
 
     </script>
+    <script type="module" src="static/js/footer.js"></script>
+
 
 </body>
 
