@@ -1,0 +1,36 @@
+{
+    "3": {
+        "blog_location": "static/blogs/1.json",
+        "blog_title": "Testing title",
+        "blog_content": "Lorean ipsum",
+        "blog_author": "Chetanya Kunndra",
+        "blog_summary": "LMAOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+        "blog_publish_date": "12/12/2121",
+        "blog_tags": [
+            "Tag3"
+        ]
+    },
+    "2": {
+        "blog_location": "static/blogs/1.json",
+        "blog_title": "Testing title",
+        "blog_content": "fudduu",
+        "blog_author": "Mansha Grover ",
+        "blog_summary": "",
+        "blog_publish_date": "12/12/2121321",
+        "blog_tags": [
+            "Tag1"
+        ]
+    },
+    "1": {
+        "blog_location": "static/blogs/1.json",
+        "blog_title": "Testing title",
+        "blog_content": "fudduu",
+        "blog_author": "Chetanya Kunndra",
+        "blog_summary": "",
+        "blog_publish_date": "12/12/2121321",
+        "blog_tags": [
+            "Tag2",
+            "Tag4"
+        ]
+    }
+}

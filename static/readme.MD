@@ -1,0 +1,1 @@
+this folder contains static files likes JSON, css or js files

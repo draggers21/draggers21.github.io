@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Auxillary tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="">
+    <!-- Auxillary tags Ends -->
+    <title>
+        Blog :=)
+    </title>
+
+    <!-- Bootstrap CSS and JS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS and JS Ends -->
+
+    <!-- Misc files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Misc files Ends -->
+    <!-- @TODO: Clean this mess -->
+    <!-- Custom BG  Style -->
+    <!-- <link href="static/css/bg_parllax_stars.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
+    <!-- <link href="static/worm_bg/worm_bg.css" rel="stylesheet"> -->
+    <!-- Custom BG  Style Ends -->
+
+    <!-- version 1.0 style -->
+    <!-- @TODO: If large shift to a css file -->
+    <link href="static/default/css/deafult.css" rel="stylesheet">
+    <!-- version 1.0 style Ends -->
+</head>
+
+<body>
+    <div id="navigation-bar"></div>
+    <!-- version 1.0 -->
+    <!-- Description: this version will contain the base design like, a solid bg, animated bg will come out in future versions-->
+    <div class="row container-fluid">
+        <div class="col-lg-9">
+            <div class="container-fluid" id="new_blogs">
+                <!-- Error description tab  -->
+                <div class="row blog_card">
+                    <div class="col">
+                        <div class="card text-justify" id="">
+
+                            <div class="card-body blog-card">
+                                <h3 class="card-title">Oops! looks like you ran into an error.</h3>
+                                <br />
+                                <h5 class="card-text" id="error-code"></h5>
+                                <h5 class="card-text" id="error-description"></h5>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Error description tab  ends -->
+
+                <!-- Search Tab -->
+                <div class="row blog_card">
+                    <div class="col">
+                        <div class="card text-justify" id="">
+
+                            <div class="card-body blog-card">
+                                <h3 class="card-title">Nothing somthing a good ol' search can't fix.</h3>
+                                <br />
+                                <form class="card-text d-flex" action="search.html" method="GET" id="search_form">
+                                    <input placeholder="Search" class="form-control me-2" name="query" style="background-color: #1d1c1c;color: #e0e0e0;">
+                                    <button class="btn btn-outline-success" type="submit" style="background-color: #00897B; color: #e0e0e0; font-weight: 900;">Search</button>
+                                </form>
+                                <br />
+                                <!-- <h5 class="card-text">Search manual: </h5> -->
+                                <h5 class="card-text">Try using the following filters to make your search more
+                                    refined.
+                                    <br /><br />
+                                    <ol>
+                                        <li>"author": Use this filter to search for blogs using author name.
+                                            <br />Usage: "author:John Doe"
+                                        </li>
+                                        <br />
+                                        <li>"tags": Use this filter to search for blogs using tags.
+                                            <br />Usage: "tags:Tag1
+                                            Tag2 ..."
+                                        </li>
+                                        <br />
+                                        <li>"title": Use this filter to search for blogs by their title name.
+                                            <br />Usage: "title:Lorem Ipsum"
+                                        </li>
+                                        <br />
+                                        <li>"date": Use this filter to search for blogs by date.
+                                            <br />Usage: "date:Month Year"
+                                        </li>
+                                        <br />
+                                        <li>"summary": Use this filter to search for blogs by their summary.
+                                            <br />Usage: "summary:Lorem Ipsum"
+                                        </li>
+                                        <br />
+                                        <li>"content": Use this filter to search for blogs by their content.
+                                            <br />Usage: "content:Lorem Ipsum"
+                                        </li>
+                                    </ol>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Search Tab ends -->
+
+                <!-- Featured Tab -->
+                <!-- <div class="row blog_card">
+                        <div class="col">
+                            <div class="card text-justify" id="">
+
+                                <div class="card-body blog-card">
+                                    <h3 class="card-title">Oops! looks like you ran into an error.</h3>
+                                    <br />
+                                    <h5 class="card-text" id="error-code"></h5>
+                                    <h5 class="card-text" id="error-description"></h5>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div> -->
+                <!-- Featured Tab Ends-->
+
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="container-fluid blog_card">
+                <div class="card text-justify" id="side-panel">
+
+                    <div class="card-body blog-card">
+                        <h3 class="card-title">Archives</h3>
+                        <br />
+                        <div id="side-panel-date"></div>
+                        <br />
+                        <div id="side-panel-tags"></div>
+                        <br />
+                        <div id="side-panel-authors"></div>
+                        <br />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- version 1.0 Ends -->
+    <!-- Footer -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col" style="text-align: center;" id="footer-text">
+            </div>
+        </div>
+    </div>
+    <!-- Footer Ends -->
+    <script type="module" src="static/js/navbar.js"></script>
+    <script type="module" src="static/js/error.js"></script>
+    <script type="module" src="static/js/side_panel.js"></script>
+    <script type="module" src="static/js/footer.js"></script>
+
+</body>
+
+</html>

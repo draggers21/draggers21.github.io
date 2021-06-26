@@ -1,0 +1,140 @@
+body {
+    background-color: #121212;
+}
+
+* {
+    color: #e0e0e0;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e0e0e0;
+}
+
+.tag-color {
+    background-color: #00897B;
+}
+
+.tag {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px;
+
+    font-weight: 700;
+    font-size: medium;
+}
+
+.blog_card {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.blog-card {
+    background-color: #424242;
+    ;
+}
+
+.main-page-side-panel {
+    background-color: #424242;
+}
+
+.blog-image {
+    align-items: center;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+}
+
+.blog-fig-caption {
+    color: #bdbdbd;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: #e0e0e0;
+    background-color: #424242;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.pagination a.this-is-the-active-page {
+    background-color: #00897B;
+    color: white;
+    border-radius: 50%;
+}
+
+.pagination a:hover:not(.this-is-the-active-page) {
+    background-color: #ddd;
+    border-radius: 50%;
+}
+
+.pagination a.disabled {
+    background-color: #1b1b1b;
+    color: white;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.pagination a:hover(.disabled) {
+    border-radius: 50%;
+}
+
+#spinner {
+    animation: rotate 0.56s infinite linear;
+    width: 50px;
+    height: 50px;
+    border: 12px solid #fff;
+    border-bottom: 12px solid rgb(101, 157, 189);
+    border-radius: 50%;
+    margin: 0;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#magnify {
+    width:100vw;
+    height:100vh;
+    background:rgba(0, 0, 0, 0.92);
+    position:fixed;
+    z-index:4;
+    display:none;
+    flex-direction: column;
+    justify-content:center;
+}
+#magnify h1 {
+    position:absolute;
+    top:0;
+    right:0;
+    margin:20px 40px;
+    color:#fff;
+    transition:0.4s ease-in-out;
+}
+
+#magnify h1:hover{
+    color:rgb(0, 0, 0);
+    cursor:pointer;
+}
+#img_here {
+    width:90%;
+    height:90%;
+    background-size:contain !important;
+    background-repeat:no-repeat !important;
+    margin:0px auto;
+}

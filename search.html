@@ -34,18 +34,78 @@
     <!-- @TODO: If large shift to a css file -->
     <link href="static/default/css/deafult.css" rel="stylesheet">
     <!-- version 1.0 style Ends -->
-
+    <!-- Main Driver Script -->
+    <!-- <script type="text/javascript" src="static/js/search.js"></script> -->
+    <!-- Main Driver Ends -->
 </head>
 
 <body>
-
     <!-- version 1.0 -->
-    <!-- Description: this version will contain the base design like, a solid bg, animated bg will come out in future versions-->
     <div id="navigation-bar"></div>
-
+    <!-- Description: this version will contain the base design like, a solid bg, animated bg will come out in future versions-->
     <div class="row container-fluid">
         <div class="col-lg-9">
-            <div class="container-fluid" id="blog-card-holder"></div>
+            <div class="container-fluid" id="search-results">
+                <!-- Search query Holder description tab  -->
+                <div class="row blog_card">
+                    <div class="col">
+                        <div class="card text-justify" id="">
+
+                            <div class="card-body blog-card">
+                                <h3 class="card-title">Search Results</h3>
+                                <br />
+                                <h5 class="card-text" id="search-query"></h5>
+                                <br />
+                                <h5 class="card-text" id="search-query-count"></h5>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Search query Holder description tab  Ends -->
+                <!-- Search Tab Help Starts-->
+                <div class="row blog_card" id="search-help" style="display: none;">
+                    <div class="col">
+                        <div class="card text-justify" id="">
+
+                            <div class="card-body blog-card">
+
+                                <h5 class="card-text">Try using the following filters to make your search more
+                                    refined.
+                                    <br /><br />
+                                    <ol>
+                                        <li>"author": Use this filter to search for blogs using author name.
+                                            <br />Usage: "author:John Doe"
+                                        </li>
+                                        <br />
+                                        <li>"tags": Use this filter to search for blogs using tags.
+                                            <br />Usage: "tags:Tag1
+                                            Tag2 ..."
+                                        </li>
+                                        <br />
+                                        <li>"title": Use this filter to search for blogs by their title name.
+                                            <br />Usage: "title:Lorem Ipsum"
+                                        </li>
+                                        <br />
+                                        <li>"date": Use this filter to search for blogs by date.
+                                            <br />Usage: "date:Month Year"
+                                        </li>
+                                        <br />
+                                        <li>"summary": Use this filter to search for blogs by their summary.
+                                            <br />Usage: "summary:Lorem Ipsum"
+                                        </li>
+                                        <br />
+                                        <li>"content": Use this filter to search for blogs by their content.
+                                            <br />Usage: "content:Lorem Ipsum"
+                                        </li>
+                                    </ol>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Search Tab Help ends -->
+            </div>
             <!-- Pagination -->
             <div class="row"><div class="col" style="text-align: center;"><div class="pagination" id="pagination"></div></div></div>
             <!-- Pagination Ends-->
@@ -69,6 +129,7 @@
             </div>
         </div>
     </div>
+    <!-- version 1.0 Ends -->
     <!-- Footer -->
     <div class="container-fluid">
         <div class="row">
@@ -77,16 +138,14 @@
         </div>
     </div>
     <!-- Footer Ends -->
-    <!-- version 1.0 Ends -->
-
-    <!-- required scripts -->
     <script type="module" src="static/js/navbar.js"></script>
-    <script type="module" src="static/js/index.js"></script>
+    <script type="module" src="static/js/search.js"></script>
     <script type="module" src="static/js/side_panel.js"></script>
     <script type="text/javascript">
         /* 
-            TODO: Optimize code and clean it. Can be found in static/js/paginate.js
-        */
+    TODO: Optimize code and clean it. 
+*/
+
         function check_next_prev_button() {
             if (document.getElementsByClassName("this-is-the-active-page")[0].getAttribute("name") == "page_1") {
                 document.getElementById("prev_page").setAttribute("class", "disabled");
@@ -121,6 +180,7 @@
                 // document.getElementById(page_to_deactivate).style.display = "none";
 
                 let prev_page = "page_" + (parseInt(page_to_deactivate.split("_")[1]) - 1);
+                console.log(prev_page);
                 // remove active status
                 active_pages[0].removeAttribute("class");
                 document.getElementById(page_to_deactivate).style.display = "none";
@@ -175,15 +235,9 @@
         }
 
     </script>
-    <!-- required scripts -->
     <script type="module" src="static/js/footer.js"></script>
+
+
 </body>
 
 </html>
-
-<!-- 
-    TODO:
-    1. Loading mech 
-    2. reduce pagination as 1 2 3 .. 10.
-    3. dynamic background
--->
