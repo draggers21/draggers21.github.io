@@ -81,7 +81,7 @@ function search_content(search_string) {
         let all_related_blog_ids = [];
         for (let i = 0; i < all_blog_ids.length; i++) {
             let blog_id = all_blog_ids[i];
-            let blog_location = "../../" + meta_data[blog_id].blog_location;
+            let blog_location = "../../../" + meta_data[blog_id].blog_location;
             fetch_json_data(blog_location).then(function (blog_content_json) {
                 let blg_content = blog_content_json.blog_content;
                 if (regex_match(search_string.toLowerCase(), blg_content.toLowerCase())) {

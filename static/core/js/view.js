@@ -62,7 +62,7 @@ else {
             for (var i = 0; i < blog_tags.length; i++) {
                 var span = document.createElement("span");
                 span.setAttribute("class", "badge rounded-pill tag tag-color");
-                span.innerHTML = blog_tags[i];
+                span.innerHTML = '<a href="search.html?query=tags:' + blog_tags[i] + '">' + blog_tags[i] + '</a>';
                 tag_container.appendChild(span);
             }
             fetch_blog_content(blog_location);

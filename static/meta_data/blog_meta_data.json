@@ -1,36 +1,89 @@
 {
-    "3": {
-        "blog_location": "static/blogs/1.json",
-        "blog_title": "Testing title",
-        "blog_content": "Lorean ipsum",
+    "1": {
+        "blog_location": "static/blogs/OverTheWire-WriteUps/Bandit/bandit0to1.json",
+        "blog_title": "OverTheWire: Bandit: Solving Bandit 0 -> Bandit 1",
         "blog_author": "Chetanya Kunndra",
-        "blog_summary": "LMAOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
-        "blog_publish_date": "12/12/2121",
+        "blog_summary": "Bandit is a war-game on OverTheWire.org made for absolute beginners. It teaches you the basics of linux file system. Here we will solve the bandit0 level",
+        "blog_publish_date": "27/06/2021",
         "blog_tags": [
-            "Tag3"
+            "WriteUp",
+            "OverTheWire",
+            "Bandit",
+            "Bash", 
+            "Linux"
         ]
     },
     "2": {
-        "blog_location": "static/blogs/1.json",
-        "blog_title": "Testing title",
-        "blog_content": "fudduu",
-        "blog_author": "Mansha Grover ",
-        "blog_summary": "",
-        "blog_publish_date": "12/12/2121321",
+        "blog_location": "static/blogs/OverTheWire-WriteUps/Bandit/bandit1to2.json",
+        "blog_title": "OverTheWire: Bandit: Solving Bandit 1 -> Bandit 2",
+        "blog_author": "Chetanya Kunndra",
+        "blog_summary": "Bandit is a war-game on OverTheWire.org made for absolute beginners. It teaches you the basics of linux file system. Here we will solve the bandit1 level",
+        "blog_publish_date": "27/06/2021",
         "blog_tags": [
-            "Tag1"
+            "WriteUp",
+            "OverTheWire",
+            "Bandit", 
+            "Bash", 
+            "Linux"
         ]
     },
-    "1": {
-        "blog_location": "static/blogs/1.json",
-        "blog_title": "Testing title",
-        "blog_content": "fudduu",
+    "3": {
+        "blog_location": "static/blogs/OverTheWire-WriteUps/Bandit/bandit2to3.json",
+        "blog_title": "OverTheWire: Bandit: Solving Bandit 2 -> Bandit 3",
         "blog_author": "Chetanya Kunndra",
-        "blog_summary": "",
-        "blog_publish_date": "12/12/2121321",
+        "blog_summary": "Bandit is a war-game on OverTheWire.org made for absolute beginners. It teaches you the basics of linux file system. Here we will solve the bandit3 level",
+        "blog_publish_date": "27/06/2021",
         "blog_tags": [
-            "Tag2",
-            "Tag4"
+            "WriteUp",
+            "OverTheWire",
+            "Bandit", 
+            "Bash", 
+            "Linux"
+        ]
+    },
+    "4": {
+        "blog_location": "static/blogs/OverTheWire-WriteUps/Natas/natas0to1.json",
+        "blog_title": "OverTheWire: Natas: Solving Natas 0 -> Natas 1",
+        "blog_author": "Chetanya Kunndra",
+        "blog_summary": "Natas is a war-game on OverTheWire.org that aims at teaching about server-side web security, In this writeup I will be solving Natas0 Level",
+        "blog_publish_date": "28/06/2021",
+        "blog_tags": [
+            "WriteUp",
+            "OverTheWire",
+            "Natas",
+            "Web Exploitation",
+            "Web Security",
+            "Server-side"
+        ]
+    },
+    "5": {
+        "blog_location": "static/blogs/OverTheWire-WriteUps/Natas/natas1to2.json",
+        "blog_title": "OverTheWire: Natas: Solving Natas 1 -> Natas 2",
+        "blog_author": "Chetanya Kunndra",
+        "blog_summary": "Natas is a war-game on OverTheWire.org that aims at teaching about server-side web security, In this writeup I will be solving Natas1 Level",
+        "blog_publish_date": "28/06/2021",
+        "blog_tags": [
+            "WriteUp",
+            "OverTheWire",
+            "Natas",
+            "Web Exploitation",
+            "Web Security",
+            "Server-side"
+        ]
+    },
+    "6": {
+        "blog_location": "static/blogs/OverTheWire-WriteUps/Natas/natas2to3.json",
+        "blog_title": "OverTheWire: Natas: Solving Natas 2 -> Natas 3",
+        "blog_author": "Chetanya Kunndra",
+        "blog_summary": "Natas is a war-game on OverTheWire.org that aims at teaching about server-side web security, In this writeup I will be solving Natas Level",
+        "blog_publish_date": "28/06/2021",
+        "blog_tags": [
+            "WriteUp",
+            "OverTheWire",
+            "Natas",
+            "Web Exploitation",
+            "Web Security",
+            "Server-side"
         ]
     }
 }
