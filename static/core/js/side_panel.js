@@ -22,7 +22,7 @@ function process_date_meta_data() {
 }
 
 function process_tag_meta_data() {
-    fetch_json_data("../../" + TAGS_TO_BLOG_ID_MAPPING).then(function (meta_data) {
+    fetch_json_data("../../../" + TAGS_TO_BLOG_ID_MAPPING).then(function (meta_data) {
         const tag_side_panel = document.getElementById("side-panel-tags")
         const h4_title = document.createElement("h4");
         h4_title.innerHTML = "Search by tag: ";
@@ -38,7 +38,7 @@ function process_tag_meta_data() {
 }
 
 function process_author_meta_data() {
-    fetch_json_data("../../" + AUTHOR_BLOG_ID_MAPPING).then(function (meta_data) {
+    fetch_json_data("../../../" + AUTHOR_BLOG_ID_MAPPING).then(function (meta_data) {
         const author_side_panel = document.getElementById("side-panel-authors")
         const h4_title = document.createElement("h4");
         h4_title.innerHTML = "Search by author: ";

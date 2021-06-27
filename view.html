@@ -36,12 +36,13 @@
 
     <!-- version 1.0 style -->
     <!-- @TODO: If large shift to a css file -->
-    <link href="static/default/css/deafult.css" rel="stylesheet">
+    <link href="static/core/css/core.css" rel="stylesheet">
     <!-- version 1.0 style Ends -->
 
 </head>
 
 <body>
+   
 
     <!-- Magnify Starts -->
     <div id="magnify">
@@ -52,11 +53,14 @@
 
     <!-- version 1.0 -->
     <!-- Description: this version will contain the base design like, a solid bg, animated bg will come out in future versions-->
+    <!-- Navigation Bar -->
+    <div id="navigation-bar"></div>
+    <!-- Navigation Bar Ends -->
     <div class="row container-fluid">
         <div class="col-lg-9">
             <div class="container-fluid" id="new_blogs">
                 <!-- One blog card -->
-                <div class="row blog_card">
+                <div class="row blog_card d-flex">
                     <div class="col">
                         <div class="card text-justify" id="">
 
@@ -102,11 +106,12 @@
     </div>
     <!-- Footer Ends -->
     <!-- Magnify Script -->
-    <script src="static/js/magnify.js" type="text/javascript"></script>
+    <script src="static/core/js/magnify.js" type="text/javascript"></script>
     <!-- Magnify Script ends-->
-    <script type="text/javascript" src="static/js/view.js"></script>
-    <script type="module" src="static/js/side_panel.js"></script>
-    <script type="module" src="static/js/footer.js"></script>
+    <script type="module" src="static/core/js/navbar.js"></script>
+    <script type="text/javascript" src="static/core/js/view.js"></script>
+    <script type="module" src="static/core/js/side_panel.js"></script>
+    <script type="module" src="static/core/js/footer.js"></script>
 
 </body>
 
