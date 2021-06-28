@@ -4,8 +4,8 @@
         "blog_title": "Testing title",
         "blog_content": "Lorean ipsum",
         "blog_author": "Chetanya Kunndra",
-        "blog_summary": "LMAOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
-        "blog_publish_date": "12/12/2121",
+        "blog_summary": "hey you",
+        "blog_publish_date": "12/11/2121",
         "blog_tags": [
             "Tag3"
         ]
@@ -14,9 +14,9 @@
         "blog_location": "static/blogs/1.json",
         "blog_title": "Testing title",
         "blog_content": "fudduu",
-        "blog_author": "Mansha Grover ",
-        "blog_summary": "",
-        "blog_publish_date": "12/12/2121321",
+        "blog_author": "Mansha Grover",
+        "blog_summary": "hey you",
+        "blog_publish_date": "12/12/1999",
         "blog_tags": [
             "Tag1"
         ]
@@ -25,9 +25,33 @@
         "blog_location": "static/blogs/1.json",
         "blog_title": "Testing title",
         "blog_content": "fudduu",
-        "blog_author": "Chetanya Kunndra",
-        "blog_summary": "",
-        "blog_publish_date": "12/12/2121321",
+        "blog_author": "Chetanya Kunndra         ",
+        "blog_summary": "hey you",
+        "blog_publish_date": "12/11/2020",
+        "blog_tags": [
+            "Tag2",
+            "Tag4"
+        ]
+    },
+    "4": {
+        "blog_location": "static/blogs/1.json",
+        "blog_title": "Testing title",
+        "blog_content": "fudduu",
+        "blog_author": "Chetanya Kunndra         ",
+        "blog_summary": "hey youuuuu",
+        "blog_publish_date": "12/12/2020",
+        "blog_tags": [
+            "Tag2",
+            "Tag4"
+        ]
+    },
+    "5": {
+        "blog_location": "static/blogs/1.json",
+        "blog_title": "Testing title",
+        "blog_content": "fudduu",
+        "blog_author": "Chetanya Kunndra         ",
+        "blog_summary": "hey youuuuu",
+        "blog_publish_date": "12/12/2020",
         "blog_tags": [
             "Tag2",
             "Tag4"
