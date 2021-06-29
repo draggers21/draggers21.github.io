@@ -15,7 +15,7 @@ else
 	against=$(git hash-object -t tree /dev/null)
 fi
 
-python3 python_files/meta_data_processor.py
+python3 static/meta_data_meta_data_processor.py
 git add .
 # If you want to allow non-ASCII filenames set this variable to true.
 allownonascii=$(git config --bool hooks.allownonascii)
