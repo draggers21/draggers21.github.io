@@ -85,5 +85,19 @@
             "Web Security",
             "Server-side"
         ]
+    },
+    "7": {
+        "blog_location": "static/blogs/OverTheWire-WriteUps/Leviathan/leviathan0to1.json",
+        "blog_title": "OverTheWire: Leviathan: Solving Leviathan 0 -> Leviathan 1",
+        "blog_author": "Chetanya Kunndra",
+        "blog_summary": "Leviathan is a war-game on OverTheWire.org that tests players knowledge *nix commands and linux file system fundamentals, in this writeup we will solve Leviathan Level 0",
+        "blog_publish_date": "29/06/2021",
+        "blog_tags": [
+            "WriteUp",
+            "OverTheWire",
+            "Leviathan",
+            "Linux",
+            "Bash"
+        ]
     }
 }
