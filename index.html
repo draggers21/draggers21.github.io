@@ -46,17 +46,25 @@
     <link href="static/core/css/core.css" rel="stylesheet">
     <!-- version 1.0 style Ends -->
 
+    <!-- Background Starts -->
+    <link href="static/core/css/background.css" rel="stylesheet">
+    <!-- Background Ends -->
+
 </head>
 
 <body>
-
+    <!-- Background Starts -->
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+    <!-- Background ends -->
     <!-- version 1.0 -->
     <!-- Description: this version will contain the base design like, a solid bg, animated bg will come out in future versions-->
     <div id="navigation-bar"></div>
 
-    <div class="row container-fluid">
+    <div class="row container-fluid" style="padding-right: inherit;">
         <div class="col-lg-9">
-            <div class="container-fluid" id="blog-card-holder"></div>
+            <div id="blog-card-holder"></div>
             <!-- Pagination -->
             <div class="row">
                 <div class="col" style="text-align: center;">
@@ -66,7 +74,7 @@
             <!-- Pagination Ends-->
         </div>
         <div class="col-lg-3">
-            <div class="container-fluid blog_card">
+            <div class="blog_card">
                 <div class="card text-justify" id="side-panel">
 
                     <div class="card-body blog-card">
@@ -200,5 +208,5 @@
     TODO:
     1. Loading mech 
     2. reduce pagination as 1 2 3 .. 10.
-    3. dynamic background
+    3. Check overflow issue in error.html and search.html
 -->
