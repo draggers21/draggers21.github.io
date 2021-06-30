@@ -50,10 +50,20 @@
     <link href="static/core/css/core.css" rel="stylesheet">
     <!-- version 1.0 style Ends -->
 
+    <!-- Background Starts -->
+    <link href="static/core/css/background.css" rel="stylesheet">
+    <!-- Background Ends -->
+
+
 </head>
 
 <body>
 
+    <!-- Background Starts -->
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+    <!-- Background ends -->
 
     <!-- Magnify Starts -->
     <div id="magnify">
@@ -67,20 +77,20 @@
     <!-- Navigation Bar -->
     <div id="navigation-bar"></div>
     <!-- Navigation Bar Ends -->
-    <div class="row container-fluid">
+    <div class="row container-fluid" style="padding-right: inherit;">
         <div class="col-lg-9">
-            <div class="container-fluid" id="new_blogs">
+            <div id="new_blogs">
                 <!-- One blog card -->
                 <div class="row blog_card d-flex">
                     <div class="col">
                         <div class="card text-justify" id="">
 
                             <div class="card-body blog-card">
-                                <h3 class="card-title" id="blog-title"></h3>
+                                <h3 class="card-title" id="blog-title" style="text-align: justify;"></h3>
                                 <p class="card-text" id="blog-author-name"></p>
                                 <p class="card-text" id="blog-publish-date"></p>
                                 <p class="card-text" id="blog-tags"></p>
-                                <h5 class="card-text" id="blog-content"></h5>
+                                <p class="card-text" id="blog-content" style="text-align: justify;"></p>
                             </div>
 
                         </div>
@@ -89,7 +99,7 @@
             </div>
         </div>
         <div class="col-lg-3">
-            <div class="container-fluid blog_card">
+            <div class="blog_card">
                 <div class="card text-justify" id="side-panel">
 
                     <div class="card-body blog-card">

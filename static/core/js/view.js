@@ -54,8 +54,8 @@ else {
             // console.log(blog_tags);
 
             document.getElementById("blog-title").innerHTML = blog_title;
-            document.getElementById("blog-author-name").innerHTML = "Author: " + blog_author;
-            document.getElementById("blog-publish-date").innerHTML = "Date Published: " + blog_publish_date;
+            document.getElementById("blog-author-name").innerHTML = "Author: <strong>" + blog_author + "</strong>";
+            document.getElementById("blog-publish-date").innerHTML = "Date Published: <strong>" + blog_publish_date  + "</strong>";
             // creating blog tags
             var tag_container = document.getElementById("blog-tags")
             tag_container.innerHTML = "Tags: ";

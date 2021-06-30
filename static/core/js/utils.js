@@ -31,7 +31,7 @@ export function create_blog_cards(blog_id, meta_data) {
     let div4 = document.createElement("div");
     div4.setAttribute("class", "card-body blog-card");
 
-    let blog_title_container = document.createElement("h3");
+    let blog_title_container = document.createElement("h4");
     blog_title_container.setAttribute("class", "card-title");
     blog_title_container.innerHTML = blog_title;
 
@@ -53,7 +53,7 @@ export function create_blog_cards(blog_id, meta_data) {
         blog_tags_container.appendChild(span);
     }
 
-    let blog_summary_container = document.createElement("h5");
+    let blog_summary_container = document.createElement("p");
     blog_summary_container.setAttribute("class", "card-text");
     blog_summary_container.innerHTML = blog_summary + " ";
 
