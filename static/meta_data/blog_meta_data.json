@@ -75,7 +75,7 @@
         "blog_location": "static/blogs/OverTheWire-WriteUps/Natas/natas2to3.json",
         "blog_title": "OverTheWire: Natas: Solving Natas 2 -> Natas 3",
         "blog_author": "Chetanya Kunndra",
-        "blog_summary": "Natas is a war-game on OverTheWire.org that aims at teaching about server-side web security, In this writeup I will be solving Natas Level",
+        "blog_summary": "Natas is a war-game on OverTheWire.org that aims at teaching about server-side web security, In this writeup I will be solving Natas Level 2",
         "blog_publish_date": "28/06/2021",
         "blog_tags": [
             "WriteUp",
