@@ -1,22 +1,22 @@
 body {
-    background-color: #121212;
+    background-color: #192734;
 }
 
 * {
-    color: #e0e0e0;
+    color: #ffffff;
 }
 
 a {
-    color: #e0e0e0;
+    color: #ffffff;
     text-decoration: none;
 }
 
 a:hover {
-    color: #e0e0e0;
+    color: #ffffff;
 }
 
 .tag-color {
-    background-color: #00897B;
+    background-color: #007c70;
 }
 
 .tag {
@@ -34,12 +34,12 @@ a:hover {
 }
 
 .blog-card {
-    background-color: #424242;
+    background-color: #192734;
     ;
 }
 
 .main-page-side-panel {
-    background-color: #424242;
+    background-color: #192734;
 }
 
 .blog-image {
@@ -50,7 +50,7 @@ a:hover {
 }
 
 .blog-fig-caption {
-    color: #bdbdbd;
+    color: #90a2af;
 }
 
 .pagination {
@@ -58,8 +58,8 @@ a:hover {
 }
 
 .pagination a {
-    color: #e0e0e0;
-    background-color: #424242;
+    color: #ffffff;
+    background-color: #192734;
     float: left;
     padding: 8px 16px;
     text-decoration: none;
@@ -68,7 +68,7 @@ a:hover {
 }
 
 .pagination a.this-is-the-active-page {
-    background-color: #00897B;
+    background-color: #007c70;
     color: white;
     border-radius: 50%;
 }
