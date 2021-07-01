@@ -19,6 +19,10 @@ a:hover {
     background-color: #007c70;
 }
 
+.tag-color:hover  {
+    background-color: #00695f;
+}
+
 .tag {
     padding-left: 10px;
     padding-right: 10px;
@@ -137,4 +141,14 @@ a:hover {
     background-size:contain !important;
     background-repeat:no-repeat !important;
     margin:0px auto;
+}
+
+.continue-reading {
+    text-align: right;
+}
+.continue-reading button {
+    background-color: #d60357;
+}
+.continue-reading button:hover {
+    background-color: #be014d;
 }

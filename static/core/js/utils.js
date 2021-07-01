@@ -55,12 +55,23 @@ export function create_blog_cards(blog_id, meta_data) {
 
     let blog_summary_container = document.createElement("p");
     blog_summary_container.setAttribute("class", "card-text");
-    blog_summary_container.innerHTML = blog_summary + " ";
+    blog_summary_container.innerHTML = blog_summary + "<br />";
 
-    let read_more_button = document.createElement("a");
-    read_more_button.setAttribute("href", "view.html?id=" + blog_id);
-    read_more_button.innerHTML = "...Continue Reading"
-    blog_summary_container.appendChild(read_more_button);
+    let read_more_section = document.createElement("p");
+    read_more_section.setAttribute("class", "card-text continue-reading");
+    
+    let read_more_button = document.createElement("button");
+    read_more_button.setAttribute("type", "button");
+    read_more_button.setAttribute("class", "btn");
+
+
+    let read_more_link = document.createElement("a");
+    read_more_link.setAttribute("href", "view.html?id=" + blog_id);
+    read_more_link.innerHTML = "<strong>Continue Reading</strong>"
+
+    read_more_button.appendChild(read_more_link);
+    read_more_section.appendChild(read_more_button);
+    // blog_summary_container.appendChild(read_more_section);
 
 
     div4.appendChild(blog_title_container);
@@ -68,6 +79,7 @@ export function create_blog_cards(blog_id, meta_data) {
     div4.appendChild(blog_date_container);
     div4.appendChild(blog_tags_container);
     div4.appendChild(blog_summary_container);
+    div4.appendChild(read_more_section);
 
     div3.appendChild(div4);
     div2.appendChild(div3);
