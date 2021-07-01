@@ -25,10 +25,6 @@ else {
         else if(!raw_query == ""){
             // search in title by default
             search_title(raw_query);
-            search_author(raw_query);
-            search_tags(raw_query);
-            search_summary(raw_query);
-            search_content(raw_query);
         }
         else{
             // error code 1503 is invalid search string
