@@ -12,6 +12,10 @@
         gtag('config', 'G-X3FMB6WHJJ');
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics Ends -->
+    <!-- Ad-sense code -->
+    <script data-ad-client="ca-pub-8804352608774351" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Ad-sense code -->
     <!-- Auxillary tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +26,10 @@
     <title>
         Blog :=)
     </title>
-
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Jquery Ends-->
     <!-- Bootstrap CSS and JS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -39,57 +46,72 @@
     <!-- Background Starts -->
     <link href="static/core/css/background.min.css" rel="stylesheet">
     <!-- Background Ends -->
+
+    <!-- Loader Starts -->
+    <!-- <link href="static/core/css/loader.min.css" rel="stylesheet"> -->
+    <!-- Loader Ends -->
+
+    <!-- animate starts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!-- animate ends -->
 </head>
 
 <body>
-    <!-- Background Starts -->
-    <div id='stars'></div>
-    <div id='stars2'></div>
-    <div id='stars3'></div>
-    <!-- Background ends -->
-    <div id="navigation-bar"></div>
-    <!-- version 1.0 -->
-    <!-- Description: this version will contain the base design like, a solid bg, animated bg will come out in future versions-->
-  
-    <div class="row container-fluid" style="padding-right: inherit;">
-        <div class="col-lg-9">
-            <div id="new_blogs">
-                <!-- Error description tab  -->
-                <div class="row blog_card">
-                    <div class="col">
-                        <div class="card text-justify" id="">
+    <!-- Spinner starts -->
+    <!-- <div id="full-page-loader">
+        <div id="full-page-spinner"></div>
+    </div> -->
+    <!-- Spinner Ends -->
+    <!-- Main content starts -->
+    <div id="main-page-content" class="animated fadeIn">
+        <!-- Background Starts -->
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+        <!-- Background ends -->
+        <div id="navigation-bar"></div>
+        <!-- version 1.0 -->
+        <!-- Description: this version will contain the base design like, a solid bg, animated bg will come out in future versions-->
 
-                            <div class="card-body blog-card">
-                                <h3 class="card-title">Oops! looks like you ran into an error.</h3>
-                                <br />
-                                <h5 class="card-text" id="error-code"></h5>
-                                <h5 class="card-text" id="error-description"></h5>
+        <div class="row container-fluid" style="padding-right: inherit;">
+            <div class="col-lg-9">
+                <div id="new_blogs">
+                    <!-- Error description tab  -->
+                    <div class="row blog_card">
+                        <div class="col">
+                            <div class="card text-justify" id="">
+
+                                <div class="card-body blog-card">
+                                    <h3 class="card-title">Oops! looks like you ran into an error.</h3>
+                                    <br />
+                                    <h5 class="card-text" id="error-code"></h5>
+                                    <h5 class="card-text" id="error-description"></h5>
+                                </div>
+
                             </div>
-
                         </div>
                     </div>
-                </div>
-                <!-- Error description tab  ends -->
+                    <!-- Error description tab  ends -->
 
-                <!-- Search Tab -->
-                <div class="row blog_card">
-                    <div class="col">
-                        <div class="card text-justify" id="">
+                    <!-- Search Tab -->
+                    <div class="row blog_card">
+                        <div class="col">
+                            <div class="card text-justify" id="">
 
-                            <div class="card-body blog-card">
-                                <h3 class="card-title">Nothing something a good ol' search can't fix.</h3>
-                                <br />
-                                <form class="card-text d-flex" action="search.html" method="GET" id="search_form">
-                                    <input placeholder="Search" class="form-control me-2" name="query"
-                                        style="background-color: #1d1c1c;color: #e0e0e0;">
-                                    <button class="btn btn-outline-success" type="submit"
-                                        style="background-color: #00897B; color: #e0e0e0; font-weight: 900;">Search</button>
-                                </form>
-                                <br />
-                                <!-- <h5 class="card-text">Search manual: </h5> -->
-                                <p class="card-text">Try using the following filters to make your search more
-                                    refined.
+                                <div class="card-body blog-card">
+                                    <h3 class="card-title">Nothing something a good ol' search can't fix.</h3>
                                     <br />
+                                    <form class="card-text d-flex" action="search.html" method="GET" id="search_form">
+                                        <input placeholder="Search" class="form-control me-2" name="query"
+                                            style="background-color: #ffffff;color: #000000;">
+                                        <button class="btn tag-color" type="submit"
+                                            style="font-weight: 900; color: #ffffff;">Search</button>
+                                    </form>
+                                    <br />
+                                    <!-- <h5 class="card-text">Search manual: </h5> -->
+                                    <p class="card-text">Try using the following filters to make your search more
+                                        refined.
+                                        <br />
                                     <ol>
                                         <li>"author": Use this filter to search for blogs using author name.
                                             <br />Usage: "author:John Doe"
@@ -116,15 +138,15 @@
                                             <br />Usage: "content:Lorem Ipsum"
                                         </li>
                                     </ol>
-                                </p>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Search Tab ends -->
+                    <!-- Search Tab ends -->
 
-                <!-- Featured Tab -->
-                <!-- <div class="row blog_card">
+                    <!-- Featured Tab -->
+                    <!-- <div class="row blog_card">
                         <div class="col">
                             <div class="card text-justify" id="">
 
@@ -138,38 +160,45 @@
                             </div>
                         </div>
                     </div> -->
-                <!-- Featured Tab Ends-->
-
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="blog_card">
-                <div class="card text-justify" id="side-panel">
-
-                    <div class="card-body blog-card">
-                        <h3 class="card-title">Archives</h3>
-                        <br />
-                        <div id="side-panel-date"></div>
-                        <br />
-                        <div id="side-panel-tags"></div>
-                        <br />
-                        <div id="side-panel-authors"></div>
-                        <br />
-                    </div>
+                    <!-- Featured Tab Ends-->
 
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- version 1.0 Ends -->
-    <!-- Footer -->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col" style="text-align: center;" id="footer-text">
+            <div class="col-lg-3">
+                <div class="blog_card">
+                    <div class="card text-justify" id="side-panel">
+
+                        <div class="card-body blog-card">
+                            <h3 class="card-title">Archives</h3>
+                            <br />
+                            <div id="side-panel-date"></div>
+                            <br />
+                            <div id="side-panel-tags"></div>
+                            <br />
+                            <div id="side-panel-authors"></div>
+                            <br />
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- version 1.0 Ends -->
+        <!-- Footer -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col" style="text-align: center;" id="footer-text">
+                </div>
+            </div>
+        </div>
+        <!-- Footer Ends -->
     </div>
-    <!-- Footer Ends -->
+    <!-- Main content Ends -->
+    <!-- <script type="module" src="static/core/js/loader.js"></script> -->
+    <script type="text/javascript">
+        window.location.hash = '#main-page-content';
+        window.location.hash = '';
+    </script>
     <script type="module" src="static/core/js/navbar.js"></script>
     <script type="module" src="static/core/js/error.js"></script>
     <script type="module" src="static/core/js/side_panel.js"></script>
