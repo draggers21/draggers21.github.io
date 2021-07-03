@@ -1,1 +1,60 @@
-{"Web Security": ["4", "5", "6"], "Linux": ["1", "2", "3", "7"], "Web Exploitation": ["4", "5", "6"], "OverTheWire": ["1", "2", "3", "4", "5", "6", "7"], "Bandit": ["1", "2", "3"], "WriteUp": ["1", "2", "3", "4", "5", "6", "7"], "Server-side": ["4", "5", "6"], "Bash": ["1", "2", "3", "7"], "Natas": ["4", "5", "6"], "Leviathan": ["7"]}
+{
+    "Web Security": [
+        "b5948611b3ddd6063f7affc264483ce52f5fa671a19b32553cc50694ebe13911",
+        "a54eec7e097aeed42f11647d32c8ba831ce9c631689b952be70ccf39cbab8f1a",
+        "8407d3054a7e6f39aa817124427cce6faf821f4e0a2950ab448a67e40239581e"
+    ],
+    "OverTheWire": [
+        "48a2cc7369a37de5edfea848e8792ba78ab4308f06a371d807b7255a29a55a43",
+        "1ac2060e471a4d9ef004e5cda7c62e6e3f0e386f7bffa6ed53901124c83b716b",
+        "28cef56f3ff578d05d47f7d5448dbdc598d472a09371ba2ef50b887b15cb23c2",
+        "b5948611b3ddd6063f7affc264483ce52f5fa671a19b32553cc50694ebe13911",
+        "a54eec7e097aeed42f11647d32c8ba831ce9c631689b952be70ccf39cbab8f1a",
+        "8407d3054a7e6f39aa817124427cce6faf821f4e0a2950ab448a67e40239581e",
+        "9a2e26224cc39d59507b7567511c14b4b3b9aef769a1a1f1b260d6b6485698c6"
+    ],
+    "Natas": [
+        "b5948611b3ddd6063f7affc264483ce52f5fa671a19b32553cc50694ebe13911",
+        "a54eec7e097aeed42f11647d32c8ba831ce9c631689b952be70ccf39cbab8f1a",
+        "8407d3054a7e6f39aa817124427cce6faf821f4e0a2950ab448a67e40239581e"
+    ],
+    "WriteUp": [
+        "48a2cc7369a37de5edfea848e8792ba78ab4308f06a371d807b7255a29a55a43",
+        "1ac2060e471a4d9ef004e5cda7c62e6e3f0e386f7bffa6ed53901124c83b716b",
+        "28cef56f3ff578d05d47f7d5448dbdc598d472a09371ba2ef50b887b15cb23c2",
+        "b5948611b3ddd6063f7affc264483ce52f5fa671a19b32553cc50694ebe13911",
+        "a54eec7e097aeed42f11647d32c8ba831ce9c631689b952be70ccf39cbab8f1a",
+        "8407d3054a7e6f39aa817124427cce6faf821f4e0a2950ab448a67e40239581e",
+        "9a2e26224cc39d59507b7567511c14b4b3b9aef769a1a1f1b260d6b6485698c6"
+    ],
+    "Web Exploitation": [
+        "b5948611b3ddd6063f7affc264483ce52f5fa671a19b32553cc50694ebe13911",
+        "a54eec7e097aeed42f11647d32c8ba831ce9c631689b952be70ccf39cbab8f1a",
+        "8407d3054a7e6f39aa817124427cce6faf821f4e0a2950ab448a67e40239581e"
+    ],
+    "Linux": [
+        "48a2cc7369a37de5edfea848e8792ba78ab4308f06a371d807b7255a29a55a43",
+        "1ac2060e471a4d9ef004e5cda7c62e6e3f0e386f7bffa6ed53901124c83b716b",
+        "28cef56f3ff578d05d47f7d5448dbdc598d472a09371ba2ef50b887b15cb23c2",
+        "9a2e26224cc39d59507b7567511c14b4b3b9aef769a1a1f1b260d6b6485698c6"
+    ],
+    "Server-side": [
+        "b5948611b3ddd6063f7affc264483ce52f5fa671a19b32553cc50694ebe13911",
+        "a54eec7e097aeed42f11647d32c8ba831ce9c631689b952be70ccf39cbab8f1a",
+        "8407d3054a7e6f39aa817124427cce6faf821f4e0a2950ab448a67e40239581e"
+    ],
+    "Bandit": [
+        "48a2cc7369a37de5edfea848e8792ba78ab4308f06a371d807b7255a29a55a43",
+        "1ac2060e471a4d9ef004e5cda7c62e6e3f0e386f7bffa6ed53901124c83b716b",
+        "28cef56f3ff578d05d47f7d5448dbdc598d472a09371ba2ef50b887b15cb23c2"
+    ],
+    "Bash": [
+        "48a2cc7369a37de5edfea848e8792ba78ab4308f06a371d807b7255a29a55a43",
+        "1ac2060e471a4d9ef004e5cda7c62e6e3f0e386f7bffa6ed53901124c83b716b",
+        "28cef56f3ff578d05d47f7d5448dbdc598d472a09371ba2ef50b887b15cb23c2",
+        "9a2e26224cc39d59507b7567511c14b4b3b9aef769a1a1f1b260d6b6485698c6"
+    ],
+    "Leviathan": [
+        "9a2e26224cc39d59507b7567511c14b4b3b9aef769a1a1f1b260d6b6485698c6"
+    ]
+}

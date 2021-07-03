@@ -1,5 +1,5 @@
-{
-    "48a2cc7369a37de5edfea848e8792ba78ab4308f06a371d807b7255a29a55a43": {
+[
+    {
         "blog_location": "static/blogs/OverTheWire-WriteUps/Bandit/bandit0to1.json",
         "blog_title": "OverTheWire: Bandit: Solving Bandit 0 -> Bandit 1",
         "blog_author": "Chetanya Kunndra",
@@ -13,7 +13,7 @@
             "Linux"
         ]
     },
-    "1ac2060e471a4d9ef004e5cda7c62e6e3f0e386f7bffa6ed53901124c83b716b": {
+    {
         "blog_location": "static/blogs/OverTheWire-WriteUps/Bandit/bandit1to2.json",
         "blog_title": "OverTheWire: Bandit: Solving Bandit 1 -> Bandit 2",
         "blog_author": "Chetanya Kunndra",
@@ -27,7 +27,7 @@
             "Linux"
         ]
     },
-    "28cef56f3ff578d05d47f7d5448dbdc598d472a09371ba2ef50b887b15cb23c2": {
+    {
         "blog_location": "static/blogs/OverTheWire-WriteUps/Bandit/bandit2to3.json",
         "blog_title": "OverTheWire: Bandit: Solving Bandit 2 -> Bandit 3",
         "blog_author": "Chetanya Kunndra",
@@ -41,7 +41,7 @@
             "Linux"
         ]
     },
-    "b5948611b3ddd6063f7affc264483ce52f5fa671a19b32553cc50694ebe13911": {
+    {
         "blog_location": "static/blogs/OverTheWire-WriteUps/Natas/natas0to1.json",
         "blog_title": "OverTheWire: Natas: Solving Natas 0 -> Natas 1",
         "blog_author": "Chetanya Kunndra",
@@ -56,7 +56,7 @@
             "Server-side"
         ]
     },
-    "a54eec7e097aeed42f11647d32c8ba831ce9c631689b952be70ccf39cbab8f1a": {
+    {
         "blog_location": "static/blogs/OverTheWire-WriteUps/Natas/natas1to2.json",
         "blog_title": "OverTheWire: Natas: Solving Natas 1 -> Natas 2",
         "blog_author": "Chetanya Kunndra",
@@ -71,7 +71,7 @@
             "Server-side"
         ]
     },
-    "8407d3054a7e6f39aa817124427cce6faf821f4e0a2950ab448a67e40239581e": {
+    {
         "blog_location": "static/blogs/OverTheWire-WriteUps/Natas/natas2to3.json",
         "blog_title": "OverTheWire: Natas: Solving Natas 2 -> Natas 3",
         "blog_author": "Chetanya Kunndra",
@@ -86,7 +86,7 @@
             "Server-side"
         ]
     },
-    "9a2e26224cc39d59507b7567511c14b4b3b9aef769a1a1f1b260d6b6485698c6": {
+    {
         "blog_location": "static/blogs/OverTheWire-WriteUps/Leviathan/leviathan0to1.json",
         "blog_title": "OverTheWire: Leviathan: Solving Leviathan 0 -> Leviathan 1",
         "blog_author": "Chetanya Kunndra",
@@ -100,4 +100,4 @@
             "Bash"
         ]
     }
-}
+]
