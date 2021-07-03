@@ -14,9 +14,10 @@ BLOG_MASTER_DATA = {}
 
 def parse_blog_data(individual_blog_data: list):
     for blog in individual_blog_data:
-        blog_content = load(open(blog['blog_location'], 'r'))['blog_content']
         blog_author = blog['blog_author']
-        blog_id = sha256((blog_author+"<>"+blog_content).encode("utf-8")).hexdigest()
+        blog_location = blog['blog_location']
+        blog_summary = blog['blog_summary']
+        blog_id = sha256((blog_author+"<>"+blog_location+"<>"+blog_summary).encode("utf-8")).hexdigest()
         BLOG_MASTER_DATA[blog_id] = blog
 
 

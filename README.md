@@ -11,7 +11,7 @@
                 src='<image path goes here>' 
                 alt='<alt caption(for seo purpose) mandatoy>' 
                 onclick='magnify(this.src)' 
-                class='figure-img img-fluid rounded blog-image'>
+                class='figure-img img-fluid  blog-image'>
                 <figcaption 
                 class='figure-caption blog-fig-caption'>
                 <Image caption>
