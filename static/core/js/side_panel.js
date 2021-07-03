@@ -11,10 +11,11 @@ function process_date_meta_data() {
         for (let i = 0; i < years.length; i++) {
             const months = Object.keys(meta_data[years[i]]);
             for (let j = 0; j < months.length; j++) {
-                const h5_date_tag = document.createElement("h5");
                 const temp_date = months[j] + " " + years[i];
-                h5_date_tag.innerHTML = '<a href="search.html?query=date:' + temp_date + '">' + capitalizeFirstLetter(temp_date) + '</a>';
-                date_side_panel.appendChild(h5_date_tag);
+                const span_container = document.createElement("span");
+                span_container.setAttribute("class", "badge rounded-pill tag tag-color");
+                span_container.innerHTML = '<a href="search.html?query=date:' + temp_date + '">' + capitalizeFirstLetter(temp_date) + '</a>';
+                date_side_panel.appendChild(span_container);
             }
 
         }
