@@ -1,3 +1,10 @@
+"""
+    Name: meta_data_processor.py
+    Authors: Manasvi Gupta, Chetanya Kunndra
+    Contact: @Manasvi1997 @Ck1998
+    Desc: Converts individual blog data into meta data and creates mapping that is used in the website.
+"""
+
 from json import load, dump
 from hashlib import sha256
 from itertools import groupby
