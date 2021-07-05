@@ -47,10 +47,14 @@
         This is para 2
         ```
 
-        If no separate line is added between two paragraphs, they will be added in the line and treated as same paragraphs.
-    1. To add an image use the following code syntax- 
-        **add_img:src=<Source of the image>:alt=<Alternate title of the image, this is used for SEO, Mandatory>:caption=<Caption for the image, always add caption, looks good :)>**
-
+        If no separate line is added between two paragraphs, they will be added in the line and treated as same paragraphs and will look like this.
+        ```
+        This is para 1.This is para 
+        ```
+    2. To add an image use the following code syntax- 
+        ```
+        add_img:src=<Source of the image>:alt=<Alternate title of the image, this is used for SEO, Mandatory>:caption=<Caption for the image, always add caption, looks good :)>
+        ```
         Eg: 
         1. add_img:src=static/images/OverTheWire-WriteUps/Leviathan/leviathan1to2/leviathan1to2_2.webp:alt=SSHing into the server:caption=SSHing into the server.
         
@@ -58,11 +62,11 @@
         Eg: 
         1. add_img:src=static/images/OverTheWire-WriteUps/Leviathan/leviathan1to2/leviathan1to2_2.webp:alt=SSHing into the server:caption=SSHing 'into' the server.
 
-    2. To add code to blog use this following code snippet -
+    3. To add code to blog use this following code snippet -
         **Yet to add :(:(**
-    3. Separate image and paragraphs using a single blank line. In general separate any two different entities by a single blank line.
-    4. In order to put something in bold, within a paragraph (yes just paragraphs, bold images do not make any sense.), enclose the required content within **"\*\*"**, just like in markdown.
-        Eg: Consider this sentence - "I need to make **this** bold.
+    4. Separate image and paragraphs using a single blank line. In general separate any two different entities by a single blank line.
+    5. In order to put something in bold, within a paragraph (yes just paragraphs, bold images do not make any sense.), enclose the required content within    **"\*\*"**, just like in markdown.
+        Eg: Consider this sentence - "I need to make \*\*this\*\* bold.
             When rendered it will be replaced as ```I need to make <strong>this</strong> bold.```
         
 4. Now once your rough draft is ready, use the python file **content_generator.py** located in the **static/supplementary_python_files** directory.

@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html" style="color: #ffffff; font-weight: bold;"><h3>Home</h3></a>
+          <a class="nav-link active" aria-current="page" href="https://draggers21.github.io/index.html" style="color: #ffffff; font-weight: bold;"><h3>Home</h3></a>
         </li>
       </ul>
-      <form class="d-flex" action="search.html" method="GET" style="margin-top: 15px;">
+      <form class="d-flex" action="https://draggers21.github.io/search.html" method="GET" style="margin-top: 15px;">
         <input class="form-control me-2" name="query" type="search" placeholder="Search" aria-label="Search" style="background-color: #1d1c1c;color: #ffffff;">
           <button class="btn btn-outline-success" type="submit" style="background-color: #00897B; color: #ffffff; font-weight: 900;">Search</button>
     </form>
@@ -27,7 +27,7 @@ div1.setAttribute("class", "container-fluid");
 
 let brand_a = document.createElement("a");
 brand_a.setAttribute("class", "navbar-brand");
-brand_a.setAttribute("href", "index.html");
+brand_a.setAttribute("href", "https://draggers21.github.io/index.html");
 brand_a.setAttribute("style", "margin-left: 10px");
 brand_a.innerHTML = "<h3 style='color:#ffffff;'>Home</h3>";
 div1.appendChild(brand_a);
@@ -63,7 +63,7 @@ li1.setAttribute("class", "nav-item");
 let a1 = document.createElement("a");
 a1.setAttribute("class", "nav-link active");
 a1.setAttribute("aria-current", "page");
-a1.setAttribute("href", "index.html");
+a1.setAttribute("href", "https://draggers21.github.io/index.html");
 a1.setAttribute("style", "color: #ffffff; font-weight: bold;");
 a1.innerHTML = "<h4>Home</h4>";
 
@@ -75,7 +75,7 @@ div2.appendChild(ul);
 
 let form = document.createElement("form");
 form.setAttribute("class", "d-flex");
-form.setAttribute("action", "search.html");
+form.setAttribute("action", "https://draggers21.github.io/search.html");
 form.setAttribute("method", "GET");
 form.setAttribute("style", "margin-top: 10px;");
 form.setAttribute("style", "margin-bottom: 5px;");

@@ -10,7 +10,7 @@ from json import dump
 from re import search, finditer
 
 
-IMAGE_REGEX_PATTERN = r"(add_img):(src)=(.+):(alt)=(.+):(caption)=(.+):(end_img)"
+IMAGE_REGEX_PATTERN = r"(add_img):(src)=(.+):(alt)=(.+):(caption)=(.+)"
 BOLD_REGEX_PATTERN = r"\*\*"
 
 
