@@ -3,12 +3,12 @@ import { ERROR_CODE_DESCRIPTION_MAPPING } from "./constants.js";
 
 if (!params) {
     // redirect to home page if no get parameters are passed
-    window.location.replace("index.html");
+    window.location.replace("https://draggers21.github.io/index.html");
 }
 else {
     if (!params.has("err_code")) {
         // redirect to home page if "err_code" parameter is not passed
-        window.location.replace("index.html");
+        window.location.replace("https://draggers21.github.io/index.html");
     }
     else {
         const err_code = params.get("err_code");

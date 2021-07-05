@@ -1,12 +1,12 @@
 const params = new URLSearchParams(window.location.search);
 if (!params) {
     // redirect to home page if no get parameters are passed
-    window.location.replace("index.html");
+    window.location.replace("https://draggers21.github.io/index.html");
 }
 else {
     if (!params.has("id")) {
         // redirect to home page if "id" parameter is not passed
-        window.location.replace("index.html");
+        window.location.replace("https://draggers21.github.io/index.html");
     }
     else {
         const blog_id = params.get("id");
@@ -26,9 +26,9 @@ else {
                 catch (err) {
                     // try fetching the specific data from the json
                     // if record not found then
-                    // redirect to error.html page
+                    // redirect to https://draggers21.github.io/error.html page
                     // error code 1501 - Invalid Blog ID
-                    window.location.replace("error.html?err_code=1501");
+                    window.location.replace("https://draggers21.github.io/error.html?err_code=1501");
                     // console.log(err)
                 }
             })
@@ -42,27 +42,29 @@ else {
 
             const blog_location = blog_meta_data.blog_location;
             const blog_title = blog_meta_data.blog_title;
+            const blog_summary = blog_meta_data.blog_summary;
+            // Changing document title and description
+            document.title = blog_title + " | Draggers21";
+
+            // Changing meta description
+            let current_meta_description_content = document.querySelector('meta[name="Description"]').getAttribute("content");
+            document.querySelector('meta[name="Description"]').setAttribute("content", blog_summary + " | " + current_meta_description_content);
+
             const blog_author = blog_meta_data.blog_author;
             const blog_publish_date = blog_meta_data.blog_publish_date;
             const blog_tags = blog_meta_data.blog_tags;
 
-            // console.log(blog_id);
-            // console.log(blog_location);
-            // console.log(blog_title);
-            // console.log(blog_author);
-            // console.log(blog_publish_date);
-            // console.log(blog_tags);
 
             document.getElementById("blog-title").innerHTML = blog_title;
             document.getElementById("blog-author-name").innerHTML = "Author: <strong>" + blog_author + "</strong>";
-            document.getElementById("blog-publish-date").innerHTML = "Date Published: <strong>" + blog_publish_date  + "</strong>";
+            document.getElementById("blog-publish-date").innerHTML = "Date Published: <strong>" + blog_publish_date + "</strong>";
             // creating blog tags
             var tag_container = document.getElementById("blog-tags")
             tag_container.innerHTML = "Tags: ";
             for (var i = 0; i < blog_tags.length; i++) {
                 var span = document.createElement("span");
                 span.setAttribute("class", "badge rounded-pill tag tag-color");
-                span.innerHTML = '<a href="search.html?query=tags:' + blog_tags[i] + '">' + blog_tags[i] + '</a>';
+                span.innerHTML = '<a href="https://draggers21.github.io/search.html?query=tags:' + blog_tags[i] + '">' + blog_tags[i] + '</a>';
                 tag_container.appendChild(span);
             }
             fetch_blog_content(blog_location);
@@ -81,9 +83,9 @@ else {
                     catch (err) {
                         // try fetching the blog content from the blog location
                         // if record not found then
-                        // redirect to error.html page
+                        // redirect to https://draggers21.github.io/error.html page
                         // error code 1502 - No Blog content found
-                        window.location.replace("error.html?err_code=1502");
+                        window.location.replace("https://draggers21.github.io/error.html?err_code=1502");
                         // console.log(err)
 
                     }
