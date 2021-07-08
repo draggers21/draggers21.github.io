@@ -49,7 +49,7 @@ export function create_blog_cards(blog_id, meta_data) {
     for (let j = 0; j < blog_tags.length; j++) {
         let span = document.createElement("span");
         span.setAttribute("class", "badge rounded-pill tag tag-color");
-        span.innerHTML = '<a href="https://draggers21.github.io/search.html?query=tags:' + blog_tags[j] + '">' + blog_tags[j] + '</a>';
+        span.innerHTML = '<a href="search.html?query=tags:' + blog_tags[j] + '">' + blog_tags[j] + '</a>';
         blog_tags_container.appendChild(span);
     }
 
@@ -66,7 +66,7 @@ export function create_blog_cards(blog_id, meta_data) {
 
 
     let read_more_link = document.createElement("a");
-    read_more_link.setAttribute("href", "https://draggers21.github.io/view.html?id=" + blog_id);
+    read_more_link.setAttribute("href", "view.html?id=" + blog_id);
     read_more_link.innerHTML = "<strong>Continue Reading</strong>"
 
     read_more_button.appendChild(read_more_link);

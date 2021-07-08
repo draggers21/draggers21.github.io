@@ -16,9 +16,9 @@ function index_driver() {
             catch (err) {
                 // try fetching the specific data from the json
                 // if record not found then
-                // redirect to https://draggers21.github.io/error.html page
+                // redirect to error.html page
                 // error code 1501 - Invalid Blog ID
-                window.location.replace("https://draggers21.github.io/error.html?err_code=1501");
+                window.location.replace("error.html?err_code=1501");
                 // console.log(err)
             }
         })

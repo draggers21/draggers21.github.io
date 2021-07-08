@@ -156,3 +156,23 @@ a:hover {
 #main-page-content{
     animation-delay:0.25s;
 }
+
+.next-post {
+    text-align: right;
+}
+.next-post button {
+    background-color: #d60357;
+}
+.next-post button:hover {
+    background-color: #be014d;
+}
+
+.prev-post {
+    text-align: left;
+}
+.prev-post button {
+    background-color: #d60357;
+}
+.prev-post button:hover {
+    background-color: #be014d;
+}
