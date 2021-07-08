@@ -14,7 +14,7 @@ function process_date_meta_data() {
                 const temp_date = months[j] + " " + years[i];
                 const span_container = document.createElement("span");
                 span_container.setAttribute("class", "badge rounded-pill tag tag-color");
-                span_container.innerHTML = '<a href="https://draggers21.github.io/search.html?query=date:' + temp_date + '">' + capitalizeFirstLetter(temp_date) + '</a>';
+                span_container.innerHTML = '<a href="search.html?query=date:' + temp_date + '">' + capitalizeFirstLetter(temp_date) + '</a>';
                 date_side_panel.appendChild(span_container);
             }
 
@@ -32,7 +32,7 @@ function process_tag_meta_data() {
         for (let i = 0; i < all_tags.length; i++) {
             const span_container = document.createElement("span");
             span_container.setAttribute("class", "badge rounded-pill tag tag-color");
-            span_container.innerHTML = '<a href="https://draggers21.github.io/search.html?query=tags:' + all_tags[i] + '">' + all_tags[i] + '</a>';
+            span_container.innerHTML = '<a href="search.html?query=tags:' + all_tags[i] + '">' + all_tags[i] + '</a>';
             tag_side_panel.appendChild(span_container);
         }
     });
@@ -48,7 +48,7 @@ function process_author_meta_data() {
         for (let i = 0; i < all_author.length; i++) {
             const span_container = document.createElement("span");
             span_container.setAttribute("class", "badge rounded-pill tag tag-color");
-            span_container.innerHTML = '<a href="https://draggers21.github.io/search.html?query=author:' + all_author[i] + '">' + all_author[i] + '</a>';
+            span_container.innerHTML = '<a href="search.html?query=author:' + all_author[i] + '">' + all_author[i] + '</a>';
             author_side_panel.appendChild(span_container);
         }
     });

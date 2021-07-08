@@ -4,12 +4,12 @@ import { BLOG_META_DATA_LOCATION, AUTHOR_BLOG_ID_MAPPING, DATE_TO_BLOG_ID_MAPPIN
 const params = new URLSearchParams(window.location.search);
 if (!params) {
     // show error if no params are passed
-    window.location.replace("https://draggers21.github.io/index.html");
+    window.location.replace("index.html");
 }
 else {
     if (!params.has("query")) {
         // show error if no params are passed
-        window.location.replace("https://draggers21.github.io/index.html");
+        window.location.replace("index.html");
     }
     else {
         const raw_query = sanitize_input(params.get("query"));
@@ -28,7 +28,7 @@ else {
         }
         else{
             // error code 1503 is invalid search string
-            window.location.replace("https://draggers21.github.io/error.html?err_code=1503");
+            window.location.replace("error.html?err_code=1503");
         }
     }
 }

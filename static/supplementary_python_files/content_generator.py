@@ -17,6 +17,15 @@ BOLD_REGEX_PATTERN = r"\*\*"
 def create_image_section(src, alt, caption):
     return f"<div class='row'><div class='col' style='text-align: center;'><figure class='figure' style='align-items: center;'><img src='{src}' alt='{alt}' onclick='magnify(this.src)' class='figure-img img-fluid blog-image'><figcaption class='figure-caption blog-fig-caption'>{caption}</figcaption></figure></div></div>"
 
+
+def create_next_post_button(url):
+    return f"<div class='col next-post'><button type='button' class='btn'><a href='{url}'><strong>Next Post &raquo;</strong></a></button></div>"
+
+
+def create_prev_post_button(url):
+    return f"<div class='col prev-post'><button type='button' class='btn'><a href='{url}'><strong>Next Post &raquo;</strong></a></button></div>"
+
+
 def parse_content(raw_content):
     blog_content = ""
     for line in raw_content:
@@ -38,6 +47,9 @@ def parse_content(raw_content):
                 else:
                     raise Exception("Key properties missing in img tag, check again.")
                 blog_content += create_image_section(src, alt, caption)
+        elif "next_post" == line[:9] or "prev_post" == line[:9]:
+            temp_line = "<div class='row'>"
+            temp_line += "</div>"
         else:
             # Check for bold elements in a list.
             matches = finditer(BOLD_REGEX_PATTERN, line)
