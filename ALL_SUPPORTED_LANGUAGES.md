@@ -1,5 +1,8 @@
 ### Code highlighting from prism.js (https://prismjs.com/)
 
+##### Use the Keyword to signify the language you want highlights for. 
+##### Keywords will be used in practice like: "code_start:lang=Keyword(To specify which language): code=.....)"
+<br />
 
 | Sno. | Language | Keyword |
 |---|---|---|
