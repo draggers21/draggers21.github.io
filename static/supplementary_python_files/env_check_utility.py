@@ -24,3 +24,5 @@ if __name__ == "__main__":
         print(f"[+] Could check and rectify for ENV variable in link_handling.js. Error: {e}")
     else:
         print("[+] link_handling.js file checked successfully.")
+
+    print("\n\n")
