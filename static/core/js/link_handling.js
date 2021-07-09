@@ -1,4 +1,4 @@
-let ENV = "dev";
+let ENV = "prod";
 
 function run_link_handling() {
     if (ENV == "dev") {
@@ -18,7 +18,6 @@ function run_link_handling() {
 
 
 function handle_link(BASE_URL) {
-    console.log(BASE_URL);
     let all_links = document.getElementsByTagName("a");
     for (var i=0; i < all_links.length; i++) {
         let curr_href = all_links[i].getAttribute("href");

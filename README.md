@@ -59,18 +59,20 @@
         ```
         This is para 1.This is para 
         ```
-    2. To add an image use the following code syntax- 
+    2. Separate each different entity with blank spaces. A blank space before and a blank space after. As a general practice separate two different paragraph, a paragraph and an image or a code with a blank line in between different sections.
+   
+    3. **ADDING IMAGES:** To add an image use the following code syntax- 
         ```
         add_img:src=<Source of the image>:alt=<Alternate title of the image, this is used for SEO, Mandatory>:caption=<Caption for the image, always add caption, looks good :)>
         ```
         Eg: 
-        1. add_img:src=static/images/OverTheWire-WriteUps/Leviathan/leviathan1to2/leviathan1to2_2.webp:alt=SSHing into the server:caption=SSHing into the server.
+        add_img:src=static/images/OverTheWire-WriteUps/Leviathan/leviathan1to2/leviathan1to2_2.webp:alt=SSHing into the server:caption=SSHing into the server.
         
         **Please note: DO NOT USE ANY QUOTATION MARKS IN 'src' or 'alt' fields, but you are free to use ONLY SINGLE QUOTES in caption fields.**
         Eg: 
-        1. add_img:src=static/images/OverTheWire-WriteUps/Leviathan/leviathan1to2/leviathan1to2_2.webp:alt=SSHing into the server:caption=SSHing 'into' the server.
+        add_img:src=static/images/OverTheWire-WriteUps/Leviathan/leviathan1to2/leviathan1to2_2.webp:alt=SSHing into the server:caption=SSHing 'into' the server.
 
-    3. To add code to your blog. Use the following syntax - 
+    4. **ADDING CODE:** To add code to your blog. Use the following syntax - 
         ```
         code_start:lang=<Language>:code=/* Can be a multiline code */:code_end
         ```
@@ -98,10 +100,27 @@
         ```
 
         to see the list of all supported languages, see **ALL_SUPPORTED_LANGUAGES.md**
-    4. Separate image and paragraphs using a single blank line. In general separate any two different entities by a single blank line.
-    5. In order to put something in bold, within a paragraph (yes just paragraphs, bold images do not make any sense.), enclose the required content within    **"\*\*"**, just like in markdown.
+    5. **MAKING TEXT BOLD:** In order to put something in bold, within a paragraph (yes just paragraphs, bold images do not make any sense.), enclose the required content within    **"\*\*"**, just like in markdown.
         Eg: Consider this sentence - "I need to make \*\*this\*\* bold.
             When rendered it will be replaced as ```I need to make <strong>this</strong> bold.```
+    6. **ADDING PREVIOUS POST AND NEXT POST BUTTONS:** To add a previous post and next button at the end of the blog, use the following code:
+       For "Next Post button" -
+       ```
+       next_post:url=<Url of the blog>
+       ```
+       Example: 
+       ```
+       next_post:url=http://127.0.0.1:5500/view.html?id=1
+       ```
+       
+       For "Previous Post button" -
+       ```
+       prev_post:url=<Url of the blog>
+       ```
+       Example: 
+       ```
+       prev_post:url=http://127.0.0.1:5500/view.html?id=1
+       ```
         
 4. Now once your rough draft is ready, use the python file **content_generator.py** located in the **static/supplementary_python_files** directory.
     **Usage: python3 content_generator.py <path to your rough draft>**
@@ -115,7 +134,7 @@
     ```
     The pre-commit file will take care of the rest. 
 7. Any corresponding images or any images in general are to be added into **static/images** folder, create a separate directory (If making a blog on a new topic) and add all images to that folder. Use the **image_converter.py** file located in **static/tatic/supplementary_python_files**, to convert images to web optimized images, i.e. **.webp**. See **Other Supplementary Python files** section below for usage.
-10. **In case you have any doubts, ping/DM Chetanya Kunndra.** 
+8.  **In case you have any doubts, ping/DM Chetanya Kunndra.** 
 
 
 #### **DO NOT UNDER ANY CIRCUMSTANCES CHANGE THE JSON FILES PRESENT IN static/meta_data/ (this does not refer to the json files, present in individual_author_data directory, those can be changed). This refers to the following files -**
