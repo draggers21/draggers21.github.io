@@ -1,12 +1,12 @@
 const params = new URLSearchParams(window.location.search);
 if (!params) {
     // redirect to home page if no get parameters are passed
-    window.location.replace("https://draggers21.github.io/index.html");
+    window.location.replace("index.html");
 }
 else {
     if (!params.has("id")) {
         // redirect to home page if "id" parameter is not passed
-        window.location.replace("https://draggers21.github.io/index.html");
+        window.location.replace("index.html");
     }
     else {
         const blog_id = params.get("id");
@@ -26,9 +26,9 @@ else {
                 catch (err) {
                     // try fetching the specific data from the json
                     // if record not found then
-                    // redirect to https://draggers21.github.io/error.html page
+                    // redirect to error.html page
                     // error code 1501 - Invalid Blog ID
-                    window.location.replace("https://draggers21.github.io/error.html?err_code=1501");
+                    window.location.replace("error.html?err_code=1501");
                     // console.log(err)
                 }
             })
@@ -64,7 +64,7 @@ else {
             for (var i = 0; i < blog_tags.length; i++) {
                 var span = document.createElement("span");
                 span.setAttribute("class", "badge rounded-pill tag tag-color");
-                span.innerHTML = '<a href="https://draggers21.github.io/search.html?query=tags:' + blog_tags[i] + '">' + blog_tags[i] + '</a>';
+                span.innerHTML = '<a href="search.html?query=tags:' + blog_tags[i] + '">' + blog_tags[i] + '</a>';
                 tag_container.appendChild(span);
             }
             fetch_blog_content(blog_location);
@@ -83,9 +83,9 @@ else {
                     catch (err) {
                         // try fetching the blog content from the blog location
                         // if record not found then
-                        // redirect to https://draggers21.github.io/error.html page
+                        // redirect to error.html page
                         // error code 1502 - No Blog content found
-                        window.location.replace("https://draggers21.github.io/error.html?err_code=1502");
+                        window.location.replace("error.html?err_code=1502");
                         // console.log(err)
 
                     }
