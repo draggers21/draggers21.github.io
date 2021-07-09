@@ -14,7 +14,8 @@
     <!-- Global site tag (gtag.js) - Google Analytics Ends -->
 
     <!-- Ad-sense code -->
-   <script data-ad-client="ca-pub-2269771724670071" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-pub-2269771724670071" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Ad-sense code -->
 
     <!-- Auxillary tags -->
@@ -59,13 +60,12 @@
     <!-- animate ends -->
 
     <!-- font awesome starts -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- font awesome ends -->
 
     <!-- Content Highlighting CSS -->
     <link rel="stylesheet" href="static/core/prism/prism.css" data-noprefix />
-    <script src="static/core/prism/prism.js" type="text/javascript"></script>
-
     <!-- Content Highlighting CSS ends -->
 
 </head>
@@ -109,7 +109,8 @@
                                     <p class="card-text" id="blog-author-name"></p>
                                     <p class="card-text" id="blog-publish-date"></p>
                                     <p class="card-text" id="blog-tags"></p>
-                                    <p class="card-text" id="blog-content" style="text-align: justify;"></p>
+                                    <p class="card-text" id="blog-content" style="text-align: justify;"
+                                        onchange="Prism.highlightAll()"></p>
                                 </div>
 
                             </div>
@@ -152,19 +153,42 @@
     <script src="static/core/js/magnify.js" type="text/javascript"></script>
     <!-- Magnify Script ends-->
     <script type="module" src="static/core/js/loader.js"></script>
-    
+
     <!-- <script type="text/javascript">
         window.location.hash = '#main-page-content';
         window.location.hash = '';
     </script> -->
+
     <script type="module" src="static/core/js/navbar.js"></script>
     <script type="text/javascript" src="static/core/js/view.js"></script>
     <script type="module" src="static/core/js/side_panel.js"></script>
-    <script type="module" src="static/core/js/footer.js"></script>
 
-    <!-- Content Highlighting -->
+    <script type="module" src="static/core/js/footer.js"></script>
+    <!-- Content Highlighting JS -->
     <script src="static/core/prism/prism.js" type="text/javascript"></script>
-    <!-- Content Highlighting ends -->  
+    <script type="module" src="static/core/js/link_handling.js"></script>
+    <!-- Content Highlighting JS ends -->
+    <script type="text/javascript">
+        Prism.plugins.NormalizeWhitespace.setDefaults({
+            'remove-trailing': true,
+            'remove-indent': true,
+            'left-trim': true,
+            'right-trim': true,
+
+        });
+        // wasted 9 hours for this 3 line code. fuck me. 
+        setTimeout(function () {
+
+            Prism.highlightAll();
+            var all_code_sections = document.getElementsByClassName("code-toolbar");
+            for (var i = 0; i < all_code_sections.length; i++) {
+
+                all_code_sections[i].setAttribute("style", "max-width: 900px; margin:auto;");
+            }
+        }, 500);
+
+
+    </script>
 </body>
 
 </html>

@@ -1,6 +1,14 @@
 # draggers21.github.io
 
-## **Steps to setup repo -**
+
+## IMPORTANT - 
+1. DO NOT EDIT AND PUSH THE FILE **static/core/js/link_handling.js** and the file **static/core/js/config/prod_config.js**.
+2. YOU CAN EDIT THE FILE **static/core/js/config/dev_config.js** BUT DO NOT PUSH IT TO CODE BASE. It is for your use only.
+3. Replace the value of **BASE_URL** in **dev_config.js** as per your usage.
+4. **link_handling.js** just replaces the href of all the anchor tags on a page and adds a base url to current href. This is done for SEO purposes and to streamline development environment.
+
+
+## Steps to setup repo -
 1. Use VS Code. (Has a very handy extension marketplace).
 2. Install **Live Server** extension from the VS Code's Extension Tab. Once installed, reload workspace and you will see a **'Go Live'** button in bottom right section of VS Code. Use it to launch a small live server and see how the website is working. (In order to view the website in full capacity/properly, we need a live server as the JS used in the project uses the **fetch** api to get JSON files and process them, it won't work otherwise.)
 3. Now copy the **pre-commit** file located in the project root, to the destination **.git/hooks**.
@@ -62,8 +70,34 @@
         Eg: 
         1. add_img:src=static/images/OverTheWire-WriteUps/Leviathan/leviathan1to2/leviathan1to2_2.webp:alt=SSHing into the server:caption=SSHing 'into' the server.
 
-    3. To add code to blog use this following code snippet -
-        **Yet to add :(:(**
+    3. To add code to your blog. Use the following syntax - 
+        ```
+        code_start:lang=<Language>:code=/* Can be a multiline code */:code_end
+        ```
+        Example: 
+        Code can be multiline - 
+        ```
+        code_start:lang=java:code= 
+        class main{ 
+        public static void main(String...args){
+        System.out.println("1")}}
+        :code_end
+        ```
+        ```
+        code_start:lang=python:code= 
+        def function():
+            pass
+        for i in range(45):
+            print(i)
+        :code_end
+        ```
+
+        Or a single line code.
+        ```
+        code_start:lang=javascript:code=alert("1"):code_end
+        ```
+
+        to see the list of all supported languages, see **ALL_SUPPORTED_LANGUAGES.md**
     4. Separate image and paragraphs using a single blank line. In general separate any two different entities by a single blank line.
     5. In order to put something in bold, within a paragraph (yes just paragraphs, bold images do not make any sense.), enclose the required content within    **"\*\*"**, just like in markdown.
         Eg: Consider this sentence - "I need to make \*\*this\*\* bold.
@@ -81,7 +115,7 @@
     ```
     The pre-commit file will take care of the rest. 
 7. Any corresponding images or any images in general are to be added into **static/images** folder, create a separate directory (If making a blog on a new topic) and add all images to that folder. Use the **image_converter.py** file located in **static/tatic/supplementary_python_files**, to convert images to web optimized images, i.e. **.webp**. See **Other Supplementary Python files** section below for usage.
-8. **In case you have any doubts, ping/DM Chetanya Kunndra.** 
+10. **In case you have any doubts, ping/DM Chetanya Kunndra.** 
 
 
 #### **DO NOT UNDER ANY CIRCUMSTANCES CHANGE THE JSON FILES PRESENT IN static/meta_data/ (this does not refer to the json files, present in individual_author_data directory, those can be changed). This refers to the following files -**
