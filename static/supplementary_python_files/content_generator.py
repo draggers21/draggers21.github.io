@@ -15,6 +15,8 @@ IMAGE_REGEX_PATTERN = r"(add_img):(src)=(.+):(alt)=(.+):(caption)=(.+)"
 BOLD_REGEX_PATTERN = r"\*\*"
 CODE_REGEX_PATTERN = r"code_start:(lang=)(.*):(code=)(?:\s\n)?((?:.+\n+)+):code_end(?:[\n])?"
 ALL_CODE_IN_CONTENT = {}
+NEXT_POST_REGEX = r"next_post:(url)=(.*)"
+PREV_POST_REGEX = f"prev_post:(url)=(.*)"
 
 def create_code_section(lang, code):
     return f"<pre class='line-numbers' style='max-height: 500px;'><code class='language-{lang} match-braces'>{code}</code></pre>"
@@ -24,11 +26,11 @@ def create_image_section(src, alt, caption):
 
 
 def create_next_post_button(url):
-    return f"<div class='col next-post'><button type='button' class='btn'><a href='{url}'><strong>Next Post &raquo;</strong></a></button></div>"
+    return f"<div class='col next-post'><button type='button' class='btn' onclick='window.open(\"{url}\")' aria-label='Next Post' title='{url}'><strong>Next Post  &raquo;</strong></button></div>"
 
 
 def create_prev_post_button(url):
-    return f"<div class='col prev-post'><button type='button' class='btn'><a href='{url}'><strong>Next Post &raquo;</strong></a></button></div>"
+    return f"<div class='col prev-post'><button type='button' class='btn' onclick='window.open(\"{url}\")' aria-label='Previous Post' title='{url}'><strong>&laquo;  Previous Post</strong></button></div>"
 
 
 def parse_content(raw_content):
@@ -52,15 +54,12 @@ def parse_content(raw_content):
                 else:
                     raise Exception("Key properties missing in img tag, check again.")
                 blog_content += create_image_section(src, alt, caption)
-        elif "next_post" == line[:9] or "prev_post" == line[:9]:
-            temp_line = "<div class='row'>"
-            temp_line += "</div>"
         elif "code_start" == line[:10]:
             # for reference: https://regex101.com/r/trd3S1/1
             match = search(r"code_start:(id)=(.*):code_end", line)
             if match:
                 section_id = int(match.group(2))
-                blog_content += ALL_CODE_IN_CONTENT[section_id].replace("\n", "<br />")
+                blog_content += ALL_CODE_IN_CONTENT[section_id]
             else:
                 raise Exception("Invalid code section format.")
         else:
@@ -84,11 +83,11 @@ def parse_content(raw_content):
                     else:
                         temp_line += "<strong>" + line[all_bold_places[i][1]: all_bold_places[i+1][0]] + "</strong>" + line[all_bold_places[i+1][1]: all_bold_places[i+2][0]]
                 
-                blog_content += temp_line
+                blog_content += temp_line.replace("\n", "")
             else:
-                    blog_content += line
+                    blog_content += line.replace("\n", "")
 
-    return blog_content.replace("\n", "")
+    return blog_content
 
 
 def process_code_sections(raw_content):
@@ -123,6 +122,45 @@ def process_code_sections(raw_content):
     return temp_raw_content
 
 
+def process_prev_next_buttons(raw_content):
+    # For reference see: 
+    # https://regex101.com/r/0dKLTY/1
+    # https://regex101.com/r/pNAvLo/1
+    
+    # finding prev button occurrence in blog.
+    
+    prev_next_button_section = "<div class='row'>"
+    
+    prev_match = search(PREV_POST_REGEX, raw_content)
+    if prev_match:
+        if prev_match.group(1) == "url":
+            url = prev_match.group(2)
+            prev_next_button_section += create_prev_post_button(url)
+            # removing previous post button from raw_content
+            sub(PREV_POST_REGEX,"", raw_content)
+        else:
+            raise Exception("Incorrect format for previous button") 
+    else:
+        prev_next_button_section += "<div class='col'></div>"
+
+    next_match = search(NEXT_POST_REGEX, raw_content)
+    if next_match:
+        if next_match.group(1) == "url":
+            url = next_match.group(2)
+            prev_next_button_section += create_next_post_button(url)
+            # removing next post button from raw_content
+            sub(NEXT_POST_REGEX,"", raw_content)
+        else:
+            raise Exception("Incorrect format for next button")
+    else:
+        prev_next_button_section += "<div class='col'></div>"
+
+
+    prev_next_button_section += "</div>"
+    
+    return prev_next_button_section, raw_content
+
+
 def process_raw_content(file_path):
     try:
         print("[+] Trying to read contents of the file...")
@@ -130,21 +168,32 @@ def process_raw_content(file_path):
     except Exception as e:
         print(f"[-] Could not read contents of the file. Error: {e}")
     else:
-        try:
-            print("[+] Trying to generate code sections of the blog.")
-            semi_raw_content = process_code_sections(raw_content).splitlines()
+        try: 
+            print("[+] Trying to generate previous and next post sections of the blog.")
+            previous_next_post_section, raw_content_after_prev_next_button = process_prev_next_buttons(raw_content)
         except Exception as e:
-            print(f"[-] Could not generate code sections. Error: {e}")
+            print(f"[-] Could not generate previous and next section. Error: {e}")
         else:
-            print("[+] Trying to parse the contents...")
+            print("[+] Previous and next blog generated successfully.")
             try:
-                blog_content = parse_content(semi_raw_content)
+                print("[+] Trying to generate code sections of the blog.")
+                # Converting semi raw content to array of lines that will be used in parse_contents
+                semi_raw_content = process_code_sections(raw_content_after_prev_next_button).splitlines()
             except Exception as e:
-                print(f"[-] Could not parse file content. Error: {e}")
+                print(f"[-] Could not generate code sections. Error: {e}")
             else:
-                print(f"[+] File contents parsed successfully.")
-                dump({"blog_content":blog_content}, open("parsed_contents.json", 'w+'))
-                print(f"[+] Parsed contents written to 'parsed_contents.json'.")
+                print("[+] Code section generated successfully.")
+                print("[+] Trying to parse the contents...")
+                try:
+                    blog_content = parse_content(semi_raw_content)
+                    # appending the previous and next post section after the blog has been processed.
+                    blog_content += previous_next_post_section
+                except Exception as e:
+                    print(f"[-] Could not parse file content. Error: {e}")
+                else:
+                    print(f"[+] File contents parsed successfully.")
+                    dump({"blog_content":blog_content}, open("parsed_contents.json", 'w+'))
+                    print(f"[+] Parsed contents written to 'parsed_contents.json'.")
 
 
 if __name__ == "__main__":

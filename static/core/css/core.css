@@ -2,7 +2,7 @@ body {
     background-color: #192734;
 }
 
-* {
+#main-page-content {
     color: #ffffff;
 }
 
@@ -161,6 +161,7 @@ a:hover {
     text-align: right;
 }
 .next-post button {
+    color: #fff;
     background-color: #d60357;
 }
 .next-post button:hover {
@@ -172,6 +173,7 @@ a:hover {
 }
 .prev-post button {
     background-color: #d60357;
+    color: #fff;
 }
 .prev-post button:hover {
     background-color: #be014d;
