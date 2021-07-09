@@ -24,7 +24,7 @@ python3 static/supplementary_python_files/env_check_utility.py
 # again add to git
 git add .
 
-echo "Commiting changes..."
+echo "Commiting changes...\n\n"
 
 # If you want to allow non-ASCII filenames set this variable to true.
 allownonascii=$(git config --bool hooks.allownonascii)

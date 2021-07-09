@@ -25,4 +25,4 @@ if __name__ == "__main__":
     else:
         print("[+] link_handling.js file checked successfully.")
 
-    print("\n\n")
+    print("\n")
