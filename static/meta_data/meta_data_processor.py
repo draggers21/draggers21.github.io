@@ -122,4 +122,4 @@ if __name__ == "__main__":
         else:
             print("[+] Meta data updated successfully.")
 
-    print("Commiting changes...\n\n")
+    print("\n")

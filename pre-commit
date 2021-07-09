@@ -15,8 +15,16 @@ else
 	against=$(git hash-object -t tree /dev/null)
 fi
 
+# process meta data
 python3 static/meta_data/meta_data_processor.py
+
+# check for ENV in link_handling.js
+python3 static/supplementary_python_files/env_check_utility.py
+
+# again add to git
 git add .
+
+echo "Commiting changes...\n\n"
 
 # If you want to allow non-ASCII filenames set this variable to true.
 allownonascii=$(git config --bool hooks.allownonascii)
