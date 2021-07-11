@@ -74,19 +74,19 @@
 
     4. **ADDING CODE:** To add code to your blog. Use the following syntax - 
         ```
-        code_start:lang=<Language>:code=/* Can be a multiline code */:code_end
+        add_code:lang=<Language>:code=/* Can be a multiline code */:code_end
         ```
         Example: 
         Code can be multiline - 
         ```
-        code_start:lang=java:code= 
+        add_code:lang=java:code= 
         class main{ 
         public static void main(String...args){
         System.out.println("1")}}
         :code_end
         ```
         ```
-        code_start:lang=python:code= 
+        add_code:lang=python:code= 
         def function():
             pass
         for i in range(45):
@@ -96,14 +96,42 @@
 
         Or a single line code.
         ```
-        code_start:lang=javascript:code=alert("1"):code_end
+        add_code:lang=javascript:code=alert("1"):code_end
         ```
 
         to see the list of all supported languages, see **ALL_SUPPORTED_LANGUAGES.md**
     5. **MAKING TEXT BOLD:** In order to put something in bold, within a paragraph (yes just paragraphs, bold images do not make any sense.), enclose the required content within    **"\*\*"**, just like in markdown.
         Eg: Consider this sentence - "I need to make \*\*this\*\* bold.
             When rendered it will be replaced as ```I need to make <strong>this</strong> bold.```
-    6. **ADDING PREVIOUS POST AND NEXT POST BUTTONS:** To add a previous post and next button at the end of the blog, use the following code:
+    6. **ADDING LINKS:** To add links to your blog. Use the following syntax - 
+        ```
+        add_link:url=<Url you want ot link>:text=<Text you want to display>:link_end
+        ```
+        1. External links - 
+            External links can be added as it is and do not require any special attention.
+           Example: 
+            ```
+            add_link:url=https://google.com:text=This is Google and an external link:link_end
+            ```
+            ```
+            add_link:url=https://youtube.com:text=This is Youtube and an external link:link_end
+            ```
+        2. Internal links -
+            Please note internal links do not need the leading website url, this is handled by **link_handling.js in static/core/js**. To link internal pages (index.html, view.html, search.html, error.html) simple use the html file name along with the required GET parameters. 
+
+            - **view.html** - requires the **id** parameter, **id** here is the blog id.
+            - **search.html** - requires the **query** parameter, **query** here is the search query.
+            - **error.html** -  requires the **err_code** parameter, **err_code** represents the error code one ran into. To see all available error codes, view **static/core/js/constants.js**
+        
+            Examples-
+            ```
+            add_link:url=index.html:text=This is the home page of the blog and an internal link:link_end
+            ```
+            ```
+            add_link:url=view.html?id=1:text=This is will show you the blog, with blog id 1.:link_end
+            ```
+
+    7. **ADDING PREVIOUS POST AND NEXT POST BUTTONS:** To add a previous post and next button at the end of the blog, use the following code:
        For "Next Post button" -
        ```
        next_post:url=<Url of the blog>
@@ -121,7 +149,7 @@
        ```
        prev_post:url=http://127.0.0.1:5500/view.html?id=1
        ```
-        
+        Same applies to internal and external links in buttons as it applies in section 6. 
 4. Now once your rough draft is ready, use the python file **content_generator.py** located in the **static/supplementary_python_files** directory.
     **Usage: python3 content_generator.py <path to your rough draft>**
     This will generate a JSON file whose contents will be **{blog_content:"<rendered rough draft in html>"}**, copy the whole content, directly to the JSON file you created in step 2.
