@@ -19,9 +19,12 @@ function run_link_handling() {
 
 function handle_link(BASE_URL) {
     let all_links = document.getElementsByTagName("a");
-    for (var i=0; i < all_links.length; i++) {
+    for (var i = 0; i < all_links.length; i++) {
         let curr_href = all_links[i].getAttribute("href");
-        all_links[i].setAttribute("href", BASE_URL + curr_href);
+        // Only process internal links.
+        if (curr_href.substring(0, 10) == "index.html" || curr_href.substring(0, 9) == "error.html" || curr_href.substring(0, 11) == "search.html" || curr_href.substring(0, 9) == "view.html") {
+            all_links[i].setAttribute("href", BASE_URL + curr_href);
+        }
     }
 }
 

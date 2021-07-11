@@ -4,6 +4,7 @@ body {
 
 #main-page-content {
     color: #ffffff;
+    animation-delay:0.25s;
 }
 
 a {
@@ -151,10 +152,6 @@ a:hover {
 }
 .continue-reading button:hover {
     background-color: #be014d;
-}
-
-#main-page-content{
-    animation-delay:0.25s;
 }
 
 .next-post {
