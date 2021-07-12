@@ -68,6 +68,11 @@
     <link rel="stylesheet" href="static/core/prism/prism.css" data-noprefix />
     <!-- Content Highlighting CSS ends -->
 
+    <!-- Pre-fetching some resources -->
+    <link rel="prefetch" href="static/core/js/config/dev_config.js" as="script" />
+    <link rel="prefetch" href="static/core/js/config/prod_config.js" as="script" />
+    <!-- Pre-fetching resources end -->
+
 </head>
 
 <body>
@@ -159,7 +164,7 @@
     </script>
 
     <script type="module" src="static/core/js/navbar.js"></script>
-    <script type="text/javascript" src="static/core/js/view.js"></script>
+    <script type="module" src="static/core/js/view.js"></script>
     <script type="module" src="static/core/js/side_panel.js"></script>
 
     <script type="module" src="static/core/js/footer.js"></script>

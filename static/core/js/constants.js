@@ -7,4 +7,6 @@ export const ERROR_CODE_DESCRIPTION_MAPPING = {
     1501: "Invalid blog id.",
     1502: "No blog content found for the furnished blog id.",
     1503: "Invalid search string.",
+    1504: "Encountered a 4xx error code while fetching core resources.",
+    1505: "Encountered a 5xx error code while fetching core resources."
 }
