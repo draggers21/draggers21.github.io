@@ -1,3 +1,7 @@
+import { fetch_json_data } from "./utils.js";
+import { BLOG_META_DATA_LOCATION } from "./constants.js";
+
+
 const params = new URLSearchParams(window.location.search);
 if (!params) {
     // redirect to home page if no get parameters are passed
@@ -14,27 +18,20 @@ else {
         // document.getElementById("blog_id").innerHTML = blog_id;
 
         // fetching metadata about the blog using blog_id
-        fetch('static/meta_data/blog_meta_data.json')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                try {
-                    // sending specific json data to the processing function
-                    process_meta_data(data[blog_id]);
-                }
-                catch (err) {
-                    // try fetching the specific data from the json
-                    // if record not found then
-                    // redirect to error.html page
-                    // error code 1501 - Invalid Blog ID
-                    window.location.replace("error.html?err_code=1501");
-                    // console.log(err)
-                }
-            })
-            .catch(function (err) {
-                console.log("error" + err);
-            });
+        fetch_json_data(BLOG_META_DATA_LOCATION).then(function (meta_data) {
+            try {
+                // sending specific json data to the processing function
+                process_meta_data(meta_data[blog_id]);
+            }
+            catch (err) {
+                // try fetching the specific data from the json
+                // if record not found then
+                // redirect to error.html page
+                // error code 1501 - Invalid Blog ID
+                window.location.replace("error.html?err_code=1501");
+                // console.log(err)
+            }
+        });
 
         function process_meta_data(blog_meta_data) {
 
@@ -72,27 +69,20 @@ else {
 
         function fetch_blog_content(blog_location) {
             // function to fetch blog content
-            fetch(blog_location)
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (data) {
-                    try {
-                        create_blog(data.blog_content);
-                    }
-                    catch (err) {
-                        // try fetching the blog content from the blog location
-                        // if record not found then
-                        // redirect to error.html page
-                        // error code 1502 - No Blog content found
-                        window.location.replace("error.html?err_code=1502");
-                        // console.log(err)
+            fetch_json_data(blog_location).then(function (data) {
+                try {
+                    create_blog(data.blog_content);
+                }
+                catch (err) {
+                    // try fetching the blog content from the blog location
+                    // if record not found then
+                    // redirect to error.html page
+                    // error code 1502 - No Blog content found
+                    window.location.replace("error.html?err_code=1502");
+                    // console.log(err)
 
-                    }
-                })
-                .catch(function (err) {
-                    console.log("error" + err);
-                });
+                }
+            });
         }
 
         function create_blog(blog_content) {

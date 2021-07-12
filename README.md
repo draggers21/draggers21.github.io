@@ -134,20 +134,20 @@
     7. **ADDING PREVIOUS POST AND NEXT POST BUTTONS:** To add a previous post and next button at the end of the blog, use the following code:
        For "Next Post button" -
        ```
-       next_post:url=<Url of the blog>
+       next_post:url=<Url of the blog>:text=<Text you want to display>
        ```
        Example: 
        ```
-       next_post:url=http://127.0.0.1:5500/view.html?id=1
+       next_post:url=http://127.0.0.1:5500/view.html?id=1:text=This is first blog
        ```
        
        For "Previous Post button" -
        ```
-       prev_post:url=<Url of the blog>
+       prev_post:url=<Url of the blog>:text=<Text you want to display>
        ```
        Example: 
        ```
-       prev_post:url=http://127.0.0.1:5500/view.html?id=1
+       prev_post:url=http://127.0.0.1:5500/view.html?id=2:text=This is second blog
        ```
         Same applies to internal and external links in buttons as it applies in section 6. 
 4. Now once your rough draft is ready, use the python file **content_generator.py** located in the **static/supplementary_python_files** directory.

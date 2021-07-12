@@ -18,8 +18,8 @@ CODE_START_REGEX = r"add_code:"
 CODE_CONTENT_REGEX = r"(lang=(.*)):(code=)(?:[\s\n])?((?:.+\n+)+)"
 CODE_END_REGEX = r":code_end"
 ALL_CODE_IN_CONTENT = {}
-NEXT_POST_REGEX = r"next_post:(url)=(.*)"
-PREV_POST_REGEX = r"prev_post:(url)=(.*)"
+NEXT_POST_REGEX = r"next_post:(url)=(.*):(text)=(.*)"
+PREV_POST_REGEX = r"prev_post:(url)=(.*):(text)=(.*)"
 ADD_LINK_REGEX = r"add_link:"
 LINK_END_REGEX = r":link_end"
 LINK_COMPONENTS_REGEX = r"(url)=(.*):(text)=(.*)"
@@ -34,12 +34,12 @@ def create_image_section(src, alt, caption):
     return f"<div class='row'><div class='col' style='text-align: center;'><figure class='figure' style='align-items: center;'><img src='{src}' alt='{alt}' onclick='magnify(this.src)' class='figure-img img-fluid blog-image'><figcaption class='figure-caption blog-fig-caption'>{caption}</figcaption></figure></div></div>"
 
 
-def create_next_post_button(url):
-    return f"<div class='col next-post'><button type='button' class='btn' onclick='window.open(\"{url}\")' aria-label='Next Post' title='{url}'><strong>Next Post  &raquo;</strong></button></div>"
+def create_next_post_button(url, text):
+    return f"<div class='col next-post'><button type='button' class='btn' onclick='window.open(\"{url}\")' aria-label='Next Post' title='{text}'><strong>Next Post  &raquo;</strong></button></div>"
 
 
-def create_prev_post_button(url):
-    return f"<div class='col prev-post'><button type='button' class='btn' onclick='window.open(\"{url}\")' aria-label='Previous Post' title='{url}'><strong>&laquo;  Previous Post</strong></button></div>"
+def create_prev_post_button(url, text):
+    return f"<div class='col prev-post'><button type='button' class='btn' onclick='window.open(\"{url}\")' aria-label='Previous Post' title='{text}'><strong>&laquo;  Previous Post</strong></button></div>"
 
 
 def create_anchor_link(url, text):
@@ -203,17 +203,18 @@ def process_code_sections(raw_content):
 
 def process_prev_next_buttons(raw_content):
     # For reference see: 
-    # https://regex101.com/r/0dKLTY/1
-    # https://regex101.com/r/pNAvLo/1
+    # https://regex101.com/r/eWPGs0/1
+    # https://regex101.com/r/FQ0bsm/1
     
     # finding prev button occurrence in blog.
     prev_next_button_section = "<div class='row'>"
     
     prev_match = search(PREV_POST_REGEX, raw_content)
     if prev_match:
-        if prev_match.group(1) == "url":
-            url = prev_match.group(2)
-            prev_next_button_section += create_prev_post_button(url)
+        if prev_match.group(1) == "url" and prev_match.group(3) == "text":
+            prev_url = prev_match.group(2)
+            prev_text = prev_match.group(4)
+            prev_next_button_section += create_prev_post_button(prev_url, prev_text)
             # removing previous post button from raw_content
             raw_content = sub(PREV_POST_REGEX,"  ", raw_content)
         else:
@@ -223,9 +224,10 @@ def process_prev_next_buttons(raw_content):
 
     next_match = search(NEXT_POST_REGEX, raw_content)
     if next_match:
-        if next_match.group(1) == "url":
-            url = next_match.group(2)
-            prev_next_button_section += create_next_post_button(url)
+        if next_match.group(1) == "url" and next_match.group(3) == "text":
+            next_url = next_match.group(2)
+            next_text = prev_match.group(4)
+            prev_next_button_section += create_next_post_button(next_url, next_text)
             # removing next post button from raw_content
             raw_content = sub(NEXT_POST_REGEX,"", raw_content)
         else:

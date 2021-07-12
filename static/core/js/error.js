@@ -13,6 +13,12 @@ else {
     else {
         const err_code = params.get("err_code");
         document.getElementById("error-code").innerHTML = "Error code: " + err_code;
-        document.getElementById("error-description").innerHTML = "Error Description: "+ERROR_CODE_DESCRIPTION_MAPPING[err_code];
+        if (params.has("status_code")){
+            let status_code = params.get("status_code");
+            document.getElementById("error-description").innerHTML = "Error Description: "+ERROR_CODE_DESCRIPTION_MAPPING[err_code] + " Response status encountered: " + status_code;;
+        }
+        else{
+            document.getElementById("error-description").innerHTML = "Error Description: "+ERROR_CODE_DESCRIPTION_MAPPING[err_code];
+        }
     }
 }

@@ -1,5 +1,6 @@
 let ENV = "prod";
 
+
 function run_link_handling() {
     if (ENV == "dev") {
         import("./config/dev_config.js")
@@ -16,6 +17,20 @@ function run_link_handling() {
     }
 }
 
+/*
+function run_link_handling() {
+    if (ENV == "dev") {
+        // DEV CONFIG
+        let BASE_URL = "";
+        handle_link(BASE_URL);
+    }
+    else if (ENV == "prod") {
+        // DEV CONFIG
+        let BASE_URL = "https://draggers21.github.io/";
+        handle_link(BASE_URL);
+    }
+}
+*/
 
 function handle_link(BASE_URL) {
     let all_links = document.getElementsByTagName("a");
