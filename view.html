@@ -14,7 +14,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics Ends -->
 
     <!-- Ad-sense code -->
-    <script data-ad-client="ca-pub-8804352608774351" async
+    <script data-ad-client="ca-pub-2269771724670071" async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Ad-sense code -->
 
@@ -32,6 +32,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Jquery Ends-->
+
 
     <!-- Bootstrap CSS and JS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -59,8 +60,18 @@
     <!-- animate ends -->
 
     <!-- font awesome starts -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- font awesome ends -->
+
+    <!-- Content Highlighting CSS -->
+    <link rel="stylesheet" href="static/core/prism/prism.css" data-noprefix />
+    <!-- Content Highlighting CSS ends -->
+
+    <!-- Pre-fetching some resources -->
+    <link rel="prefetch" href="static/core/js/config/dev_config.js" as="script" />
+    <link rel="prefetch" href="static/core/js/config/prod_config.js" as="script" />
+    <!-- Pre-fetching resources end -->
 
 </head>
 
@@ -146,15 +157,42 @@
     <script src="static/core/js/magnify.js" type="text/javascript"></script>
     <!-- Magnify Script ends-->
     <script type="module" src="static/core/js/loader.js"></script>
-    <!-- <script type="text/javascript">
+
+    <script type="text/javascript">
         window.location.hash = '#main-page-content';
         window.location.hash = '';
-    </script> -->
-    <script type="module" src="static/core/js/navbar.js"></script>
-    <script type="text/javascript" src="static/core/js/view.js"></script>
-    <script type="module" src="static/core/js/side_panel.js"></script>
-    <script type="module" src="static/core/js/footer.js"></script>
+    </script>
 
+    <script type="module" src="static/core/js/navbar.js"></script>
+    <script type="module" src="static/core/js/view.js"></script>
+    <script type="module" src="static/core/js/side_panel.js"></script>
+
+    <script type="module" src="static/core/js/footer.js"></script>
+    <!-- Content Highlighting JS -->
+    <script src="static/core/prism/prism.js" type="text/javascript"></script>
+    <script type="module" src="static/core/js/link_handling.js"></script>
+    <!-- Content Highlighting JS ends -->
+    <script type="text/javascript">
+        Prism.plugins.NormalizeWhitespace.setDefaults({
+            'remove-trailing': true,
+            'remove-indent': true,
+            'left-trim': true,
+            'right-trim': true,
+
+        });
+        // wasted 9 hours for this 3 line code. fuck me. 
+        setTimeout(function () {
+
+            Prism.highlightAll();
+            var all_code_sections = document.getElementsByClassName("code-toolbar");
+            for (var i = 0; i < all_code_sections.length; i++) {
+
+                all_code_sections[i].setAttribute("style", "max-width: 900px; margin:auto;");
+            }
+        }, 500);
+
+
+    </script>
 </body>
 
 </html>

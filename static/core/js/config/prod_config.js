@@ -1,0 +1,1 @@
+export let BASE_URL = "https://draggers21.github.io/";

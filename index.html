@@ -13,7 +13,7 @@
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics Ends -->
     <!-- Ad-sense code -->
-    <script data-ad-client="ca-pub-8804352608774351" async
+    <script data-ad-client="ca-pub-2269771724670071" async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Ad-sense code -->
     <!-- Auxillary tags -->
@@ -56,6 +56,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <!-- animate ends -->
 
+    <!-- Pre-fetching some resources -->
+    <link rel="prefetch" href="static/core/js/config/dev_config.js" as="script" />
+    <link rel="prefetch" href="static/core/js/config/prod_config.js" as="script" />
+    <!-- Pre-fetching resources end -->
 </head>
 
 <body>
@@ -119,10 +123,10 @@
 
     <!-- required scripts -->
     <script type="module" src="static/core/js/loader.js"></script>
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
         window.location.hash = '#main-page-content';
         window.location.hash = '';
-    </script> -->
+    </script>
     <script type="module" src="static/core/js/navbar.js"></script>
     <script type="module" src="static/core/js/index.js"></script>
     <script type="module" src="static/core/js/side_panel.js"></script>
@@ -220,6 +224,8 @@
     </script>
     <!-- required scripts -->
     <script type="module" src="static/core/js/footer.js"></script>
+    <script type="module" src="static/core/js/link_handling.js"></script>
+
 </body>
 
 </html>

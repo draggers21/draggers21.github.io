@@ -1,30 +1,22 @@
-
-import { create_blog_cards, create_pagination } from "./utils.js";
-import { CARD_PER_PAGE_LIMIT } from "./constants.js";
+import { fetch_json_data, create_blog_cards, create_pagination } from "./utils.js";
+import { BLOG_META_DATA_LOCATION, CARD_PER_PAGE_LIMIT } from "./constants.js";
 
 
 function index_driver() {
-    fetch('static/meta_data/blog_meta_data.json')
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            try {
-                // sending specific json data to the processing function
-                process_meta_data(data);
-            }
-            catch (err) {
-                // try fetching the specific data from the json
-                // if record not found then
-                // redirect to error.html page
-                // error code 1501 - Invalid Blog ID
-                window.location.replace("error.html?err_code=1501");
-                // console.log(err)
-            }
-        })
-        .catch(function (err) {
-            console.log("error" + err);
-        });
+    fetch_json_data(BLOG_META_DATA_LOCATION).then(function (meta_data) {
+        try {
+            // sending specific json data to the processing function
+            process_meta_data(meta_data);
+        }
+        catch (err) {
+            // try fetching the specific data from the json
+            // if record not found then
+            // redirect to error.html page
+            // error code 1501 - Invalid Blog ID
+            window.location.replace("error.html?err_code=1501");
+            // console.log(err)
+        }
+    });
 }
 
 function process_meta_data(meta_data) {

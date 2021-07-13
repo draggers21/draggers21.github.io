@@ -2,13 +2,16 @@ body {
     background-color: #192734;
 }
 
-* {
+#main-page-content {
     color: #ffffff;
+    animation-delay:0.25s;
 }
 
 a {
     color: #ffffff;
     text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
 }
 
 a:hover {
@@ -63,7 +66,8 @@ a:hover {
 
 .pagination a {
     color: #ffffff;
-    background-color: #192734;
+    background-color: #424242;
+    font-style: normal;
     float: left;
     padding: 8px 16px;
     text-decoration: none;
@@ -153,14 +157,11 @@ a:hover {
     background-color: #be014d;
 }
 
-#main-page-content{
-    animation-delay:0.25s;
-}
-
 .next-post {
     text-align: right;
 }
 .next-post button {
+    color: #fff;
     background-color: #d60357;
 }
 .next-post button:hover {
@@ -172,6 +173,7 @@ a:hover {
 }
 .prev-post button {
     background-color: #d60357;
+    color: #fff;
 }
 .prev-post button:hover {
     background-color: #be014d;

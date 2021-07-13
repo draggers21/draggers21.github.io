@@ -113,5 +113,45 @@
             "Linux",
             "Bash"
         ]
+    },
+    {
+        "blog_location": "static/blogs/CSES/Introductory_Problems/weird_algorithm.json",
+        "blog_title": "CSES: Introductory Problem Set: Solving Weird Algorithm.",
+        "blog_author": "Chetanya Kunndra",
+        "blog_summary": "CSES Problem set is a collection of more than 300 programming challenges, which aims at teaching various segments of competitive programming. In this article we will solve the 'Weird Algorithm' problem of the Introductory set.",
+        "blog_publish_date": "11/07/2021",
+        "blog_tags": [
+            "C++",
+            "CSES",
+            "Python3",
+            "Competitive Programming"
+        ]
+    },
+    {
+        "blog_location": "static/blogs/CSES/Introductory_Problems/missing_number.json",
+        "blog_title": "CSES: Introductory Problem Set: Solving Missing Number.",
+        "blog_author": "Chetanya Kunndra",
+        "blog_summary": "CSES Problem set is a collection of more than 300 programming challenges, which aims at teaching various segments of competitive programming. In this article we will solve the 'Missing Number' problem of the Introductory set.",
+        "blog_publish_date": "11/07/2021",
+        "blog_tags": [
+            "C++",
+            "CSES",
+            "Python3",
+            "Competitive Programming"
+        ]
+    },
+    {
+        "blog_location": "static/blogs/OverTheWire-WriteUps/Leviathan/leviathan2to3.json",
+        "blog_title": "OverTheWire: Leviathan: Solving Leviathan 2 -> Leviathan 3",
+        "blog_author": "Chetanya Kunndra",
+        "blog_summary": "Leviathan is a war-game on OverTheWire.org that tests players knowledge *nix commands and linux file system fundamentals amd tools, in this writeup we will solve Leviathan Level 1, to get the password for leviathan2",
+        "blog_publish_date": "13/07/2021",
+        "blog_tags": [
+            "WriteUp",
+            "OverTheWire",
+            "Leviathan",
+            "Linux",
+            "Bash"
+        ]
     }
 ]

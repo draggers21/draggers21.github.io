@@ -1,6 +1,7 @@
 export async function fetch_json_data(meta_data_location) {
     try {
         let response = await fetch(meta_data_location);
+        check_response_status(response.status);
         return await response.json();
     }
     catch (error) {
@@ -143,3 +144,18 @@ export function sanitize_input(string) {
     const reg = /[&<>"'/]/ig;
     return string.replace(reg, (match)=>(map[match]));
   }
+
+function check_response_status(status)
+{
+    if(status>=400 && status<500){
+        // error code 1504 - refers to all 4xx errors
+        window.location.replace("error.html?err_code=1504&status_code="+status);
+    }
+    else if(status>=500){
+        // error code 1505 - refers to all 5xx errors
+        window.location.replace("error.html?err_code=1505&status_code="+status);
+    }
+    else{
+        return;
+    }
+}
