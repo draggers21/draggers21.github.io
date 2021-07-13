@@ -1,0 +1,45 @@
+[
+    {
+        "blog_location": "static/blogs/DataScience/what_is_data_science.json",
+        "blog_title": "What is Data Science?",
+        "blog_author": "Manasvi Grover",
+        "blog_summary": "",
+        "blog_publish_date": "13/07/2021",
+        "blog_tags": [
+            "WriteUp",
+            "Data Science",
+            "Data Visualization",
+            "Machine Learning"
+        ]
+    },
+    {
+        "blog_location": "static/blogs/DataScience/indexing_in_numpy.json",
+        "blog_title": "Indexing in Numpy",
+        "blog_author": "Manasvi Grover",
+        "blog_summary": "",
+        "blog_publish_date": "13/07/2021",
+        "blog_tags": [
+            "WriteUp",
+            "Data Science",
+            "Numpy",
+            "Machine Learning",
+            "Indexing",
+            "Python",
+            "Python Basics"
+        ]
+    },
+    {
+        "blog_location": "static/blogs/DataScience/introduction_to_web_scraping.json",
+        "blog_title": "Introduction to Web Scraping",
+        "blog_author": "Manasvi Grover",
+        "blog_summary": "",
+        "blog_publish_date": "13/07/2021",
+        "blog_tags": [
+            "WriteUp",
+            "Data Science",
+            "Web Scraping",
+            "Python",
+            "Python Basics"
+        ]
+    }
+]
