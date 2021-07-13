@@ -10,7 +10,8 @@
             "Data Science",
             "Data Visualization",
             "Machine Learning"
-        ]
+        ],
+        "semi_hash": "old:65e7cde4d2dcd3acca1c997ca59ee7cefb29da7c64de38a3ed894b93f4786dfb"
     },
     {
         "blog_location": "static/blogs/DataScience/indexing_in_numpy.json",
@@ -26,7 +27,8 @@
             "Indexing",
             "Python",
             "Python Basics"
-        ]
+        ],
+        "semi_hash": "old:0fe138f1ade66c0bd1f48b61d7ac6b603d1e04b996465be4e8e4b9b33b343a7e"
     },
     {
         "blog_location": "static/blogs/DataScience/introduction_to_web_scraping.json",
@@ -40,6 +42,7 @@
             "Web Scraping",
             "Python",
             "Python Basics"
-        ]
+        ],
+        "semi_hash": "old:03ae97c1799650820db0626ecf5137328a5c16be41dcb7d3d7b2ed172af141eb"
     }
 ]
