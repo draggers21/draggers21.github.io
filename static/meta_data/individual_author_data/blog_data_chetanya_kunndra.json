@@ -139,5 +139,19 @@
             "Python3",
             "Competitive Programming"
         ]
+    },
+    {
+        "blog_location": "static/blogs/OverTheWire-WriteUps/Leviathan/leviathan2to3.json",
+        "blog_title": "OverTheWire: Leviathan: Solving Leviathan 2 -> Leviathan 3",
+        "blog_author": "Chetanya Kunndra",
+        "blog_summary": "Leviathan is a war-game on OverTheWire.org that tests players knowledge *nix commands and linux file system fundamentals amd tools, in this writeup we will solve Leviathan Level 1, to get the password for leviathan2",
+        "blog_publish_date": "13/07/2021",
+        "blog_tags": [
+            "WriteUp",
+            "OverTheWire",
+            "Leviathan",
+            "Linux",
+            "Bash"
+        ]
     }
 ]
