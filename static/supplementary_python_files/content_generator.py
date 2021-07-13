@@ -43,7 +43,7 @@ def create_prev_post_button(url, text):
 
 
 def create_anchor_link(url, text):
-    return f"<a href='{url}' target='_blank'>{text}</a>"
+    return f"<a href='{url}' target='_blank' rel='noopener'>{text}</a>"
 
 
 def process_bold_text(line):
