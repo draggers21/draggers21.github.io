@@ -10,7 +10,15 @@
             "Tag_2", 
             "Tag_3", 
             "Tag_4" 
-        ]
+        ],
+        "prev_post": {
+            "url": "URL",
+            "text": "TEXT TO DISPLAY"
+        },
+        "next_post": {
+            "url": "URL",
+            "text": "TEXT TO DISPLAY"
+        }
     },
     {
         "blog_location": "static/blogs/OverTheWire-WriteUps/Bandit/bandit0to1.json",
@@ -24,7 +32,15 @@
             "Bandit",
             "Bash",
             "Linux"
-        ]
+        ],
+        "prev_post": {
+            "url": "view.html?id=3cd6b65ca447d248b388f98436f12a8dd3adc57f38317fc2d685ec27ce335989",
+            "text": "OverTheWire: Bandit: Solving Bandit 0 -> Bandit 1"
+        },
+        "next_post": {
+            "url": "view.html?id=82fdd4dfe71563f1d90751dc2cca9b47f9514442587ec4212280d3cfc4657cec",
+            "text": "OverTheWire: Bandit: Solving Bandit 2 -> Bandit 3"
+        }
     },
     {
         "blog_location": "static/blogs/OverTheWire-WriteUps/Bandit/bandit1to2.json",
@@ -38,6 +54,14 @@
             "Bandit",
             "Bash",
             "Linux"
-        ]
+        ],
+        "prev_post": {
+            "url": "view.html?id=3cd6b65ca447d248b388f98436f12a8dd3adc57f38317fc2d685ec27ce335989",
+            "text": "OverTheWire: Bandit: Solving Bandit 0 -> Bandit 1"
+        },
+        "next_post": {
+            "url": "view.html?id=82fdd4dfe71563f1d90751dc2cca9b47f9514442587ec4212280d3cfc4657cec",
+            "text": "OverTheWire: Bandit: Solving Bandit 2 -> Bandit 3"
+        }
     }
 ]

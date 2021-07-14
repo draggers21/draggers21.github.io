@@ -64,14 +64,88 @@ else {
                 span.innerHTML = '<a href="search.html?query=tags:' + blog_tags[i] + '">' + blog_tags[i] + '</a>';
                 tag_container.appendChild(span);
             }
-            fetch_blog_content(blog_location);
+
+            try {
+                var prev_post = blog_meta_data.prev_post;
+            }
+            catch (error) {
+                var prev_post = "";
+            }
+            try {
+                var next_post = blog_meta_data.next_post;
+            }
+            catch (error) {
+                var next_post = "";
+            }
+
+            let prev_next_section = create_previous_next_section(prev_post, next_post);
+            fetch_blog_content(blog_location, prev_next_section);
         }
 
-        function fetch_blog_content(blog_location) {
+        function generate_prev_post(prev_post) {
+            if (prev_post == "") {
+                return "<div class='col'></div>";
+            }
+            else {
+                try {
+                    var prev_post_url = prev_post.url;
+                    if (prev_post_url == "" || prev_post_url == null) {
+                        return "<div class='col'></div>";
+                    }
+                }
+                catch (err) {
+                    return "<div class='col'></div>";
+                }
+                try {
+                    var prev_post_text = prev_post.text;
+                }
+                catch (err) {
+                    var prev_post_text = prev_post_url
+                }
+
+                return "<div class='col prev-post'><button type='button' class='btn' onclick='window.open(\"" + prev_post_url + "\")' aria-label='Previous Post' title='" + prev_post_text + "'><strong>&laquo;  Previous Post</strong></button></div>";
+            }
+        }
+
+        function generate_next_post(next_post) {
+            if (next_post == "") {
+                return "<div class='col'></div>";
+            }
+            else {
+                try {
+                    var next_post_url = next_post.url;
+                    if (next_post_url == "" || next_post_url == null) {
+                        return "<div class='col'></div>";
+                    }
+                }
+                catch (err) {
+                    return "<div class='col'></div>";
+                }
+                try {
+                    var next_post_text = next_post.text;
+                }
+                catch (err) {
+                    var next_post_text = next_post_url
+                }
+
+                return "<div class='col next-post'><button type='button' class='btn' onclick='window.open(\"" + next_post_url + "\")' aria-label='Next Post' title='" + next_post_text + "'><strong>Next Post  &raquo;</strong></button></div>";
+            }
+        }
+
+
+        function create_previous_next_section(prev_post, next_post) {
+            let prev_next_section = "<div class='row'>"
+            prev_next_section += generate_prev_post(prev_post);
+            prev_next_section += generate_next_post(next_post);
+            prev_next_section += "</div>"
+            return prev_next_section
+        }
+
+        function fetch_blog_content(blog_location, prev_next_section) {
             // function to fetch blog content
             fetch_json_data(blog_location).then(function (data) {
                 try {
-                    create_blog(data.blog_content);
+                    create_blog(data.blog_content, prev_next_section);
                 }
                 catch (err) {
                     // try fetching the blog content from the blog location
@@ -85,10 +159,10 @@ else {
             });
         }
 
-        function create_blog(blog_content) {
+        function create_blog(blog_content, prev_next_section) {
             // function to display blog content on the page
             // console.log(blog_content);
-            document.getElementById("blog-content").innerHTML = blog_content;
+            document.getElementById("blog-content").innerHTML = blog_content + "<br /><br /><br /><br />" + prev_next_section;
         }
     }
 }

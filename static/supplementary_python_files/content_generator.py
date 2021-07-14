@@ -15,11 +15,9 @@ from re import search, finditer, sub
 IMAGE_REGEX_PATTERN = r"(add_img):(src)=(.+):(alt)=(.+):(caption)=(.+)"
 BOLD_REGEX_PATTERN = r"\*\*"
 CODE_START_REGEX = r"add_code:"
-CODE_CONTENT_REGEX = r"(lang=(.*)):(code=)(?:[\s\n])?((?:.+\n+)+)"
+CODE_CONTENT_REGEX = r"(lang=(.*)):(code=)(?:[\s\n]+)?((?:.+\n*)+)?"
 CODE_END_REGEX = r":code_end"
 ALL_CODE_IN_CONTENT = {}
-NEXT_POST_REGEX = r"next_post:(url)=(.*):(text)=(.*)"
-PREV_POST_REGEX = r"prev_post:(url)=(.*):(text)=(.*)"
 ADD_LINK_REGEX = r"add_link:"
 LINK_END_REGEX = r":link_end"
 LINK_COMPONENTS_REGEX = r"(url)=(.*):(text)=(.*)"
@@ -32,14 +30,6 @@ def create_code_section(lang, code):
 
 def create_image_section(src, alt, caption):
     return f"<div class='row'><div class='col' style='text-align: center;'><figure class='figure' style='align-items: center;'><img src='{src}' alt='{alt}' onclick='magnify(this.src)' class='figure-img img-fluid blog-image'><figcaption class='figure-caption blog-fig-caption'>{caption}</figcaption></figure></div></div>"
-
-
-def create_next_post_button(url, text):
-    return f"<div class='col next-post'><button type='button' class='btn' onclick='window.open(\"{url}\")' aria-label='Next Post' title='{text}'><strong>Next Post  &raquo;</strong></button></div>"
-
-
-def create_prev_post_button(url, text):
-    return f"<div class='col prev-post'><button type='button' class='btn' onclick='window.open(\"{url}\")' aria-label='Previous Post' title='{text}'><strong>&laquo;  Previous Post</strong></button></div>"
 
 
 def create_anchor_link(url, text):
@@ -174,7 +164,6 @@ def process_code_sections(raw_content):
             code_content = raw_content[code_start_end:code_end_start]
             
             code_content_match = search(CODE_CONTENT_REGEX, code_content)
-            
             if not code_content_match:
                 raise Exception("Invalid code format missing key values")
             else:
@@ -201,45 +190,6 @@ def process_code_sections(raw_content):
         return temp_raw_content
 
 
-def process_prev_next_buttons(raw_content):
-    # For reference see: 
-    # https://regex101.com/r/eWPGs0/1
-    # https://regex101.com/r/FQ0bsm/1
-    
-    # finding prev button occurrence in blog.
-    prev_next_button_section = "<div class='row'>"
-    
-    prev_match = search(PREV_POST_REGEX, raw_content)
-    if prev_match:
-        if prev_match.group(1) == "url" and prev_match.group(3) == "text":
-            prev_url = prev_match.group(2)
-            prev_text = prev_match.group(4)
-            prev_next_button_section += create_prev_post_button(prev_url, prev_text)
-            # removing previous post button from raw_content
-            raw_content = sub(PREV_POST_REGEX,"  ", raw_content)
-        else:
-            raise Exception("Incorrect format for previous button") 
-    else:
-        prev_next_button_section += "<div class='col'></div>"
-
-    next_match = search(NEXT_POST_REGEX, raw_content)
-    if next_match:
-        if next_match.group(1) == "url" and next_match.group(3) == "text":
-            next_url = next_match.group(2)
-            next_text = prev_match.group(4)
-            prev_next_button_section += create_next_post_button(next_url, next_text)
-            # removing next post button from raw_content
-            raw_content = sub(NEXT_POST_REGEX,"", raw_content)
-        else:
-            raise Exception("Incorrect format for next button")
-    else:
-        prev_next_button_section += "<div class='col'></div>"
-
-
-    prev_next_button_section += "</div>"
-    return prev_next_button_section, raw_content
-
-
 def process_raw_content(file_path):
     try:
         print("[+] Trying to read contents of the file...")
@@ -247,32 +197,26 @@ def process_raw_content(file_path):
     except Exception as e:
         print(f"[-] Could not read contents of the file. Error: {e}")
     else:
-        try: 
-            print("[+] Trying to generate previous and next post sections of the blog.")
-            previous_next_post_section, raw_content_after_prev_next_button = process_prev_next_buttons(raw_content)
+        try:
+            print("[+] Trying to generate code sections of the blog.")
+            # Converting semi raw content to array of lines that will be used in parse_contents
+            semi_raw_content = process_code_sections(raw_content).splitlines()
         except Exception as e:
-            print(f"[-] Could not generate previous and next section. Error: {e}")
+            print(f"[-] Could not generate code sections. Error: {e}")
         else:
-            print("[+] Previous and next blog generated successfully.")
+            print("[+] Code section generated successfully.")
+            print("[+] Trying to parse the contents...")
             try:
-                print("[+] Trying to generate code sections of the blog.")
-                # Converting semi raw content to array of lines that will be used in parse_contents
-                semi_raw_content = process_code_sections(raw_content_after_prev_next_button).splitlines()
+                blog_content = parse_content(semi_raw_content)
+                # appending the previous and next post section after the blog has been processed.
             except Exception as e:
-                print(f"[-] Could not generate code sections. Error: {e}")
+                print(f"[-] Could not parse file content. Error: {e}")
             else:
-                print("[+] Code section generated successfully.")
-                print("[+] Trying to parse the contents...")
-                try:
-                    blog_content = parse_content(semi_raw_content)
-                    # appending the previous and next post section after the blog has been processed.
-                    blog_content += previous_next_post_section
-                except Exception as e:
-                    print(f"[-] Could not parse file content. Error: {e}")
-                else:
-                    print(f"[+] File contents parsed successfully.")
-                    dump({"blog_content":blog_content}, open("parsed_contents.json", 'w+'))
-                    print(f"[+] Parsed contents written to 'parsed_contents.json'.")
+                print(f"[+] File contents parsed successfully.")
+                parsed_file_name = ["." if x == "" else x for x in RAW_CONTENT_PATH.split(".")[:-1]]
+                parsed_file_name = "".join(parsed_file_name)+"_parsed.json"
+                dump({"blog_content":blog_content}, open(parsed_file_name, 'w+'))
+                print(f"[+] Parsed contents written to '{parsed_file_name}'.")
 
 
 if __name__ == "__main__":
