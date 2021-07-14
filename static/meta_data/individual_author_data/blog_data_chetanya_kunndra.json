@@ -12,6 +12,11 @@
             "Bash",
             "Linux"
         ],
+        "final_blog_hash": "3cd6b65ca447d248b388f98436f12a8dd3adc57f38317fc2d685ec27ce335989",
+        "next_post": {
+            "url": "view.html?id=ea9b169ff1b7a4eefc0924760dc46e61f4a3c566aaf9faa2f5a3c27bb75a88e0",
+            "text": "OverTheWire: Bandit: Solving Bandit 1 -> Bandit 2"
+        },
         "semi_hash": "old:3cd6b65ca447d248b388f98436f12a8dd3adc57f38317fc2d685ec27ce335989"
     },
     {
@@ -27,6 +32,15 @@
             "Bash",
             "Linux"
         ],
+        "final_blog_hash": "ea9b169ff1b7a4eefc0924760dc46e61f4a3c566aaf9faa2f5a3c27bb75a88e0",
+        "prev_post": {
+            "url": "view.html?id=3cd6b65ca447d248b388f98436f12a8dd3adc57f38317fc2d685ec27ce335989",
+            "text": "OverTheWire: Bandit: Solving Bandit 0 -> Bandit 1"
+        },
+        "next_post": {
+            "url": "view.html?id=82fdd4dfe71563f1d90751dc2cca9b47f9514442587ec4212280d3cfc4657cec",
+            "text": "OverTheWire: Bandit: Solving Bandit 2 -> Bandit 3"
+        },
         "semi_hash": "old:ea9b169ff1b7a4eefc0924760dc46e61f4a3c566aaf9faa2f5a3c27bb75a88e0"
     },
     {
@@ -42,6 +56,11 @@
             "Bash",
             "Linux"
         ],
+        "final_blog_hash": "82fdd4dfe71563f1d90751dc2cca9b47f9514442587ec4212280d3cfc4657cec",
+        "prev_post": {
+            "url": "view.html?id=ea9b169ff1b7a4eefc0924760dc46e61f4a3c566aaf9faa2f5a3c27bb75a88e0",
+            "text": "OverTheWire: Bandit: Solving Bandit 1 -> Bandit 2"
+        },
         "semi_hash": "old:82fdd4dfe71563f1d90751dc2cca9b47f9514442587ec4212280d3cfc4657cec"
     },
     {
@@ -58,6 +77,11 @@
             "Web Security",
             "Server-side"
         ],
+        "final_blog_hash": "a836c8fff2e55b57763f7ad2a3d3a41aca4ab616dafd88ee0b24bef582beddc9",
+        "next_post": {
+            "url": "view.html?id=0faacaf92acbc422e99bcde562bcbfe76512ebf0ad0f9a1e63659281f30369d4",
+            "text": "OverTheWire: Natas: Solving Natas 1 -> Natas 2"
+        },
         "semi_hash": "old:a836c8fff2e55b57763f7ad2a3d3a41aca4ab616dafd88ee0b24bef582beddc9"
     },
     {
@@ -74,6 +98,15 @@
             "Web Security",
             "Server-side"
         ],
+        "final_blog_hash": "0faacaf92acbc422e99bcde562bcbfe76512ebf0ad0f9a1e63659281f30369d4",
+        "prev_post": {
+            "url": "view.html?id=a836c8fff2e55b57763f7ad2a3d3a41aca4ab616dafd88ee0b24bef582beddc9",
+            "text": "OverTheWire: Natas: Solving Natas 0 -> Natas 1"
+        },
+        "next_post": {
+            "url": "view.html?id=4e4ae8322c5ec6b26dba5c8a74037c0d4ea608267925248a37b5a56abc018572",
+            "text": "OverTheWire: Natas: Solving Natas 2 -> Natas 3"
+        },
         "semi_hash": "old:0faacaf92acbc422e99bcde562bcbfe76512ebf0ad0f9a1e63659281f30369d4"
     },
     {
@@ -90,6 +123,11 @@
             "Web Security",
             "Server-side"
         ],
+        "final_blog_hash": "4e4ae8322c5ec6b26dba5c8a74037c0d4ea608267925248a37b5a56abc018572",
+        "prev_post": {
+            "url": "view.html?id=0faacaf92acbc422e99bcde562bcbfe76512ebf0ad0f9a1e63659281f30369d4",
+            "text": "OverTheWire: Natas: Solving Natas 1 -> Natas 2"
+        },
         "semi_hash": "old:4e4ae8322c5ec6b26dba5c8a74037c0d4ea608267925248a37b5a56abc018572"
     },
     {
@@ -105,6 +143,11 @@
             "Linux",
             "Bash"
         ],
+        "final_blog_hash": "0df7c7c594c3593eeae08a80ecf201329c9753d2a7c2e6bd2371d3919bec0ed6",
+        "next_post": {
+            "url": "view.html?id=891077dae1ae376f6f656f48e7da130bacd8e3b9c597e1df17fc189ca65ebae4",
+            "text": "OverTheWire: Leviathan: Solving Leviathan 1 -> Leviathan 2"
+        },
         "semi_hash": "old:0df7c7c594c3593eeae08a80ecf201329c9753d2a7c2e6bd2371d3919bec0ed6"
     },
     {
@@ -120,6 +163,15 @@
             "Linux",
             "Bash"
         ],
+        "final_blog_hash": "891077dae1ae376f6f656f48e7da130bacd8e3b9c597e1df17fc189ca65ebae4",
+        "prev_post": {
+            "url": "view.html?id=0df7c7c594c3593eeae08a80ecf201329c9753d2a7c2e6bd2371d3919bec0ed6",
+            "text": "OverTheWire: Leviathan: Solving Leviathan 0 -> Leviathan 1"
+        },
+        "next_post": {
+            "url": "view.html?id=5935493193db9a861c47d50f44d3c87e9f1e8005e60fb059ce5ee1fae5c09a8a",
+            "text": "OverTheWire: Leviathan: Solving Leviathan 2 -> Leviathan 3"
+        },
         "semi_hash": "old:891077dae1ae376f6f656f48e7da130bacd8e3b9c597e1df17fc189ca65ebae4"
     },
     {
@@ -134,6 +186,11 @@
             "Python3",
             "Competitive Programming"
         ],
+        "final_blog_hash": "2c9d431514de6d3c3ebdf4e6275fab6eeb94feaa7ca543ffa91ccdd319eb35bc",
+        "next_post": {
+            "url": "view.html?id=a5c21348821d966a8a2d5e608e49d7d09e6c946f66a2881b2141478edf529776",
+            "text": "CSES: Introductory Problem Set: Solving Missing Number."
+        },
         "semi_hash": "old:2c9d431514de6d3c3ebdf4e6275fab6eeb94feaa7ca543ffa91ccdd319eb35bc"
     },
     {
@@ -148,6 +205,11 @@
             "Python3",
             "Competitive Programming"
         ],
+        "final_blog_hash": "a5c21348821d966a8a2d5e608e49d7d09e6c946f66a2881b2141478edf529776",
+        "prev_post": {
+            "url": "view.html?id=2c9d431514de6d3c3ebdf4e6275fab6eeb94feaa7ca543ffa91ccdd319eb35bc",
+            "text": "CSES: Introductory Problem Set: Solving Weird Algorithm."
+        },
         "semi_hash": "old:a5c21348821d966a8a2d5e608e49d7d09e6c946f66a2881b2141478edf529776"
     },
     {
@@ -163,6 +225,15 @@
             "Linux",
             "Bash"
         ],
+        "final_blog_hash": "5935493193db9a861c47d50f44d3c87e9f1e8005e60fb059ce5ee1fae5c09a8a",
+        "prev_post": {
+            "url": "view.html?id=891077dae1ae376f6f656f48e7da130bacd8e3b9c597e1df17fc189ca65ebae4",
+            "text": "OverTheWire: Leviathan: Solving Leviathan 1 -> Leviathan 2"
+        },
+        "next_post": {
+            "url": "view.html?id=0d431468614379199d1fba64b0d8db3af68391ba1acde3b404f3ed2cec087d18",
+            "text": "OverTheWire: Leviathan: Solving Leviathan 3 -> Leviathan 4"
+        },
         "semi_hash": "old:5935493193db9a861c47d50f44d3c87e9f1e8005e60fb059ce5ee1fae5c09a8a"
     },
     {
@@ -178,6 +249,15 @@
             "Linux",
             "Bash"
         ],
+        "final_blog_hash": "0d431468614379199d1fba64b0d8db3af68391ba1acde3b404f3ed2cec087d18",
+        "prev_post": {
+            "url": "view.html?id=5935493193db9a861c47d50f44d3c87e9f1e8005e60fb059ce5ee1fae5c09a8a",
+            "text": "OverTheWire: Leviathan: Solving Leviathan 2 -> Leviathan 3"
+        },
+        "next_post": {
+            "url": "view.html?id=8a36fc1dcfa37c4802ea17b4a841ee8c21ded2a0b67bb7aa208221ef260caeb0",
+            "text": "OverTheWire: Leviathan: Solving Leviathan 4 -> Leviathan 5"
+        },
         "semi_hash": "old:0d431468614379199d1fba64b0d8db3af68391ba1acde3b404f3ed2cec087d18"
     },
     {
@@ -193,6 +273,15 @@
             "Linux",
             "Bash"
         ],
+        "prev_post": {
+            "url": "view.html?id=0d431468614379199d1fba64b0d8db3af68391ba1acde3b404f3ed2cec087d18",
+            "text": "OverTheWire: Leviathan: Solving Leviathan 3 -> Leviathan 4"
+        },
+        "next_post": {
+            "url": "",
+            "text": ""
+        },
+        "final_blog_hash": "8a36fc1dcfa37c4802ea17b4a841ee8c21ded2a0b67bb7aa208221ef260caeb0",
         "semi_hash": "27930e69e47ccf8ca676dd8774f95735c28a3a44289171317019fc45e5fe9cf9"
     }
 ]

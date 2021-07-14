@@ -42,6 +42,7 @@ def parse_blog_data(individual_blog_data: list):
             blog_hash = generate_hash(semi_hash)
         BLOG_MASTER_DATA[blog_hash] = blog
         blog['semi_hash'] = semi_hash
+        blog['final_blog_hash'] = blog_hash
 
     return individual_blog_data
 
