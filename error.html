@@ -22,6 +22,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description"
         content="Welcome to our technical blog, here you will find topics related to cyber-security, data science and machine learning. There are write-ups, technical articles, how tos, fundamentals and lot more topics, that would be of your interest.">
+    <meta name="theme-color" content="#192734">
     <!-- Auxillary tags Ends -->
     <title>
         Error | Draggers21
@@ -209,7 +210,12 @@
     <script type="module" src="static/core/js/side_panel.js"></script>
     <script type="module" src="static/core/js/footer.js"></script>
     <script type="module" src="static/core/js/link_handling.js"></script>
-
+    <!-- Script to change the top value of the background to prevent overflow-->
+    <script type="text/javascript">
+        let main_content_height = document.getElementById("main-page-content").offsetHeight;
+        document.documentElement.style.setProperty("--top-value", main_content_height);
+    </script>
+    <!-- Script Ends -->
 </body>
 
 </html>

@@ -22,6 +22,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description"
         content="Welcome to our technical blog, here you will find topics related to cyber-security, data science and machine learning. There are write-ups, technical articles, how tos, fundamentals and lot more topics, that would be of your interest.">
+    <meta name="theme-color" content="#192734">
     <!-- Auxillary tags Ends -->
     <title>
         Search | Draggers21
@@ -55,7 +56,7 @@
     <!-- animate starts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <!-- animate ends -->
-    
+
     <!-- Pre-fetching some resources -->
     <link rel="prefetch" href="static/core/js/config/dev_config.js" as="script" />
     <link rel="prefetch" href="static/core/js/config/prod_config.js" as="script" />
@@ -280,6 +281,13 @@
     </script>
     <script type="module" src="static/core/js/footer.js"></script>
     <script type="module" src="static/core/js/link_handling.js"></script>
-
+    <!-- Script to change the top value of the background to prevent overflow-->
+    <script type="text/javascript">
+        let main_content_height = document.getElementById("main-page-content").clientHeight;
+        console.log(main_content_height);
+        document.documentElement.style.setProperty("--top-value", main_content_height);
+    </script>
+    <!-- Script Ends -->
 </body>
+
 </html>

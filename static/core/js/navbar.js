@@ -57,6 +57,7 @@ let ul = document.createElement("ul");
 ul.setAttribute("class", "navbar-nav me-auto mb-2 mb-lg-0");
 
 let li1 = document.createElement("li");
+li1.innerHTML = "<a href='archives.html' style='margin-left: 10px;margin-top:10px;font-style:normal;font-size:large;font-weight:500'>Archives</a>";
 li1.setAttribute("class", "nav-item");
 
 /*
