@@ -278,10 +278,54 @@
             "text": "OverTheWire: Leviathan: Solving Leviathan 3 -> Leviathan 4"
         },
         "next_post": {
-            "url": "",
-            "text": ""
+            "url": "view.html?id=cb42290b8c0c33bde477b24b712d694975ac0722426fc1756ca271a6b58bb87b",
+            "text": "OverTheWire: Leviathan: Solving Leviathan 5 -> Leviathan 6"
         },
         "final_blog_hash": "8a36fc1dcfa37c4802ea17b4a841ee8c21ded2a0b67bb7aa208221ef260caeb0",
         "semi_hash": "27930e69e47ccf8ca676dd8774f95735c28a3a44289171317019fc45e5fe9cf9"
+    },
+    {
+        "blog_location": "static/blogs/OverTheWire-WriteUps/Leviathan/leviathan5to6.json",
+        "blog_title": "OverTheWire: Leviathan: Solving Leviathan 5 -> Leviathan 6",
+        "blog_author": "Chetanya Kunndra",
+        "blog_summary": "Leviathan is a war-game on OverTheWire.org that tests players knowledge *nix commands and linux file system fundamentals amd tools, in this writeup we will solve Leviathan Level 5, to get the password for leviathan6",
+        "blog_publish_date": "15/07/2021",
+        "blog_tags": [
+            "WriteUp",
+            "OverTheWire",
+            "Leviathan",
+            "Linux",
+            "Bash"
+        ],
+        "prev_post": {
+            "url": "view.html?id=8a36fc1dcfa37c4802ea17b4a841ee8c21ded2a0b67bb7aa208221ef260caeb0",
+            "text": "OverTheWire: Leviathan: Solving Leviathan 4 -> Leviathan 5"
+        },
+        "next_post": {
+            "url": "view.html?id=3bb41292971de66a60f1e58abe86b3ebc173fa6b49baecf297ecc7572da3e72d",
+            "text": "OverTheWire: Leviathan: Solving Leviathan 6 -> Leviathan 7"
+        },
+        "final_blog_hash": "cb42290b8c0c33bde477b24b712d694975ac0722426fc1756ca271a6b58bb87b",
+        "semi_hash": "11a13279be5a4269b2735609a4ff23d6b43deb022009fb8e2b2a7955bd32a8e2"
+    },
+    {
+        "blog_location": "static/blogs/OverTheWire-WriteUps/Leviathan/leviathan6to7.json",
+        "blog_title": "OverTheWire: Leviathan: Solving Leviathan 6 -> Leviathan 7",
+        "blog_author": "Chetanya Kunndra",
+        "blog_summary": "Leviathan is a war-game on OverTheWire.org that tests players knowledge *nix commands and linux file system fundamentals amd tools, in this writeup we will solve Leviathan Level 6, to get the password for leviathan7",
+        "blog_publish_date": "15/07/2021",
+        "blog_tags": [
+            "WriteUp",
+            "OverTheWire",
+            "Leviathan",
+            "Linux",
+            "Bash"
+        ],
+        "prev_post": {
+            "url": "view.html?id=cb42290b8c0c33bde477b24b712d694975ac0722426fc1756ca271a6b58bb87b",
+            "text": "OverTheWire: Leviathan: Solving Leviathan 5 -> Leviathan 6"
+        },
+        "final_blog_hash": "3bb41292971de66a60f1e58abe86b3ebc173fa6b49baecf297ecc7572da3e72d",
+        "semi_hash": "e1e08a15602d90b7ba9aad4d45851c4e12964ea400ea521f0a21b4e756fc2b74"
     }
 ]

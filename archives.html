@@ -25,7 +25,7 @@
     <meta name="theme-color" content="#192734">
     <!-- Auxillary tags Ends -->
     <title>
-        Home | Draggers21
+        Archives | Draggers21
     </title>
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -81,17 +81,7 @@
         <div id="navigation-bar"></div>
 
         <div class="row container-fluid" style="padding-right: inherit;">
-            <div class="col-lg-9">
-                <div id="blog-card-holder"></div>
-                <!-- Pagination -->
-                <div class="row">
-                    <div class="col" style="text-align: center;">
-                        <div class="pagination" id="pagination"></div>
-                    </div>
-                </div>
-                <!-- Pagination Ends-->
-            </div>
-            <div class="col-lg-3">
+            <div class="col-lg">
                 <div class="blog_card">
                     <div class="card text-justify" id="side-panel">
 
@@ -121,7 +111,6 @@
     </div>
     <!-- Main content Ends -->
     <!-- version 1.0 Ends -->
-
     <!-- required scripts -->
     <script type="module" src="static/core/js/loader.js"></script>
     <script type="text/javascript">
@@ -129,101 +118,7 @@
         window.location.hash = '';
     </script>
     <script type="module" src="static/core/js/navbar.js"></script>
-    <script type="module" src="static/core/js/index.js"></script>
     <script type="module" src="static/core/js/side_panel.js"></script>
-    <script type="text/javascript">
-        /* 
-            TODO: Optimize code and clean it. Can be found in static/core/js/paginate.js
-        */
-        function check_next_prev_button() {
-            if (document.getElementsByClassName("this-is-the-active-page")[0].getAttribute("name") == "page_1") {
-                document.getElementById("prev_page").setAttribute("class", "disabled");
-                if (document.getElementsByClassName("this-is-the-active-page")[0].getAttribute("id") == "last_page") {
-                    document.getElementById("next_page").setAttribute("class", "disabled");
-                }
-                else {
-                    document.getElementById("next_page").removeAttribute("class");
-                }
-            }
-            else if (document.getElementsByClassName("this-is-the-active-page")[0].getAttribute("id") == "last_page") {
-                document.getElementById("next_page").setAttribute("class", "disabled");
-                document.getElementById("prev_page").removeAttribute("class");
-            }
-            else {
-                document.getElementById("prev_page").removeAttribute("class");
-                document.getElementById("next_page").removeAttribute("class");
-            }
-        }
-
-        function change_page(element_name) {
-            //console.log(element_name);
-            if (element_name == "left_shift") {
-                // getting the current active pagination button
-                let active_pages = document.getElementsByClassName("this-is-the-active-page");
-
-                // console.log(active_pages)
-                // getting the corresponding page number
-                let page_to_deactivate = active_pages[0].getAttribute("name");
-
-                // changing display to none 
-                // document.getElementById(page_to_deactivate).style.display = "none";
-
-                let prev_page = "page_" + (parseInt(page_to_deactivate.split("_")[1]) - 1);
-                // remove active status
-                active_pages[0].removeAttribute("class");
-                document.getElementById(page_to_deactivate).style.display = "none";
-
-                // change class of pagintion button
-                document.getElementsByName(prev_page)[0].setAttribute("class", "this-is-the-active-page");
-                // this will display the div with id page_number
-                document.getElementById(prev_page).style.display = "block";
-            }
-            else if (element_name == "right_shift") {
-                // getting the current active pagination button
-                let active_pages = document.getElementsByClassName("this-is-the-active-page");
-
-                // console.log(active_pages)
-                // getting the corresponding page number
-                let page_to_deactivate = active_pages[0].getAttribute("name");
-
-                // changing display to none 
-                // document.getElementById(page_to_deactivate).style.display = "none";
-
-                let next_page = "page_" + (parseInt(page_to_deactivate.split("_")[1]) + 1);
-                console.log(next_page);
-                // remove active status
-                active_pages[0].removeAttribute("class");
-                document.getElementById(page_to_deactivate).style.display = "none";
-
-                // change class of pagintion button
-                document.getElementsByName(next_page)[0].setAttribute("class", "this-is-the-active-page");
-                // this will display the div with id page_number
-                document.getElementById(next_page).style.display = "block";
-            }
-            else if (element_name.includes("page")) {
-                // getting the current active pagination button
-                let active_pages = document.getElementsByClassName("this-is-the-active-page");
-                // console.log(active_pages)
-
-                // getting the corresponding page number
-                let page_to_deactivate = active_pages[0].getAttribute("name");
-
-                // changing display to none 
-                document.getElementById(page_to_deactivate).style.display = "none";
-
-                // remove active status
-                active_pages[0].removeAttribute("class");
-
-                document.getElementsByName(element_name)[0].setAttribute("class", "this-is-the-active-page");
-                // this will display the div with id page_number
-                document.getElementById(element_name).style.display = "block";
-
-            }
-            check_next_prev_button();
-        }
-
-    </script>
-    <!-- required scripts -->
     <script type="module" src="static/core/js/footer.js"></script>
     <script type="module" src="static/core/js/link_handling.js"></script>
     <!-- Script to change the top value of the background to prevent overflow-->
