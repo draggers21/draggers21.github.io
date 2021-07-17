@@ -353,7 +353,7 @@
         "blog_title": "OverTheWire: Krypton: Solving Krypton 1 -> Krypton 2",
         "blog_author": "Chetanya Kunndra",
         "blog_summary": "Krypton is a war-game presented by OverTheWire.org which aims at teaching players about cryptography, In this writeup we will try and solve Krypton level 1 in order to get the password for Krypton level 2.",
-        "blog_publish_date": "15/07/2021",
+        "blog_publish_date": "16/07/2021",
         "blog_tags": [
             "WriteUp",
             "OverTheWire",

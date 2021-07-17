@@ -9,6 +9,17 @@
     flex-direction: column;
     align-items: center;
 }
+
+#full-page-loader .loader-image {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 275px;
+    height: auto;
+    z-index: 999;
+    display: flex;
+}
+
 #full-page-spinner {
     animation: rotate 0.56s infinite linear;
     width:75px;

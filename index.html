@@ -23,6 +23,13 @@
     <meta name="Description"
         content="Welcome to our technical blog, here you will find topics related to cyber-security, data science and machine learning. There are write-ups, technical articles, how tos, fundamentals and lot more topics, that would be of your interest.">
     <meta name="theme-color" content="#192734">
+    <!-- Favicons starts -->
+    <link rel="icon" href="static/core/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/core/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/core/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/core/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/core/images/favicon/site.webmanifest">
+    <!-- Favicons ends -->
     <!-- Auxillary tags Ends -->
     <title>
         Home | Draggers21
@@ -66,6 +73,7 @@
 <body>
     <!-- Spinner starts -->
     <div id="full-page-loader">
+        <img class="loader-image" src="static/core/images/logo/logo.png">
         <div id="full-page-spinner"></div>
     </div>
     <!-- Spinner Ends -->
@@ -228,8 +236,7 @@
     <script type="module" src="static/core/js/link_handling.js"></script>
     <!-- Script to change the top value of the background to prevent overflow-->
     <script type="text/javascript">
-        let main_content_height = document.getElementById("body").offsetHeight;
-        console.log(main_content_height);
+        let main_content_height = document.getElementById("main-page-content").offsetHeight;
         document.documentElement.style.setProperty("--top-value", "2000px");
     </script>
     <!-- Script Ends -->

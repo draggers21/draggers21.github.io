@@ -26,6 +26,13 @@
         content="Welcome to our technical blog, here you will find topics related to cyber-security, data science and machine learning. There are write-ups, technical articles, how tos, fundamentals and lot more topics, that would be of your interest.">
     <meta name="theme-color" content="#192734">
     <!-- Auxillary tags Ends -->
+    <!-- Favicons starts -->
+    <link rel="icon" href="static/core/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/core/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/core/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/core/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/core/images/favicon/site.webmanifest">
+    <!-- Favicons ends -->
     <title>
         Draggers21
     </title>
@@ -86,6 +93,7 @@
     <!-- Magnify ends -->
     <!-- Spinner starts -->
     <div id="full-page-loader">
+        <img class="loader-image" src="static/core/images/logo/logo.png">
         <div id="full-page-spinner"></div>
     </div>
     <!-- Spinner Ends -->
@@ -183,13 +191,12 @@
         });
         // wasted 9 hours for this 3 line code. fuck me. 
         setTimeout(function () {
-
             Prism.highlightAll();
             var all_code_sections = document.getElementsByClassName("code-toolbar");
             for (var i = 0; i < all_code_sections.length; i++) {
                 all_code_sections[i].setAttribute("style", "max-width: 900px; margin:auto;");
             }
-        }, 500);
+        }, 1000);
     </script>
     <!-- Script to change the top value of the background to prevent overflow-->
     <script type="text/javascript">
