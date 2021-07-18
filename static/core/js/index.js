@@ -40,7 +40,7 @@ function process_meta_data(meta_data) {
         let temp_blog_id = blog_ids.slice(((i - 1) * CARD_PER_PAGE_LIMIT), (i * CARD_PER_PAGE_LIMIT));
         for (let j = 0; j < temp_blog_id.length; j++) {
             let div1 = create_blog_cards(temp_blog_id[j], meta_data[temp_blog_id[j]]);
-            page_div.append(div1);
+            page_div.appendChild(div1);
         }
         blog_card_holder_container.appendChild(page_div);
     }
