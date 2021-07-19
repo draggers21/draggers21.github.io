@@ -3,7 +3,7 @@
         "blog_location": "static/blogs/DataScience/what_is_data_science.json",
         "blog_title": "What is Data Science?",
         "blog_author": "Manasvi Grover",
-        "blog_summary": "",
+        "blog_summary": "A begginer introduction to Data Science,it's various branches and what each branch consists of, a kickstarter article for basic knowledge",
         "blog_publish_date": "13/07/2021",
         "blog_tags": [
             "WriteUp",
@@ -16,7 +16,7 @@
         "blog_location": "static/blogs/DataScience/indexing_in_numpy.json",
         "blog_title": "Indexing in Numpy",
         "blog_author": "Manasvi Grover",
-        "blog_summary": "",
+        "blog_summary": "Numpy is one of the ost widely used libraries for computation in Data Science, consisting of 1-D, 2-D and upto n-D arrays. Indexind in numpy arrays turns up to be a little tweaked as compare to other data types. This article is a roadmap to the same.",
         "blog_publish_date": "13/07/2021",
         "blog_tags": [
             "WriteUp",
@@ -32,7 +32,7 @@
         "blog_location": "static/blogs/DataScience/introduction_to_web_scraping.json",
         "blog_title": "Introduction to Web Scraping",
         "blog_author": "Manasvi Grover",
-        "blog_summary": "",
+        "blog_summary": "Web Scraping being one of the most significant data extraction methods of the current time, this article is an introduction to the same with some examples",
         "blog_publish_date": "13/07/2021",
         "blog_tags": [
             "WriteUp",
