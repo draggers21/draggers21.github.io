@@ -9,23 +9,42 @@ from json import load, dump
 from hashlib import sha256
 from itertools import groupby
 from os import walk, path
+from datetime import datetime
+from uuid import uuid4
 
 
 month_dict = {1: 'jan', 2: 'feb', 3: 'mar', 4: 'apr', 5: 'may', 6: 'jun',
     7: 'jul', 8: 'aug', 9: 'sep', 10: 'oct', 11: 'nov', 12: 'dec'}
 
-INDIVIDUAL_BLOG_DATA_LOCATION = "static/meta_data/individual_author_data" 
 
-BLOG_MASTER_DATA = {}
+INDIVIDUAL_BLOG_DATA_LOCATION = "static/meta_data/individual_author_data" 
+MASTER_DATA_LOCATION = "static/meta_data/blog_meta_data.json"
+BLOG_MASTER_DATA = load(open(MASTER_DATA_LOCATION, "r"))
+
+
+def generate_hash(string):
+    return sha256((string).encode("utf-8")).hexdigest()
 
 
 def parse_blog_data(individual_blog_data: list):
     for blog in individual_blog_data:
-        blog_author = blog['blog_author']
-        blog_location = blog['blog_location']
-        blog_summary = blog['blog_summary']
-        blog_id = sha256((blog_author+"<>"+blog_location+"<>"+blog_summary).encode("utf-8")).hexdigest()
-        BLOG_MASTER_DATA[blog_id] = blog
+        try:
+            semi_hash =  blog.pop('semi_hash')
+        except KeyError:
+            semi_hash = generate_hash(str(datetime.now())+str(uuid4()))
+        
+        if not semi_hash:
+            semi_hash = generate_hash(str(datetime.now())+str(uuid4()))
+
+        if semi_hash[:4] == "old:":
+            blog_hash = semi_hash[4:]
+        else:
+            blog_hash = generate_hash(semi_hash)
+        BLOG_MASTER_DATA[blog_hash] = blog
+        blog['semi_hash'] = semi_hash
+        blog['final_blog_hash'] = blog_hash
+
+    return individual_blog_data
 
 
 def update_blog_meta_data():
@@ -34,7 +53,8 @@ def update_blog_meta_data():
             if file.split(".")[-1] == "json" and "blog_data" in file.split(".")[0]:
                 try:
                     print(f"[+] Trying to parse file {file} ...")
-                    parse_blog_data(load(open(path.join(root, file))))
+                    processed_data = parse_blog_data(load(open(path.join(root, file))))
+                    dump(processed_data, open(path.join(root, file), "w+"), indent=4)
                 except Exception as e:
                     print(f"[-] Could not parse file {file}. Error: {e}")
                     continue
@@ -43,14 +63,14 @@ def update_blog_meta_data():
 
     try:
         print(f"[+] Trying to write master data to file.")
-        dump(BLOG_MASTER_DATA, open('static/meta_data/blog_meta_data.json', 'w+'))
+        dump(BLOG_MASTER_DATA, open(MASTER_DATA_LOCATION, 'w+'))
     except Exception as e:
         print(f"[-]  Master data could not be written to file. Error: {e}")
     else:
         print(f"[+] Master data successfully written to file.")
 
 
-def update_meta_data(blog_meta_data):
+def update_author_mapping(blog_meta_data):
     # updating author number
     try:
         print("[+] Trying to update author mapping...")
@@ -67,6 +87,10 @@ def update_meta_data(blog_meta_data):
     else:
         print("[+] Author mapping updated successfully.")
 
+    return sorted_blog_meta_items_by_author
+
+
+def update_tag_mapping(blog_meta_data):
     # Update tags to blog id mapping file
     try:
         print("[+] Trying to update tag mapping...")
@@ -84,6 +108,8 @@ def update_meta_data(blog_meta_data):
     else:
         print("[+] Tag mapping updated successfully.")
 
+
+def update_date_mapping(blog_meta_data, sorted_blog_meta_items_by_author):
     # Update date to blog id mapping
     try:
         print("[+] Trying to update date mapping...")
@@ -106,8 +132,13 @@ def update_meta_data(blog_meta_data):
         print("[+] Date mapping updated successfully.")
 
 
+def update_meta_data(blog_meta_data):
+    sorted_blog_meta_items_by_author = update_author_mapping(blog_meta_data)
+    update_tag_mapping(blog_meta_data)
+    update_date_mapping(blog_meta_data, sorted_blog_meta_items_by_author)
+
+
 if __name__ == "__main__":
-    
     try:
         update_blog_meta_data()    
     except Exception as e:

@@ -178,3 +178,29 @@ a:hover {
 .prev-post button:hover {
     background-color: #be014d;
 }
+
+.about-author-cols {
+    text-align: justify;
+    padding: 0%;
+}
+
+.about-author-img {
+    height: 300px; 
+    width: auto; 
+    margin: 10px 25px 10px 25px;
+    border-radius: 10px;
+}
+
+.author-social {
+    text-align: center;
+    font-size: x-large;
+    padding: 10px;
+}
+
+.navbar-items {
+    margin-left: 10px;
+    margin-top:10px;
+    font-style:normal;
+    font-size:large;
+    font-weight:500;
+}

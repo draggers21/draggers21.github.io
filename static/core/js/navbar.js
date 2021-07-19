@@ -57,8 +57,12 @@ let ul = document.createElement("ul");
 ul.setAttribute("class", "navbar-nav me-auto mb-2 mb-lg-0");
 
 let li1 = document.createElement("li");
+li1.innerHTML = "<a href='archives.html' class='navbar-items'>Archives</a>";
 li1.setAttribute("class", "nav-item");
 
+let li2 = document.createElement("li");
+li2.innerHTML = "<a href='about_us.html' class='navbar-items'>About Us</a>";
+li2.setAttribute("class", "nav-item");
 /*
 let a1 = document.createElement("a");
 a1.setAttribute("class", "nav-link active");
@@ -70,6 +74,7 @@ a1.innerHTML = "<h4>Home</h4>";
 li1.appendChild(a1);
 */
 ul.appendChild(li1);
+ul.appendChild(li2);
 
 div2.appendChild(ul);
 

@@ -10,4 +10,14 @@ The above paragraph shows how you can add an image, now, we will use bold text. 
 
 This pretty much sums up the basics, keep in mind that if you want to put something in quotations, use 'single quotes' as double quotes will give an erroneous JSON file, but same single quotes won't give an erroneous HTML when rendered.
 
+add_code:lang=python:code=
+This is a multiline code example.
+
+You can see there are multiple lines here.
+
+you can add multiline code after specifying the type of language you want to highlight. 
+:code_end
+
+add_code:lang=python:code=This is a single line code example. :code_end
+
 You can copy the string in 'blog_contents', paste it into an html file and see the results for yourself.
