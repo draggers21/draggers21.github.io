@@ -34,7 +34,7 @@ export function create_blog_cards(blog_id, meta_data) {
 
     let blog_title_container = document.createElement("h4");
     blog_title_container.setAttribute("class", "card-title");
-    blog_title_container.innerHTML = blog_title;
+    blog_title_container.innerHTML = "<a href='view.html?id="+blog_id+"' style='font-style:normal'>"+blog_title+"</a>";
 
     let blog_author_container = document.createElement("p");
     blog_author_container.setAttribute("class", "card-text");
