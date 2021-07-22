@@ -13,7 +13,7 @@ else {
     }
     else {
         const raw_query = sanitize_input(params.get("query"));
-        
+
         // add query to dom
         document.getElementById("search-query").innerHTML = "Search query:&emsp;'&nbsp;" + raw_query + "&nbsp;'";
 
@@ -22,11 +22,11 @@ else {
             const query_arr = raw_query.split(":");
             parse_filters(query_arr);
         }
-        else if(!raw_query == ""){
+        else if (!raw_query == "") {
             // search in title by default
             search_title(raw_query);
         }
-        else{
+        else {
             // error code 1503 is invalid search string
             window.location.replace("error.html?err_code=1503");
         }
@@ -64,6 +64,7 @@ function regex_match(string_to_search, string_to_search_in) {
 }
 
 function display_search_result_count(blog_ids_length) {
+    console.log(blog_ids_length)
     if (blog_ids_length == 0) {
         document.getElementById("search-help").style.display = "block";
     }
@@ -192,10 +193,15 @@ function display_content(blog_ids) {
             else {
                 page_div.setAttribute("style", "display: none;");
             }
-            let temp_blog_id = blog_ids.slice(((i-1)*CARD_PER_PAGE_LIMIT), (i*CARD_PER_PAGE_LIMIT));
+            let temp_blog_id = blog_ids.slice(((i - 1) * CARD_PER_PAGE_LIMIT), (i * CARD_PER_PAGE_LIMIT));
             for (let j = 0; j < temp_blog_id.length; j++) {
-                let div1 = create_blog_cards(temp_blog_id[j], meta_data[temp_blog_id[j]]);
-                page_div.appendChild(div1);
+                let is_blog_publish = meta_data[temp_blog_id[j]].publish;
+                if (is_blog_publish != false && is_blog_publish != undefined) {
+                    let div1 = create_blog_cards(temp_blog_id[j], meta_data[temp_blog_id[j]]);
+                    page_div.appendChild(div1);
+                } else {
+                    continue;
+                }
             }
             search_results_container.appendChild(page_div);
         }

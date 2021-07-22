@@ -39,8 +39,13 @@ function process_meta_data(meta_data) {
 
         let temp_blog_id = blog_ids.slice(((i - 1) * CARD_PER_PAGE_LIMIT), (i * CARD_PER_PAGE_LIMIT));
         for (let j = 0; j < temp_blog_id.length; j++) {
-            let div1 = create_blog_cards(temp_blog_id[j], meta_data[temp_blog_id[j]]);
-            page_div.appendChild(div1);
+            let is_blog_publish = meta_data[temp_blog_id[j]].publish;
+            if (is_blog_publish != false && is_blog_publish != undefined) {
+                let div1 = create_blog_cards(temp_blog_id[j], meta_data[temp_blog_id[j]]);
+                page_div.appendChild(div1);
+            } else {
+                continue;
+            }
         }
         blog_card_holder_container.appendChild(page_div);
     }
