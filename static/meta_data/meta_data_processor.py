@@ -147,6 +147,7 @@ if __name__ == "__main__":
         print("[+] Master data rendered successfully.")
         try:
             print("[+] Trying to update meta data...")
+            BLOG_MASTER_DATA = {i:k for i,k in BLOG_MASTER_DATA.items() if k['publish'] == True}           
             update_meta_data(blog_meta_data=BLOG_MASTER_DATA)
         except Exception as e:
             print(f"[-] Could not update meta data. Error: {e}")
