@@ -66,5 +66,26 @@
         },
         "publish": true,
         "semi_hash": "old:03ae97c1799650820db0626ecf5137328a5c16be41dcb7d3d7b2ed172af141eb"
+    },
+    {
+        "blog_location": "static/blogs/DataScience/how_does_computer_see_image.json",
+        "blog_title": "How does the computer see an image?",
+        "blog_author": "Manasvi Grover",
+        "blog_summary": "In computer language, an image is nothing more than a huge(HUGE) collection of numbers. The image is broken down into n number of boxes (the greater the number, the better), then we define the color for each of these boxes. ",
+        "blog_publish_date": "28/07/2021",
+        "blog_tags": [
+            "image",
+            "image processing",
+            "python",
+            "Python",
+            "Python Basics"
+        ],
+        "prev_post": {
+            "url": "view.html?id=0fe138f1ade66c0bd1f48b61d7ac6b603d1e04b996465be4e8e4b9b33b343a7e",
+            "text": "Indexing in Numpy"
+        },
+        "publish": true,
+        "final_blog_hash": "35eef45a376c293949abad7dc29f17fa1392eb74c1809add46d1da28dfc23634",
+        "semi_hash": "89fbf0ea64ca66da1fc25dd8043cef6e5474096ea27cc64fa1eb67c11d0a42c4"
     }
 ]

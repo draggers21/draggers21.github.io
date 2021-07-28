@@ -1,4 +1,4 @@
-let ENV = "prod";
+let ENV = "dev";
 
 
 function run_link_handling() {
