@@ -11,7 +11,7 @@ from itertools import groupby
 from os import walk, path
 from datetime import datetime
 from uuid import uuid4
-
+from math import ceil
 
 month_dict = {1: 'jan', 2: 'feb', 3: 'mar', 4: 'apr', 5: 'may', 6: 'jun',
     7: 'jul', 8: 'aug', 9: 'sep', 10: 'oct', 11: 'nov', 12: 'dec'}
@@ -20,14 +20,21 @@ month_dict = {1: 'jan', 2: 'feb', 3: 'mar', 4: 'apr', 5: 'may', 6: 'jun',
 INDIVIDUAL_BLOG_DATA_LOCATION = "static/meta_data/individual_author_data" 
 MASTER_DATA_LOCATION = "static/meta_data/blog_meta_data.json"
 BLOG_MASTER_DATA = load(open(MASTER_DATA_LOCATION, "r"))
+READING_LIMIT = 250
 
 
 def generate_hash(string):
     return sha256((string).encode("utf-8")).hexdigest()
 
 
+def calculate_reading_limit(blog_content):
+    words = [x for x in blog_content.split(" ") if len(x) > 3]
+    return str(ceil(len(words)/READING_LIMIT))
+
+
 def parse_blog_data(individual_blog_data: list):
     for blog in individual_blog_data:
+        blog_location = blog['blog_location']
         try:
             semi_hash =  blog.pop('semi_hash')
         except KeyError:
@@ -41,6 +48,7 @@ def parse_blog_data(individual_blog_data: list):
         else:
             blog_hash = generate_hash(semi_hash)
         BLOG_MASTER_DATA[blog_hash] = blog
+        BLOG_MASTER_DATA[blog_hash]["read_time"] = calculate_reading_limit(blog_content=open(blog_location, 'r').read())
         blog['semi_hash'] = semi_hash
         blog['final_blog_hash'] = blog_hash
 
@@ -147,6 +155,7 @@ if __name__ == "__main__":
         print("[+] Master data rendered successfully.")
         try:
             print("[+] Trying to update meta data...")
+            BLOG_MASTER_DATA = {i:k for i,k in BLOG_MASTER_DATA.items() if k['publish'] == True}           
             update_meta_data(blog_meta_data=BLOG_MASTER_DATA)
         except Exception as e:
             print(f"[-] Could not update meta data. Error: {e}")

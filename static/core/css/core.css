@@ -204,3 +204,7 @@ a:hover {
     font-size:large;
     font-weight:500;
 }
+.error-image {
+    height: 250px;
+    width: auto;
+}

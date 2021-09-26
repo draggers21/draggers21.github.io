@@ -16,6 +16,8 @@
             "url": "view.html?id=0fe138f1ade66c0bd1f48b61d7ac6b603d1e04b996465be4e8e4b9b33b343a7e",
             "text": "Indexing in Numpy"
         },
+        "publish": true,
+        "read_time": "2",
         "semi_hash": "old:65e7cde4d2dcd3acca1c997ca59ee7cefb29da7c64de38a3ed894b93f4786dfb"
     },
     {
@@ -42,6 +44,8 @@
             "url": "view.html?id=03ae97c1799650820db0626ecf5137328a5c16be41dcb7d3d7b2ed172af141eb",
             "text": "Introduction to Web Scraping"
         },
+        "publish": true,
+        "read_time": "2",
         "semi_hash": "old:0fe138f1ade66c0bd1f48b61d7ac6b603d1e04b996465be4e8e4b9b33b343a7e"
     },
     {
@@ -62,6 +66,8 @@
             "url": "view.html?id=0fe138f1ade66c0bd1f48b61d7ac6b603d1e04b996465be4e8e4b9b33b343a7e",
             "text": "Indexing in Numpy"
         },
+        "publish": true,
+        "read_time": "2",
         "semi_hash": "old:03ae97c1799650820db0626ecf5137328a5c16be41dcb7d3d7b2ed172af141eb"
     }
 ]

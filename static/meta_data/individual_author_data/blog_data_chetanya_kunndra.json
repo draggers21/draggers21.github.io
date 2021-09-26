@@ -17,6 +17,8 @@
             "url": "view.html?id=ea9b169ff1b7a4eefc0924760dc46e61f4a3c566aaf9faa2f5a3c27bb75a88e0",
             "text": "OverTheWire: Bandit: Solving Bandit 1 -> Bandit 2"
         },
+        "publish": true,
+        "read_time": "1",
         "semi_hash": "old:3cd6b65ca447d248b388f98436f12a8dd3adc57f38317fc2d685ec27ce335989"
     },
     {
@@ -41,6 +43,8 @@
             "url": "view.html?id=82fdd4dfe71563f1d90751dc2cca9b47f9514442587ec4212280d3cfc4657cec",
             "text": "OverTheWire: Bandit: Solving Bandit 2 -> Bandit 3"
         },
+        "publish": true,
+        "read_time": "2",
         "semi_hash": "old:ea9b169ff1b7a4eefc0924760dc46e61f4a3c566aaf9faa2f5a3c27bb75a88e0"
     },
     {
@@ -61,6 +65,8 @@
             "url": "view.html?id=ea9b169ff1b7a4eefc0924760dc46e61f4a3c566aaf9faa2f5a3c27bb75a88e0",
             "text": "OverTheWire: Bandit: Solving Bandit 1 -> Bandit 2"
         },
+        "publish": true,
+        "read_time": "2",
         "semi_hash": "old:82fdd4dfe71563f1d90751dc2cca9b47f9514442587ec4212280d3cfc4657cec"
     },
     {
@@ -82,6 +88,8 @@
             "url": "view.html?id=0faacaf92acbc422e99bcde562bcbfe76512ebf0ad0f9a1e63659281f30369d4",
             "text": "OverTheWire: Natas: Solving Natas 1 -> Natas 2"
         },
+        "publish": true,
+        "read_time": "1",
         "semi_hash": "old:a836c8fff2e55b57763f7ad2a3d3a41aca4ab616dafd88ee0b24bef582beddc9"
     },
     {
@@ -107,6 +115,8 @@
             "url": "view.html?id=4e4ae8322c5ec6b26dba5c8a74037c0d4ea608267925248a37b5a56abc018572",
             "text": "OverTheWire: Natas: Solving Natas 2 -> Natas 3"
         },
+        "publish": true,
+        "read_time": "1",
         "semi_hash": "old:0faacaf92acbc422e99bcde562bcbfe76512ebf0ad0f9a1e63659281f30369d4"
     },
     {
@@ -128,6 +138,8 @@
             "url": "view.html?id=0faacaf92acbc422e99bcde562bcbfe76512ebf0ad0f9a1e63659281f30369d4",
             "text": "OverTheWire: Natas: Solving Natas 1 -> Natas 2"
         },
+        "publish": true,
+        "read_time": "1",
         "semi_hash": "old:4e4ae8322c5ec6b26dba5c8a74037c0d4ea608267925248a37b5a56abc018572"
     },
     {
@@ -148,6 +160,8 @@
             "url": "view.html?id=891077dae1ae376f6f656f48e7da130bacd8e3b9c597e1df17fc189ca65ebae4",
             "text": "OverTheWire: Leviathan: Solving Leviathan 1 -> Leviathan 2"
         },
+        "publish": true,
+        "read_time": "2",
         "semi_hash": "old:0df7c7c594c3593eeae08a80ecf201329c9753d2a7c2e6bd2371d3919bec0ed6"
     },
     {
@@ -172,6 +186,8 @@
             "url": "view.html?id=5935493193db9a861c47d50f44d3c87e9f1e8005e60fb059ce5ee1fae5c09a8a",
             "text": "OverTheWire: Leviathan: Solving Leviathan 2 -> Leviathan 3"
         },
+        "publish": true,
+        "read_time": "3",
         "semi_hash": "old:891077dae1ae376f6f656f48e7da130bacd8e3b9c597e1df17fc189ca65ebae4"
     },
     {
@@ -191,6 +207,8 @@
             "url": "view.html?id=a5c21348821d966a8a2d5e608e49d7d09e6c946f66a2881b2141478edf529776",
             "text": "CSES: Introductory Problem Set: Solving Missing Number."
         },
+        "publish": true,
+        "read_time": "2",
         "semi_hash": "old:2c9d431514de6d3c3ebdf4e6275fab6eeb94feaa7ca543ffa91ccdd319eb35bc"
     },
     {
@@ -210,6 +228,8 @@
             "url": "view.html?id=2c9d431514de6d3c3ebdf4e6275fab6eeb94feaa7ca543ffa91ccdd319eb35bc",
             "text": "CSES: Introductory Problem Set: Solving Weird Algorithm."
         },
+        "publish": true,
+        "read_time": "2",
         "semi_hash": "old:a5c21348821d966a8a2d5e608e49d7d09e6c946f66a2881b2141478edf529776"
     },
     {
@@ -234,6 +254,8 @@
             "url": "view.html?id=0d431468614379199d1fba64b0d8db3af68391ba1acde3b404f3ed2cec087d18",
             "text": "OverTheWire: Leviathan: Solving Leviathan 3 -> Leviathan 4"
         },
+        "publish": true,
+        "read_time": "4",
         "semi_hash": "old:5935493193db9a861c47d50f44d3c87e9f1e8005e60fb059ce5ee1fae5c09a8a"
     },
     {
@@ -258,6 +280,8 @@
             "url": "view.html?id=8a36fc1dcfa37c4802ea17b4a841ee8c21ded2a0b67bb7aa208221ef260caeb0",
             "text": "OverTheWire: Leviathan: Solving Leviathan 4 -> Leviathan 5"
         },
+        "publish": true,
+        "read_time": "2",
         "semi_hash": "old:0d431468614379199d1fba64b0d8db3af68391ba1acde3b404f3ed2cec087d18"
     },
     {
@@ -282,6 +306,8 @@
             "text": "OverTheWire: Leviathan: Solving Leviathan 5 -> Leviathan 6"
         },
         "final_blog_hash": "8a36fc1dcfa37c4802ea17b4a841ee8c21ded2a0b67bb7aa208221ef260caeb0",
+        "publish": true,
+        "read_time": "2",
         "semi_hash": "27930e69e47ccf8ca676dd8774f95735c28a3a44289171317019fc45e5fe9cf9"
     },
     {
@@ -306,6 +332,8 @@
             "text": "OverTheWire: Leviathan: Solving Leviathan 6 -> Leviathan 7"
         },
         "final_blog_hash": "cb42290b8c0c33bde477b24b712d694975ac0722426fc1756ca271a6b58bb87b",
+        "publish": true,
+        "read_time": "2",
         "semi_hash": "11a13279be5a4269b2735609a4ff23d6b43deb022009fb8e2b2a7955bd32a8e2"
     },
     {
@@ -326,6 +354,8 @@
             "text": "OverTheWire: Leviathan: Solving Leviathan 5 -> Leviathan 6"
         },
         "final_blog_hash": "3bb41292971de66a60f1e58abe86b3ebc173fa6b49baecf297ecc7572da3e72d",
+        "publish": true,
+        "read_time": "3",
         "semi_hash": "e1e08a15602d90b7ba9aad4d45851c4e12964ea400ea521f0a21b4e756fc2b74"
     },
     {
@@ -346,6 +376,8 @@
             "url": "view.html?id=8411a50f01488bbe556bd98df6a6c68078d6059d73287629f8cae6ab4b7684d3",
             "text": "OverTheWire: Krypton: Solving Krypton 1 -> Krypton 2"
         },
+        "publish": true,
+        "read_time": "1",
         "semi_hash": "ef0d0e8b3e14a651055e4b83ee5389890a06d774a64f65bc78e5e2b217b47ef6"
     },
     {
@@ -366,6 +398,8 @@
             "text": "OverTheWire: Krypton: Solving Krypton 0 -> Krypton 1"
         },
         "final_blog_hash": "8411a50f01488bbe556bd98df6a6c68078d6059d73287629f8cae6ab4b7684d3",
+        "publish": true,
+        "read_time": "2",
         "semi_hash": "58ac3ab118b2403c5e6e42236a0bb2d8842f5d9b55f05b6f19d0c72c0b119aa7"
     }
 ]

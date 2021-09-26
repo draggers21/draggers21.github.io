@@ -1,3 +1,5 @@
+import { NUMBER_OF_PAGES_IN_PAGINATION } from "./constants.js";
+
 export async function fetch_json_data(meta_data_location) {
     try {
         let response = await fetch(meta_data_location);
@@ -19,6 +21,7 @@ export function create_blog_cards(blog_id, meta_data) {
     let blog_publish_date = meta_data.blog_publish_date;
     let blog_tags = meta_data.blog_tags;
     let blog_summary = meta_data.blog_summary;
+    let blog_read_time = meta_data.read_time;
 
     let div1 = document.createElement("div");
     div1.setAttribute("class", "row blog_card");
@@ -34,7 +37,7 @@ export function create_blog_cards(blog_id, meta_data) {
 
     let blog_title_container = document.createElement("h4");
     blog_title_container.setAttribute("class", "card-title");
-    blog_title_container.innerHTML = blog_title;
+    blog_title_container.innerHTML = "<a href='view.html?id=" + blog_id + "' style='font-style:normal'>" + blog_title + "</a>";
 
     let blog_author_container = document.createElement("p");
     blog_author_container.setAttribute("class", "card-text");
@@ -54,13 +57,22 @@ export function create_blog_cards(blog_id, meta_data) {
         blog_tags_container.appendChild(span);
     }
 
+    let blog_read_time_container = document.createElement("p");
+    blog_read_time_container.setAttribute("class", "card-text");
+    if (blog_read_time == "1") {
+        blog_read_time_container.innerHTML = "Read time: " + blog_read_time + " min";
+    }
+    else {
+        blog_read_time_container.innerHTML = "Read time: " + blog_read_time + " mins";
+    }
+
     let blog_summary_container = document.createElement("p");
     blog_summary_container.setAttribute("class", "card-text");
     blog_summary_container.innerHTML = blog_summary + "<br />";
 
     let read_more_section = document.createElement("p");
     read_more_section.setAttribute("class", "card-text continue-reading");
-    
+
     let read_more_button = document.createElement("button");
     read_more_button.setAttribute("type", "button");
     read_more_button.setAttribute("class", "btn");
@@ -79,6 +91,7 @@ export function create_blog_cards(blog_id, meta_data) {
     div4.appendChild(blog_author_container);
     div4.appendChild(blog_date_container);
     div4.appendChild(blog_tags_container);
+    div4.appendChild(blog_read_time_container);
     div4.appendChild(blog_summary_container);
     div4.appendChild(read_more_section);
 
@@ -91,10 +104,8 @@ export function create_blog_cards(blog_id, meta_data) {
 
 export function create_pagination(number_of_pages) {
 
+    // If number of pages greater than 5 resolve to ... structure
     let empty_div = document.createElement("div");
-    empty_div.setAttribute("class", "row");
-    let col = document.createElement("div");
-    col.setAttribute("class", "col");
     let left_shift = document.createElement("a");
     left_shift.setAttribute("href", "#");
     left_shift.setAttribute("class", "disabled");
@@ -102,8 +113,12 @@ export function create_pagination(number_of_pages) {
     left_shift.setAttribute("name", "left_shift");
     left_shift.setAttribute("id", "prev_page");
     left_shift.innerHTML = "&laquo";
-    col.appendChild(left_shift);
+    empty_div.appendChild(left_shift);
 
+    let total_number_of_pagination_segments = Math.ceil(number_of_pages/NUMBER_OF_PAGES_IN_PAGINATION);
+    
+    for(let k = 1; k <= total_number_of_pagination_segments; k++){}
+    
     for (let i = 1; i <= number_of_pages; i++) {
         let a_tag = document.createElement("a");
         a_tag.setAttribute("href", "#");
@@ -116,7 +131,7 @@ export function create_pagination(number_of_pages) {
         if (i == number_of_pages) {
             a_tag.setAttribute("id", "last_page");
         }
-        col.appendChild(a_tag);
+        empty_div.appendChild(a_tag);
     }
     let right_shift = document.createElement("a");
     right_shift.setAttribute("href", "#");
@@ -127,8 +142,7 @@ export function create_pagination(number_of_pages) {
     right_shift.setAttribute("name", "right_shift");
     right_shift.setAttribute("id", "next_page");
     right_shift.innerHTML = "&raquo;";
-    col.appendChild(right_shift);
-    empty_div.appendChild(col);
+    empty_div.appendChild(right_shift);
     return empty_div;
 }
 
@@ -142,20 +156,19 @@ export function sanitize_input(string) {
         "/": '&#x2F;',
     };
     const reg = /[&<>"'/]/ig;
-    return string.replace(reg, (match)=>(map[match]));
-  }
+    return string.replace(reg, (match) => (map[match]));
+}
 
-function check_response_status(status)
-{
-    if(status>=400 && status<500){
+function check_response_status(status) {
+    if (status >= 400 && status < 500) {
         // error code 1504 - refers to all 4xx errors
-        window.location.replace("error.html?err_code=1504&status_code="+status);
+        window.location.replace("error.html?err_code=1504&status_code=" + status);
     }
-    else if(status>=500){
+    else if (status >= 500) {
         // error code 1505 - refers to all 5xx errors
-        window.location.replace("error.html?err_code=1505&status_code="+status);
+        window.location.replace("error.html?err_code=1505&status_code=" + status);
     }
-    else{
+    else {
         return;
     }
 }
