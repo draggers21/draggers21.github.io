@@ -68,6 +68,11 @@
     <link rel="prefetch" href="static/core/js/config/dev_config.js" as="script" />
     <link rel="prefetch" href="static/core/js/config/prod_config.js" as="script" />
     <!-- Pre-fetching resources end -->
+    
+    <!-- core JS files for this page -->
+    <script type="module" src="static/core/js/index.js"></script>
+    <script type="module" src="static/core/js/side_panel.js"></script>
+    <!-- core JS files for this page ends -->
 </head>
 
 <body>
@@ -137,8 +142,11 @@
         window.location.hash = '';
     </script>
     <script type="module" src="static/core/js/navbar.js"></script>
+    <!-- Moving these core JS files to head 
     <script type="module" src="static/core/js/index.js"></script>
-    <script type="module" src="static/core/js/side_panel.js"></script>
+    <script type="module" src="static/core/js/side_panel.js"></script> -->
+
+    <!-- Pagination Script starts -->
     <script type="text/javascript">
         /* 
             TODO: Optimize code and clean it. Can be found in static/core/js/paginate.js
@@ -230,7 +238,25 @@
             check_next_prev_button();
         }
 
+        // Jump to page script
+        function jump_to_page(page_num) {
+            let page = "page_" + page_num
+            try {
+                var is_page = document.getElementsByName(page_num)[0];
+            }
+            catch (err) {
+                window.alert("Invalid page number.");
+                return;
+            }
+            if (is_page != undefined) {
+                change_page(page);
+            }
+            else {
+                return;
+            }
+        }
     </script>
+    <!-- Pagination Script ends -->
     <!-- required scripts -->
     <script type="module" src="static/core/js/footer.js"></script>
     <script type="module" src="static/core/js/link_handling.js"></script>

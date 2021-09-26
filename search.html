@@ -68,6 +68,11 @@
     <link rel="prefetch" href="static/core/js/config/dev_config.js" as="script" />
     <link rel="prefetch" href="static/core/js/config/prod_config.js" as="script" />
     <!-- Pre-fetching resources end -->
+
+    <!-- core JS files for this page -->
+    <script type="module" src="static/core/js/search.js"></script>
+    <script type="module" src="static/core/js/side_panel.js"></script>
+    <!-- core JS files for this page ends -->
 </head>
 
 <body>
@@ -194,8 +199,9 @@
         window.location.hash = '';
     </script>
     <script type="module" src="static/core/js/navbar.js"></script>
+    <!-- Moving these core JS files to head 
     <script type="module" src="static/core/js/search.js"></script>
-    <script type="module" src="static/core/js/side_panel.js"></script>
+    <script type="module" src="static/core/js/side_panel.js"></script> -->
     <script type="text/javascript">
 
         function check_next_prev_button() {

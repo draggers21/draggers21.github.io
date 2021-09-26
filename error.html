@@ -67,6 +67,11 @@
     <link rel="prefetch" href="static/core/js/config/dev_config.js" as="script" />
     <link rel="prefetch" href="static/core/js/config/prod_config.js" as="script" />
     <!-- Pre-fetching resources end -->
+    
+    <!-- core JS files for this page -->
+    <script type="module" src="static/core/js/error.js"></script>
+    <script type="module" src="static/core/js/side_panel.js"></script>
+    <!-- core JS files for this page ends -->
 </head>
 
 <body>
@@ -98,6 +103,13 @@
                                 <div class="card-body blog-card">
                                     <h3 class="card-title">Oops! looks like you ran into an error.</h3>
                                     <br />
+                                    <div class="row">
+                                        <div class="col" style="text-align: center;">
+                                            <img id="error_image" class="error-image" alt="error_gif">
+                                        </div>
+                                    </div>
+                                    
+                                    <br /><br />
                                     <h5 class="card-text" id="error-code"></h5>
                                     <h5 class="card-text" id="error-description"></h5>
                                 </div>
@@ -175,7 +187,6 @@
                         </div>
                     </div> -->
                     <!-- Featured Tab Ends-->
-
                 </div>
             </div>
             <div class="col-lg-3">
@@ -214,8 +225,9 @@
         window.location.hash = '';
     </script>
     <script type="module" src="static/core/js/navbar.js"></script>
+    <!-- Moving these core js files to head 
     <script type="module" src="static/core/js/error.js"></script>
-    <script type="module" src="static/core/js/side_panel.js"></script>
+    <script type="module" src="static/core/js/side_panel.js"></script> -->
     <script type="module" src="static/core/js/footer.js"></script>
     <script type="module" src="static/core/js/link_handling.js"></script>
     <!-- Script to change the top value of the background to prevent overflow-->
