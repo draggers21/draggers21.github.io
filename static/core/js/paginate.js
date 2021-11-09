@@ -33,7 +33,7 @@ function check_next_prev_button() {
 
         // Logic - check if paginate segment is last segment then disable else do nothing 
 
-        console.log(paginate_segment_id);
+        // console.log(paginate_segment_id);
         if (paginate_segment_id == "last-paginate-segment") {
 
             document.getElementById("next_page_" + paginate_segment_number).setAttribute("class", "disabled");
@@ -79,7 +79,7 @@ function change_page(element_name) {
         // document.getElementById(page_to_deactivate).style.display = "none";
 
         let prev_page = "page_" + (parseInt(page_to_deactivate.split("_")[1]) - 1);
-        console.log(prev_page);
+        // console.log(prev_page);
         // remove active status
         active_pages[0].removeAttribute("class");
         document.getElementById(page_to_deactivate).style.display = "none";
@@ -105,7 +105,7 @@ function change_page(element_name) {
             // getting the next paginate segment list
             let paginate_segment_to_deactive = active_paginate_segment[0].getAttribute("name");
             let next_paginate_segment = "paginate_segement_" + (parseInt(paginate_segment_to_deactive.split("_")[2]) + 1);
-            console.log(next_paginate_segment);
+            // console.log(next_paginate_segment);
             // deactivating the current segment and activating the next segment
             active_paginate_segment[0].removeAttribute("class");
             document.getElementsByName(paginate_segment_to_deactive)[0].style.display = "none";
