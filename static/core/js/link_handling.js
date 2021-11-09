@@ -1,4 +1,4 @@
-let ENV = "prod";
+export let ENV = "prod";
 
 
 function run_link_handling() {

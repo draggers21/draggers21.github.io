@@ -16,7 +16,7 @@ if __name__ == "__main__":
         file_content = open(FILE_LOCATION, "r+").read()
         if search(MATCHING_REGEX, file_content):
             print("[+] ENV change detected, changing ENV to default value.")
-            file_content = sub(MATCHING_REGEX, 'let ENV = "prod";', file_content)
+            file_content = sub(MATCHING_REGEX, 'export let ENV = "prod";', file_content)
             open(FILE_LOCATION, "w+").write(file_content)
         else:
             print("[+] No ENV change. ALL OK!")
