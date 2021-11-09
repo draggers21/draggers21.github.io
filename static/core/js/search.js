@@ -1,4 +1,4 @@
-import { fetch_json_data, create_blog_cards, create_pagination, sanitize_input } from "./utils.js";
+import { fetch_json_data, create_blog_cards, create_pagination_holder, sanitize_input } from "./utils.js";
 import { BLOG_META_DATA_LOCATION, AUTHOR_BLOG_ID_MAPPING, DATE_TO_BLOG_ID_MAPPING, TAGS_TO_BLOG_ID_MAPPING, CARD_PER_PAGE_LIMIT } from "./constants.js";
 
 const params = new URLSearchParams(window.location.search);
@@ -206,7 +206,7 @@ function display_content(blog_ids) {
             search_results_container.appendChild(page_div);
         }
 
-        let pagination = create_pagination(number_of_pages);
+        let pagination = create_pagination_holder(number_of_pages);
         document.getElementById("pagination").appendChild(pagination);
 
     });

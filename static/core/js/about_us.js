@@ -1,4 +1,4 @@
-import { fetch_json_data, create_pagination } from "./utils.js";
+import { fetch_json_data, create_pagination_holder } from "./utils.js";
 import { AUTHOR_DETAILS_LOCATION, CARD_PER_PAGE_LIMIT } from "./constants.js";
 
 
@@ -226,7 +226,7 @@ function process_author_data(author_data) {
         }
         blog_card_holder_container.appendChild(page_div);
     }
-    let pagination = create_pagination(number_of_pages);
+    let pagination = create_pagination_holder(number_of_pages);
     document.getElementById("pagination").appendChild(pagination);
 }
 
