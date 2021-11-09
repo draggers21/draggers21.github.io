@@ -113,7 +113,7 @@ function create_pagination(page_start, page_end, paginate_segment) {
     }
     left_shift.setAttribute("onclick", "change_page(this.name)");
     left_shift.setAttribute("name", "left_shift");
-    left_shift.setAttribute("id", "prev_page_"+paginate_segment);
+    left_shift.setAttribute("id", "prev_page_" + paginate_segment);
     left_shift.innerHTML = "&laquo";
     empty_div.appendChild(left_shift);
 
@@ -140,7 +140,7 @@ function create_pagination(page_start, page_end, paginate_segment) {
     }
     right_shift.setAttribute("onclick", "change_page(this.name)");
     right_shift.setAttribute("name", "right_shift");
-    right_shift.setAttribute("id", "next_page_"+paginate_segment);
+    right_shift.setAttribute("id", "next_page_" + paginate_segment);
     right_shift.innerHTML = "&raquo;";
     empty_div.appendChild(right_shift);
     return empty_div;
@@ -169,7 +169,12 @@ export function create_pagination_holder(total_number_of_pages) {
             // First paginate segment
             temp_div.setAttribute("class", "this-is-the-active-paginate-segment");
             temp_div.setAttribute("style", "display: block;");
-            temp_div.setAttribute("id", "first-paginate-segment");
+            if (total_number_of_pagination_segments == 1) {
+                temp_div.setAttribute("id", "last-paginate-segment");
+            }
+            else {
+                temp_div.setAttribute("id", "first-paginate-segment");
+            }
         } else if (page_end == total_number_of_pages) {
             // last paginate segment
             temp_div.setAttribute("class", "this-is-the-last-paginate-segment");
