@@ -102,49 +102,90 @@ export function create_blog_cards(blog_id, meta_data) {
     return div1;
 }
 
-export function create_pagination(number_of_pages) {
+function create_pagination(page_start, page_end, paginate_segment) {
 
-    // If number of pages greater than 5 resolve to ... structure
+    // TODO Add paginate segment id in right and left shift buttons
     let empty_div = document.createElement("div");
     let left_shift = document.createElement("a");
     left_shift.setAttribute("href", "#");
-    left_shift.setAttribute("class", "disabled");
+    if (paginate_segment == 1) {
+        left_shift.setAttribute("class", "disabled");
+    }
     left_shift.setAttribute("onclick", "change_page(this.name)");
     left_shift.setAttribute("name", "left_shift");
-    left_shift.setAttribute("id", "prev_page");
+    left_shift.setAttribute("id", "prev_page_"+paginate_segment);
     left_shift.innerHTML = "&laquo";
     empty_div.appendChild(left_shift);
 
-    let total_number_of_pagination_segments = Math.ceil(number_of_pages/NUMBER_OF_PAGES_IN_PAGINATION);
-    
-    for(let k = 1; k <= total_number_of_pagination_segments; k++){}
-    
-    for (let i = 1; i <= number_of_pages; i++) {
+    for (let i = page_start; i <= page_end; i++) {
         let a_tag = document.createElement("a");
         a_tag.setAttribute("href", "#");
         a_tag.setAttribute("onclick", "change_page(this.name)");
         a_tag.setAttribute("name", "page_" + i);
         a_tag.innerHTML = i;
         if (i == 1) {
+            // first and active page in any segment 
             a_tag.setAttribute("class", "this-is-the-active-page");
         }
-        if (i == number_of_pages) {
+        if (i == page_end) {
+            // Last page in any segment
             a_tag.setAttribute("id", "last_page");
         }
         empty_div.appendChild(a_tag);
     }
     let right_shift = document.createElement("a");
     right_shift.setAttribute("href", "#");
-    if (number_of_pages == 1) {
+    if (page_start == 1 && page_end == 1) {
         right_shift.setAttribute("class", "disabled");
     }
     right_shift.setAttribute("onclick", "change_page(this.name)");
     right_shift.setAttribute("name", "right_shift");
-    right_shift.setAttribute("id", "next_page");
+    right_shift.setAttribute("id", "next_page_"+paginate_segment);
     right_shift.innerHTML = "&raquo;";
     empty_div.appendChild(right_shift);
     return empty_div;
 }
+
+export function create_pagination_holder(total_number_of_pages) {
+    // this variable will hold the entire pagination html
+    let complete_pagination_div = document.createElement("div");
+    let total_number_of_pagination_segments = Math.ceil(total_number_of_pages / NUMBER_OF_PAGES_IN_PAGINATION);
+    var prev_page_end = 0;
+    for (let k = 1; k <= total_number_of_pagination_segments; k++) {
+        var page_start = prev_page_end + 1;
+        var page_end = k * NUMBER_OF_PAGES_IN_PAGINATION;
+        if (page_end > total_number_of_pages) {
+            page_end = total_number_of_pages;
+        }
+        prev_page_end = page_end;
+
+        // Call the above function here with start_page and end_page
+        // It will return the html code that will be added here after.
+        var inner_pagination_html = create_pagination(page_start, page_end, k);
+
+        var temp_div = document.createElement("div");
+        temp_div.setAttribute("name", "paginate_segement_" + k)
+        if (page_start == 1) {
+            // First paginate segment
+            temp_div.setAttribute("class", "this-is-the-active-paginate-segment");
+            temp_div.setAttribute("style", "display: block;");
+            temp_div.setAttribute("id", "first-paginate-segment");
+        } else if (page_end == total_number_of_pages) {
+            // last paginate segment
+            temp_div.setAttribute("class", "this-is-the-last-paginate-segment");
+            temp_div.setAttribute("style", "display: none;");
+            temp_div.setAttribute("id", "last-paginate-segment");
+        }
+        else {
+            temp_div.setAttribute("style", "display: none;")
+        }
+        temp_div.append(inner_pagination_html);
+        complete_pagination_div.append(temp_div);
+    }
+
+    return complete_pagination_div;
+}
+
 
 export function sanitize_input(string) {
     const map = {

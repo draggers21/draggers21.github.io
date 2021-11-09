@@ -7,7 +7,7 @@
 from re import search, sub
 
 # See for reference: https://regex101.com/r/J3romj/1
-MATCHING_REGEX = r'let ENV = "dev";'
+MATCHING_REGEX = r'export let ENV = "dev";'
 FILE_LOCATION = "static/core/js/link_handling.js"
 
 if __name__ == "__main__":

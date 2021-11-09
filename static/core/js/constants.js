@@ -13,4 +13,4 @@ export const ERROR_CODE_DESCRIPTION_MAPPING = {
     1506: "Incorrect JSON file structure."
 }
 export const NUMBER_OF_ERROR_IMAGES = 3;
-export const NUMBER_OF_PAGES_IN_PAGINATION = 5;
+export const NUMBER_OF_PAGES_IN_PAGINATION = 4;
