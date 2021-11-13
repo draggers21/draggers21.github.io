@@ -64,7 +64,7 @@ function regex_match(string_to_search, string_to_search_in) {
 }
 
 function display_search_result_count(blog_ids_length) {
-    console.log(blog_ids_length)
+    // console.log(blog_ids_length)
     if (blog_ids_length == 0) {
         document.getElementById("search-help").style.display = "block";
     }
