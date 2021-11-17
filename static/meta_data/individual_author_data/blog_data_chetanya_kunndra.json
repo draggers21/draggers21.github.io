@@ -397,9 +397,35 @@
             "url": "view.html?id=8387c23908c831657e9ab34d42ccdfe1a70475fe788c88f65767d34e322d93e3",
             "text": "OverTheWire: Krypton: Solving Krypton 0 -> Krypton 1"
         },
+        "next_post": {
+            "url": "view.html?id=d56d0ed692969053e5e76c63ef608ceff054a33d4112760248d0afa7839f6183",
+            "text": "OverTheWire: Krypton: Solving Krypton 0 -> Krypton 1"
+        },
         "final_blog_hash": "8411a50f01488bbe556bd98df6a6c68078d6059d73287629f8cae6ab4b7684d3",
         "publish": true,
         "read_time": "2",
         "semi_hash": "58ac3ab118b2403c5e6e42236a0bb2d8842f5d9b55f05b6f19d0c72c0b119aa7"
+    },
+    {
+        "blog_location": "static/blogs/OverTheWire-WriteUps/Krypton/krypton2to3.json",
+        "blog_title": "OverTheWire: Krypton: Solving Krypton 2 -> Krypton 3",
+        "blog_author": "Chetanya Kunndra",
+        "blog_summary": "Krypton is a war-game presented by OverTheWire.org which aims at teaching players about cryptography, In this writeup we will try and solve Krypton level 2 in order to get the password for Krypton level 3.",
+        "blog_publish_date": "17/11/2021",
+        "blog_tags": [
+            "WriteUp",
+            "OverTheWire",
+            "Krypton",
+            "Cryptography",
+            "caesar"
+        ],
+        "prev_post": {
+            "url": "view.html?id=8411a50f01488bbe556bd98df6a6c68078d6059d73287629f8cae6ab4b7684d3",
+            "text": "OverTheWire: Krypton: Solving Krypton 0 -> Krypton 1"
+        },
+        "publish": true,
+        "read_time": "2",
+        "final_blog_hash": "d56d0ed692969053e5e76c63ef608ceff054a33d4112760248d0afa7839f6183",
+        "semi_hash": "82d409586f8eace32c3f071d7c137557f77e0d068d0f6eab1101559808976448"
     }
 ]
